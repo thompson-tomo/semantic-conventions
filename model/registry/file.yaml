@@ -37,3 +37,46 @@ groups:
         brief: >
           File size in bytes.
         stability: experimental
+  - id: registry.file.provider
+    prefix: file.provider
+    type: attribute_group
+    display_name: File Provider Attributes
+    brief: "Describes file provider attributes."
+    attributes:
+      - id: name
+        type: string
+        brief: >
+          What is the provider being used to connect to the file store
+        stability: experimental
+        examples: ['AzureBlob', 'FTP', 'AWSS3']
+      - id: supplier
+        type: string
+        brief: >
+          Who is supplying the provider being used to connect to the file store.
+        stability: experimental
+        examples: ['Microsoft', 'Google', 'AWS', 'FluentStorage']
+  - id: registry.file.store
+    prefix: file.store
+    type: attribute_group
+    display_name: File Store Attributes
+    brief: "Describes file store attributes."
+    attributes:
+      - id: type
+        type: string
+        brief: >
+          What is the type of file store being used.
+        stability: experimental
+        examples: ['S3', 'FTP', 'LogicalDisk']
+      - id: name
+        type: string
+        brief: >
+          What does the supplier call this file store
+        stability: experimental
+        examples: ['AzureBlob', 'FTP', 'AWSS3']
+      - id: supplier
+        type: string
+        brief: >
+          Who is providing the file store.
+        stability: experimental
+        examples: ['Azure', 'GCP', 'AWS']
+      
