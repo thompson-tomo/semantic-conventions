@@ -15,9 +15,6 @@ This document defines attributes for software deployments.
 | Key | Stability | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- |
 | <a id="deployment-environment-name" href="#deployment-environment-name">`deployment.environment.name`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Name of the [deployment environment](https://wikipedia.org/wiki/Deployment_environment) (aka deployment tier). [1] | `staging`; `production` |
-| <a id="deployment-id" href="#deployment-id">`deployment.id`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The id of the deployment. | `1208` |
-| <a id="deployment-name" href="#deployment-name">`deployment.name`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The name of the deployment. | `deploy my app`; `deploy-frontend` |
-| <a id="deployment-status" href="#deployment-status">`deployment.status`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The status of the deployment. | `failed`; `succeeded` |
 
 **[1] `deployment.environment.name`:** `deployment.environment.name` does not affect the uniqueness constraints defined through
 the `service.namespace`, `service.name` and `service.instance.id` resource attributes.
@@ -26,15 +23,6 @@ considered to be identifying the same service:
 
 - `service.name=frontend`, `deployment.environment.name=production`
 - `service.name=frontend`, `deployment.environment.name=staging`.
-
----
-
-`deployment.status` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
-
-| Value | Description | Stability |
-| --- | --- | --- |
-| `failed` | failed | ![Development](https://img.shields.io/badge/-development-blue) |
-| `succeeded` | succeeded | ![Development](https://img.shields.io/badge/-development-blue) |
 
 ## Deployment Deprecated Attributes
 
@@ -45,3 +33,15 @@ Describes deprecated deployment attributes.
 | Key | Stability | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- |
 | <a id="deployment-environment" href="#deployment-environment">`deployment.environment`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `deployment.environment.name`. | string | Deprecated, use `deployment.environment.name` instead. | `staging`; `production` |
+| <a id="deployment-id" href="#deployment-id">`deployment.id`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.run.id`. | string | The id of the deployment. | `1208` |
+| <a id="deployment-name" href="#deployment-name">`deployment.name`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.name`. | string | The name of the deployment. | `deploy my app`; `deploy-frontend` |
+| <a id="deployment-status" href="#deployment-status">`deployment.status`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.run.result`. | string | The status of the deployment. | `failed`; `succeeded` |
+
+---
+
+`deployment.status` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
+
+| Value | Description | Stability |
+| --- | --- | --- |
+| `failed` | failed | ![Development](https://img.shields.io/badge/-development-blue) |
+| `succeeded` | succeeded | ![Development](https://img.shields.io/badge/-development-blue) |

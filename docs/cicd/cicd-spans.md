@@ -52,9 +52,9 @@ The `{pipeline}` SHOULD be the [`cicd.pipeline.name`](/docs/registry/attributes/
 
 | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- |
-| [`cicd.pipeline.result`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The result of a pipeline run. | `success`; `failure`; `timeout`; `skipped` |
+| [`cicd.pipeline.result`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.execution.result`. | `Required` | string | The result of a pipeline run. | `success`; `failure`; `timeout`; `skipped` |
 | [`error.type`](/docs/registry/attributes/error.md) | ![Stable](https://img.shields.io/badge/-stable-lightgreen) | `Conditionally Required` if the pipeline result is `failure` or `error` | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` |
-| [`cicd.pipeline.action.name`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The kind of action a pipeline run is performing. | `BUILD`; `RUN`; `SYNC` |
+| [`cicd.pipeline.action.name`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.category`. | `Opt-In` | string | The kind of action a pipeline run is performing. | `BUILD`; `RUN`; `SYNC` |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
 
@@ -130,10 +130,10 @@ This span describes task execution in a pipeline run.
 
 | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- |
-| [`cicd.pipeline.task.name`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The human readable name of a task within a pipeline. Task here most closely aligns with a [computing process](https://wikipedia.org/wiki/Pipeline_(computing)) in a pipeline. Other terms for tasks include commands, steps, and procedures. | `Run GoLang Linter`; `Go Build`; `go-test`; `deploy_binary` |
-| [`cicd.pipeline.task.run.id`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The unique identifier of a task run within a pipeline. | `12097` |
-| [`cicd.pipeline.task.run.result`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` |
-| [`cicd.pipeline.task.run.url.full`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline task run, providing the complete address in order to locate and identify the pipeline task run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763/job/26920038674?pr=1075` |
+| [`cicd.pipeline.task.name`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.name`. | `Required` | string | The human readable name of a task within a pipeline. Task here most closely aligns with a [computing process](https://wikipedia.org/wiki/Pipeline_(computing)) in a pipeline. Other terms for tasks include commands, steps, and procedures. | `Run GoLang Linter`; `Go Build`; `go-test`; `deploy_binary` |
+| [`cicd.pipeline.task.run.id`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.run.id`. | `Required` | string | The unique identifier of a task run within a pipeline. | `12097` |
+| [`cicd.pipeline.task.run.result`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.run.result`. | `Required` | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` |
+| [`cicd.pipeline.task.run.url.full`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.run.url.full`. | `Required` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline task run, providing the complete address in order to locate and identify the pipeline task run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763/job/26920038674?pr=1075` |
 | [`error.type`](/docs/registry/attributes/error.md) | ![Stable](https://img.shields.io/badge/-stable-lightgreen) | `Conditionally Required` if the task result is `failure` or `error` | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
