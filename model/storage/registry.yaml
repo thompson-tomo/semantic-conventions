@@ -1,0 +1,118 @@
+groups:
+  - id: registry.storage
+    type: attribute_group
+    display_name: Disk Attributes
+    brief: >
+        These attributes may be used for any storage related operation.
+    attributes:
+      - id: storage.localfs.id
+        type: string
+        stability: development
+        brief: "A unique value for each file system local to this host."
+        note: >
+          The value for each file system must remain constant at least from one re-initialization of the agent to the next re-initialization.
+        examples: ["1"]
+      - id: storage.localfs.mount.point
+        type: string
+        stability: development
+        brief: "The path name of the root of this file system."
+        examples: ["C:\\"]
+      - id: storage.localfs.mount.type
+        type: string
+        stability: development
+        brief: "The type of mounting used to make the file system available."
+        note: >
+          Used for remote mount points
+        examples: ["NFS", "SAMBA"]
+      - id: storage.cloudfs.collection
+        type: string
+        stability: development
+        brief: "A cloud based collection of files."
+        note: "This is another term for bucket"
+        examples: ["app-bucket"]
+      - id: storage.upload.id
+        type: string
+        stability: development
+        brief: "Upload ID that identifies the multipart upload."
+        examples: ["dfRtDYWFbkRONycy.Yxwh66Yjlx.cph0gtNBtJ"]
+      - id: storage.upload.part
+        type: int
+        stability: development
+        brief: "The part number of the part being uploaded in a multipart-upload operation."
+        examples: [3456]
+      - id: storage.volume.description
+        type: string
+        stability: development
+        brief: >
+          A textual description of this partition.
+        examples: [ 'Primary storage volume' ]
+      - id: storage.volume.id
+        type: string
+        stability: development
+        brief: >
+          A unique value for each partition on this long-term storage device. 
+        note: >
+          The value for each long-term storage device must remain constant at least from one re- initialization of the agent to the next re- initialization.
+        examples: [ '1' ]
+      - id: storage.volume.ispartition
+        type: boolean
+        stability: development
+        brief: >
+          This volume is also a partition
+        examples: [ true, false ]
+      - id: storage.volume.name
+        type: string
+        stability: development
+        brief: >
+          The name of the storage volume.
+        examples: [ 'volume1' ]
+      - id: storage.volume.size
+        type: string
+        stability: development
+        brief: >
+          The size of this volume.
+        examples: [ '100000' ]
+      - id: storage.volume.raid.level
+        type: string
+        stability: development
+        brief: >
+          The raid configuration of the volume
+        examples: [ 'RAID5' ]
+      - id: storage.volume.raid.disks
+        type: string
+        stability: development
+        brief: >
+          The number of disks in the raid configuration
+        examples: [ '4' ]
+      - id: storage.volume.type
+        stability: development
+        brief: >
+          The type of the storage volume.
+        examples: [ "emptyDir", "persistentVolumeClaim" ]
+        type:
+          members:
+            - id: persistent_volume_claim
+              value: 'persistentVolumeClaim'
+              brief: "A [persistentVolumeClaim](https://v1-30.docs.kubernetes.io/docs/concepts/storage/volumes/#persistentvolumeclaim) volume"
+              stability: development
+            - id: config_map
+              value: 'configMap'
+              brief: "A [configMap](https://v1-30.docs.kubernetes.io/docs/concepts/storage/volumes/#configmap) volume"
+              stability: development
+            - id: downward_api
+              value: 'downwardAPI'
+              brief: "A [downwardAPI](https://v1-30.docs.kubernetes.io/docs/concepts/storage/volumes/#downwardapi) volume"
+              stability: development
+            - id: empty_dir
+              value: 'emptyDir'
+              brief: "An [emptyDir](https://v1-30.docs.kubernetes.io/docs/concepts/storage/volumes/#emptydir) volume"
+              stability: development
+            - id: secret
+              value: 'secret'
+              brief: "A [secret](https://v1-30.docs.kubernetes.io/docs/concepts/storage/volumes/#secret) volume"
+              stability: development
+            - id: local
+              value: 'local'
+              brief: "A [local](https://v1-30.docs.kubernetes.io/docs/concepts/storage/volumes/#local) volume"
+              stability: development
+      
