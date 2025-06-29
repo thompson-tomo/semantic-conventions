@@ -1,0 +1,88 @@
+groups:
+  - id: registry.host.deprecated
+    type: attribute_group
+    display_name: Deprecated Host Attributes
+    brief: >
+      A host is defined as a computing instance. For example, physical servers, virtual machines, switches or disk array.
+    attributes:
+      - id: host.arch
+        type:
+          members:
+            - id: amd64
+              value: 'amd64'
+              brief: "AMD64"
+              stability: development
+            - id: arm32
+              value: 'arm32'
+              brief: "ARM32"
+              stability: development
+            - id: arm64
+              value: 'arm64'
+              brief: "ARM64"
+              stability: development
+            - id: ia64
+              value: 'ia64'
+              brief: "Itanium"
+              stability: development
+            - id: ppc32
+              value: 'ppc32'
+              brief: "32-bit PowerPC"
+              stability: development
+            - id: ppc64
+              value: 'ppc64'
+              brief: "64-bit PowerPC"
+              stability: development
+            - id: s390x
+              value: 's390x'
+              brief: "IBM z/Architecture"
+              stability: development
+            - id: x86
+              value: 'x86'
+              brief: "32-bit x86"
+              stability: development
+        stability: development
+        deprecated:
+          reason: renamed
+          renamed_to: hw.cpu.arch
+        brief: >
+            The CPU architecture the host system is running on.
+      - id: host.cpu.vendor.id
+        stability: development
+        type: string
+        brief: >
+          Processor manufacturer identifier. A maximum 12-character string.
+        note: >
+          [CPUID](https://wiki.osdev.org/CPUID) command returns the vendor ID string in EBX, EDX and ECX registers.
+          Writing these to memory in this order results in a 12-character string.
+        examples: [ 'GenuineIntel' ]
+      - id: host.cpu.family
+        stability: development
+        type: string
+        deprecated:
+          reason: renamed
+          renamed_to: hw.cpu.family
+        brief: >
+          Family or generation of the CPU.
+        examples: [ '6', 'PA-RISC 1.1e' ]
+      - id: host.cpu.model.id
+        stability: development
+        type: string
+        brief: >
+          Model identifier. It provides more granular information about the CPU, distinguishing it from
+          other CPUs within the same family.
+        examples: [ '6', '9000/778/B180L' ]
+      - id: host.cpu.model.name
+        stability: development
+        type: string
+        brief: >
+          Model designation of the processor.
+        examples: [ '11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz' ]
+      - id: host.cpu.stepping
+        stability: development
+        type: string
+        deprecated:
+          reason: renamed
+          renamed_to: hw.cpu.stepping
+        brief: >
+          Stepping or core revisions.
+        examples: ["1", "r1p1"]

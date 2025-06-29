@@ -107,3 +107,84 @@ groups:
         stability: development
         brief: >
           The current state of the component
+      - id: hw.cpu.arch
+        type:
+          members:
+            - id: amd64
+              value: 'amd64'
+              brief: "AMD64"
+              stability: development
+            - id: arm32
+              value: 'arm32'
+              brief: "ARM32"
+              stability: development
+            - id: arm64
+              value: 'arm64'
+              brief: "ARM64"
+              stability: development
+            - id: ia64
+              value: 'ia64'
+              brief: "Itanium"
+              stability: development
+            - id: ppc32
+              value: 'ppc32'
+              brief: "32-bit PowerPC"
+              stability: development
+            - id: ppc64
+              value: 'ppc64'
+              brief: "64-bit PowerPC"
+              stability: development
+            - id: s390x
+              value: 's390x'
+              brief: "IBM z/Architecture"
+              stability: development
+            - id: x86
+              value: 'x86'
+              brief: "32-bit x86"
+              stability: development
+        stability: development
+        brief: >
+            The CPU architecture the host system is running on.
+      - id: hw.cpu.family
+        stability: development
+        type: string
+        brief: >
+          Family or generation of the CPU.
+        examples: [ '6', 'PA-RISC 1.1e' ]
+      - id: hw.cpu.stepping
+        stability: development
+        type: string
+        brief: >
+          Stepping or core revisions.
+        examples: ["1", "r1p1"]
+      - id: hw.cpu.mode
+        brief: "The mode of the CPU"
+        type:
+          # TODO: Fix how enum members are used in semantic conventions after https://github.com/open-telemetry/weaver/issues/479
+          members:
+            - id: user
+              value: 'user'
+              stability: development
+            - id: system
+              value: 'system'
+              stability: development
+            - id: nice
+              value: 'nice'
+              stability: development
+            - id: idle
+              value: 'idle'
+              stability: development
+            - id: iowait
+              value: 'iowait'
+              stability: development
+            - id: interrupt
+              value: 'interrupt'
+              stability: development
+            - id: steal
+              value: 'steal'
+              stability: development
+            - id: kernel
+              value: 'kernel'
+              stability: development
+        stability: development
+        examples: [ "user", "system" ]

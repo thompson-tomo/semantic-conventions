@@ -1,0 +1,14 @@
+groups:
+  - id: registry.cpu.deprecated
+    type: attribute_group
+    brief: Attributes specific to a cpu instance.
+    display_name: Deprecated CPU Attributes
+    attributes:
+      - id: cpu.logical_number
+        type: int
+        stability: development
+        deprecated:
+          reason: renamed
+          renamed_to: hw.id
+        brief: "The logical CPU number [0..n-1]"
+        examples: [1]

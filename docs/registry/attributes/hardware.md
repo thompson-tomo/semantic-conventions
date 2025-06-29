@@ -9,6 +9,10 @@ Attributes for hardware.
 
 | Attribute | Type | Description | Examples | Stability |
 |---|---|---|---|---|
+| <a id="hw-cpu-arch" href="#hw-cpu-arch">`hw.cpu.arch`</a> | string | The CPU architecture the host system is running on. | `amd64`; `arm32`; `arm64` | ![Development](https://img.shields.io/badge/-development-blue) |
+| <a id="hw-cpu-family" href="#hw-cpu-family">`hw.cpu.family`</a> | string | Family or generation of the CPU. | `6`; `PA-RISC 1.1e` | ![Development](https://img.shields.io/badge/-development-blue) |
+| <a id="hw-cpu-mode" href="#hw-cpu-mode">`hw.cpu.mode`</a> | string | The mode of the CPU | `user`; `system` | ![Development](https://img.shields.io/badge/-development-blue) |
+| <a id="hw-cpu-stepping" href="#hw-cpu-stepping">`hw.cpu.stepping`</a> | string | Stepping or core revisions. | `1`; `r1p1` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="hw-id" href="#hw-id">`hw.id`</a> | string | An identifier for the hardware component, unique within the monitored host | `win32battery_battery_testsysa33_1` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="hw-name" href="#hw-name">`hw.name`</a> | string | An easily-recognizable name for the hardware component | `eth0` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="hw-parent" href="#hw-parent">`hw.parent`</a> | string | Unique identifier of the parent component (typically the `hw.id` attribute of the enclosure, or disk controller) | `dellStorage_perc_0` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -16,6 +20,36 @@ Attributes for hardware.
 | <a id="hw-type" href="#hw-type">`hw.type`</a> | string | Type of the component [1] | `battery`; `cpu`; `disk_controller` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `hw.type`:** Describes the category of the hardware component for which `hw.state` is being reported. For example, `hw.type=temperature` along with `hw.state=degraded` would indicate that the temperature of the hardware component has been reported as `degraded`.
+
+---
+
+`hw.cpu.arch` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
+
+| Value  | Description | Stability |
+|---|---|---|
+| `amd64` | AMD64 | ![Development](https://img.shields.io/badge/-development-blue) |
+| `arm32` | ARM32 | ![Development](https://img.shields.io/badge/-development-blue) |
+| `arm64` | ARM64 | ![Development](https://img.shields.io/badge/-development-blue) |
+| `ia64` | Itanium | ![Development](https://img.shields.io/badge/-development-blue) |
+| `ppc32` | 32-bit PowerPC | ![Development](https://img.shields.io/badge/-development-blue) |
+| `ppc64` | 64-bit PowerPC | ![Development](https://img.shields.io/badge/-development-blue) |
+| `s390x` | IBM z/Architecture | ![Development](https://img.shields.io/badge/-development-blue) |
+| `x86` | 32-bit x86 | ![Development](https://img.shields.io/badge/-development-blue) |
+
+---
+
+`hw.cpu.mode` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
+
+| Value  | Description | Stability |
+|---|---|---|
+| `idle` | idle | ![Development](https://img.shields.io/badge/-development-blue) |
+| `interrupt` | interrupt | ![Development](https://img.shields.io/badge/-development-blue) |
+| `iowait` | iowait | ![Development](https://img.shields.io/badge/-development-blue) |
+| `kernel` | kernel | ![Development](https://img.shields.io/badge/-development-blue) |
+| `nice` | nice | ![Development](https://img.shields.io/badge/-development-blue) |
+| `steal` | steal | ![Development](https://img.shields.io/badge/-development-blue) |
+| `system` | system | ![Development](https://img.shields.io/badge/-development-blue) |
+| `user` | user | ![Development](https://img.shields.io/badge/-development-blue) |
 
 ---
 
