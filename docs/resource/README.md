@@ -77,11 +77,11 @@ as specified in the [Resource SDK specification](https://github.com/open-telemet
 
 **Status:** ![Mixed](https://img.shields.io/badge/-mixed-yellow)
 
-**type:** `service`
+**Type:** `service`
 
-**Description:** A service instance.
+**Summary:** A service instance.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`service.name`](/docs/registry/attributes/service.md) | string | Logical name of the service. [1] | `shoppingcart` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`service.instance.id`](/docs/registry/attributes/service.md) | string | The string ID of the service instance. [2] | `627cc493-f310-47de-96bd-71410b7dec09` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -150,11 +150,11 @@ service.name = Shop.shoppingcart
 
 **Status:** ![Stable](https://img.shields.io/badge/-stable-lightgreen)
 
-**type:** `telemetry.sdk`
+**Type:** `telemetry.sdk`
 
-**Description:** The telemetry SDK used to capture data recorded by the instrumentation libraries.
+**Summary:** The telemetry SDK used to capture data recorded by the instrumentation libraries.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`telemetry.sdk.language`](/docs/registry/attributes/telemetry.md) | string | The language of the telemetry SDK. | `cpp`; `dotnet`; `erlang` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`telemetry.sdk.name`](/docs/registry/attributes/telemetry.md) | string | The name of the telemetry SDK as defined above. [1] | `opentelemetry` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -171,7 +171,7 @@ All custom identifiers SHOULD be stable across different versions of an implemen
 
 `telemetry.sdk.language` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `cpp` | cpp | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `dotnet` | dotnet | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -203,11 +203,11 @@ All custom identifiers SHOULD be stable across different versions of an implemen
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `telemetry.distro`
+**Type:** `telemetry.distro`
 
-**Description:** The distribution of telemetry SDK used to capture data recorded by the instrumentation libraries.
+**Summary:** The distribution of telemetry SDK used to capture data recorded by the instrumentation libraries.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`telemetry.distro.name`](/docs/registry/attributes/telemetry.md) | string | The name of the auto instrumentation agent or distribution, if used. [1] | `parts-unlimited-java` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`telemetry.distro.version`](/docs/registry/attributes/telemetry.md) | string | The version string of the auto instrumentation agent or distribution, if used. | `1.2.3` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |

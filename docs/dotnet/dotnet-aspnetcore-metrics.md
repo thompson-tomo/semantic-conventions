@@ -45,7 +45,7 @@ All routing metrics are reported by the `Microsoft.AspNetCore.Routing` meter.
 
 **[1]:** Meter name: `Microsoft.AspNetCore.Routing`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aspnetcore.routing.match_status`](/docs/registry/attributes/aspnetcore.md) | string | Match result - success or failure | `success`; `failure` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`aspnetcore.routing.is_fallback`](/docs/registry/attributes/aspnetcore.md) | boolean | A value that indicates whether the matched route is a fallback route. | `true` | `Conditionally Required` if and only if a route was successfully matched. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -58,7 +58,7 @@ SHOULD include the [application root](/docs/http/http-spans.md#http-server-defin
 
 `aspnetcore.routing.match_status` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `failure` | Match failed | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `success` | Match succeeded | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -87,7 +87,7 @@ Exceptions Metric is reported by the `Microsoft.AspNetCore.Diagnostics` meter.
 
 **[1]:** Meter name: `Microsoft.AspNetCore.Diagnostics`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aspnetcore.diagnostics.exception.result`](/docs/registry/attributes/aspnetcore.md) | string | ASP.NET Core exception middleware handling result | `handled`; `unhandled` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | The full name of exception type. [1] | `System.OperationCanceledException`; `Contoso.MyException` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -119,7 +119,7 @@ it's RECOMMENDED to:
 
 `aspnetcore.diagnostics.exception.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `aborted` | Exception handling didn't run because the request was aborted. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `handled` | Exception was handled by the exception handling middleware. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -130,7 +130,7 @@ it's RECOMMENDED to:
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -158,7 +158,7 @@ All rate-limiting metrics are reported by the `Microsoft.AspNetCore.RateLimiting
 
 **[1]:** Meter name: `Microsoft.AspNetCore.RateLimiting`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aspnetcore.rate_limiting.policy`](/docs/registry/attributes/aspnetcore.md) | string | Rate limiting policy name. | `fixed`; `sliding`; `token` | `Conditionally Required` [1] | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -188,7 +188,7 @@ of `[ 0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1, 2.5, 5, 7.5, 10 
 
 **[1]:** Meter name: `Microsoft.AspNetCore.RateLimiting`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aspnetcore.rate_limiting.policy`](/docs/registry/attributes/aspnetcore.md) | string | Rate limiting policy name. | `fixed`; `sliding`; `token` | `Conditionally Required` [1] | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -214,7 +214,7 @@ of `[ 0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1, 2.5, 5, 7.5, 10 
 
 **[1]:** Meter name: `Microsoft.AspNetCore.RateLimiting`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aspnetcore.rate_limiting.policy`](/docs/registry/attributes/aspnetcore.md) | string | Rate limiting policy name. | `fixed`; `sliding`; `token` | `Conditionally Required` [1] | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -244,7 +244,7 @@ of `[ 0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1, 2.5, 5, 7.5, 10 
 
 **[1]:** Meter name: `Microsoft.AspNetCore.RateLimiting`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aspnetcore.rate_limiting.result`](/docs/registry/attributes/aspnetcore.md) | string | Rate-limiting result, shows whether the lease was acquired or contains a rejection reason | `acquired`; `request_canceled` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`aspnetcore.rate_limiting.policy`](/docs/registry/attributes/aspnetcore.md) | string | Rate limiting policy name. | `fixed`; `sliding`; `token` | `Conditionally Required` [1] | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -255,7 +255,7 @@ of `[ 0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1, 2.5, 5, 7.5, 10 
 
 `aspnetcore.rate_limiting.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `acquired` | Lease was acquired | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `endpoint_limiter` | Lease request was rejected by the endpoint limiter | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -287,7 +287,7 @@ of `[ 0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1, 2.5, 5, 7.5, 10 
 
 Meter name: `Microsoft.AspNetCore.RateLimiting`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aspnetcore.rate_limiting.result`](/docs/registry/attributes/aspnetcore.md) | string | Rate-limiting result, shows whether the lease was acquired or contains a rejection reason | `acquired`; `request_canceled` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`aspnetcore.rate_limiting.policy`](/docs/registry/attributes/aspnetcore.md) | string | Rate limiting policy name. | `fixed`; `sliding`; `token` | `Conditionally Required` [1] | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -298,7 +298,7 @@ Meter name: `Microsoft.AspNetCore.RateLimiting`; Added in: ASP.NET Core 8.0
 
 `aspnetcore.rate_limiting.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `acquired` | Lease was acquired | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `endpoint_limiter` | Lease request was rejected by the endpoint limiter | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |

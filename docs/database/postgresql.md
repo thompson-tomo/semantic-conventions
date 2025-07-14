@@ -26,15 +26,15 @@ The Semantic Conventions for *PostgreSQL* extend and override the [Database Sema
 
 **Status:** ![Stable](https://img.shields.io/badge/-stable-lightgreen)
 
-Spans representing calls to a PostgreSQL database adhere to the general [Semantic Conventions for Database Client Spans](database-spans.md).
+**Summary:** Spans representing calls to a PostgreSQL database adhere to the general [Semantic Conventions for Database Client Spans](database-spans.md).
 
 `db.system.name` MUST be set to `"postgresql"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`db.namespace`](/docs/registry/attributes/db.md) | string | The schema associated with the connection, qualified by the database name. [1] | `mydatabase.products`; `mydatabase.customers` | `Conditionally Required` If available without an additional network call. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`db.response.status_code`](/docs/registry/attributes/db.md) | string | [PostgreSQL error code](https://www.postgresql.org/docs/current/errcodes-appendix.html). [2] | `08000`; `08P01` | `Conditionally Required` If response has ended with warning or an error. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -146,7 +146,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 

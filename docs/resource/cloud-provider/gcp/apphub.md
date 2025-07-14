@@ -22,11 +22,11 @@ See [Supported Resources](https://cloud.google.com/app-hub/docs/supported-resour
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `gcp.apphub.application`
+**Type:** `gcp.apphub.application`
 
-**Description:** Attributes denoting data from an Application in AppHub. See [AppHub overview](https://cloud.google.com/app-hub/docs/overview).
+**Summary:** Attributes denoting data from an Application in AppHub. See [AppHub overview](https://cloud.google.com/app-hub/docs/overview).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gcp.apphub.application.container`](/docs/registry/attributes/gcp.md) | string | The container within GCP where the AppHub application is defined. | `projects/my-container-project` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`gcp.apphub.application.id`](/docs/registry/attributes/gcp.md) | string | The name of the application as configured in AppHub. | `my-application` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -49,11 +49,11 @@ See [Supported Resources](https://cloud.google.com/app-hub/docs/supported-resour
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `gcp.apphub.service`
+**Type:** `gcp.apphub.service`
 
-**Description:** Attributes denoting data from a Service in AppHub. See [AppHub overview](https://cloud.google.com/app-hub/docs/overview).
+**Summary:** Attributes denoting data from a Service in AppHub. See [AppHub overview](https://cloud.google.com/app-hub/docs/overview).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gcp.apphub.service.criticality_type`](/docs/registry/attributes/gcp.md) | string | Criticality of a service indicates its importance to the business. [1] | `MISSION_CRITICAL`; `HIGH`; `MEDIUM` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`gcp.apphub.service.environment_type`](/docs/registry/attributes/gcp.md) | string | Environment of a service is the stage of a software lifecycle. [2] | `PRODUCTION`; `STAGING`; `TEST` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -67,7 +67,7 @@ See [Supported Resources](https://cloud.google.com/app-hub/docs/supported-resour
 
 `gcp.apphub.service.criticality_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `HIGH` | High impact. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `LOW` | Low impact. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -78,7 +78,7 @@ See [Supported Resources](https://cloud.google.com/app-hub/docs/supported-resour
 
 `gcp.apphub.service.environment_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `DEVELOPMENT` | Development environment. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `PRODUCTION` | Production environment. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -102,11 +102,11 @@ See [Supported Resources](https://cloud.google.com/app-hub/docs/supported-resour
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `gcp.apphub.workload`
+**Type:** `gcp.apphub.workload`
 
-**Description:** Attributes denoting data from a Workload in AppHub. See [AppHub overview](https://cloud.google.com/app-hub/docs/overview).
+**Summary:** Attributes denoting data from a Workload in AppHub. See [AppHub overview](https://cloud.google.com/app-hub/docs/overview).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gcp.apphub.workload.criticality_type`](/docs/registry/attributes/gcp.md) | string | Criticality of a workload indicates its importance to the business. [1] | `MISSION_CRITICAL`; `HIGH`; `MEDIUM` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`gcp.apphub.workload.environment_type`](/docs/registry/attributes/gcp.md) | string | Environment of a workload is the stage of a software lifecycle. [2] | `PRODUCTION`; `STAGING`; `TEST` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -120,7 +120,7 @@ See [Supported Resources](https://cloud.google.com/app-hub/docs/supported-resour
 
 `gcp.apphub.workload.criticality_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `HIGH` | High impact. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `LOW` | Low impact. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -131,7 +131,7 @@ See [Supported Resources](https://cloud.google.com/app-hub/docs/supported-resour
 
 `gcp.apphub.workload.environment_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `DEVELOPMENT` | Development environment. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `PRODUCTION` | Production environment. | ![Development](https://img.shields.io/badge/-development-blue) |

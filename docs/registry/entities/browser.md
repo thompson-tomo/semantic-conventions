@@ -9,16 +9,17 @@
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `browser`
+**Type:** `browser`
 
-**Description:** The web browser in which the application represented by the resource is running. The `browser.*` attributes MUST be used only for resources that represent applications running in a web browser (regardless of whether running on a mobile or desktop device).
+**Summary:** The web browser in which the application represented by the resource is running. The `browser.*` attributes MUST be used only for resources that represent applications running in a web browser (regardless of whether running on a mobile or desktop device).
+
 
 **Other Attributes:**
 
 > :warning: This entity definition contains attributes without a role.
 > Stable Entities MUST NOT have attributes without a defined role.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`browser.brands`](/docs/registry/attributes/browser.md) | string[] | Array of brand name and version separated by a space [1] | `[" Not A;Brand 99", "Chromium 99", "Chrome 99"]` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`browser.language`](/docs/registry/attributes/browser.md) | string | Preferred language of the user using the browser [2] | `en`; `en-US`; `fr`; `fr-FR` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |

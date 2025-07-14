@@ -70,7 +70,7 @@ if they do not cause breaking changes to HTTP semantic conventions.
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`server.address`](/docs/registry/attributes/server.md) | string | Server domain name if available without reverse DNS lookup; otherwise, IP address or Unix domain socket name. [1] | `example.com`; `10.1.2.80`; `/tmp/my.sock` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`server.port`](/docs/registry/attributes/server.md) | int | Server port number. [2] | `80`; `8080`; `443` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -117,7 +117,7 @@ if they do not cause breaking changes to HTTP semantic conventions.
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`client.address`](/docs/registry/attributes/client.md) | string | Client address - domain name if available without reverse DNS lookup; otherwise, IP address or Unix domain socket name. [1] | `client.example.com`; `10.1.2.80`; `/tmp/my.sock` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`client.port`](/docs/registry/attributes/client.md) | int | Client port number. [2] | `65123` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -149,7 +149,7 @@ This also covers unidirectional UDP flows and peer-to-peer communication where t
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`source.address`](/docs/registry/attributes/source.md) | string | Source address - domain name if available without reverse DNS lookup; otherwise, IP address or Unix domain socket name. [1] | `source.example.com`; `10.1.2.80`; `/tmp/my.sock` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`source.port`](/docs/registry/attributes/source.md) | int | Source port number | `3389`; `2888` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -172,7 +172,7 @@ Destination fields capture details about the receiver of a network exchange/pack
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`destination.address`](/docs/registry/attributes/destination.md) | string | Destination address - domain name if available without reverse DNS lookup; otherwise, IP address or Unix domain socket name. [1] | `destination.example.com`; `10.1.2.80`; `/tmp/my.sock` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`destination.port`](/docs/registry/attributes/destination.md) | int | Destination port number | `3389`; `2888` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -200,7 +200,7 @@ if they do not cause breaking changes to HTTP semantic conventions.
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.local.address`](/docs/registry/attributes/network.md) | string | Local address of the network connection - IP address or Unix domain socket name. | `10.1.2.80`; `/tmp/my.sock` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`network.local.port`](/docs/registry/attributes/network.md) | int | Local port number of the network connection. | `65123` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -227,7 +227,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -239,7 +239,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -297,7 +297,7 @@ Note that `network.local.*` attributes are not included in these examples since 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.carrier.icc`](/docs/registry/attributes/network.md) | string | The ISO 3166-1 alpha-2 2-character country code associated with the mobile carrier network. | `DE` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`network.carrier.mcc`](/docs/registry/attributes/network.md) | string | The mobile carrier country code. | `310` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -310,7 +310,7 @@ Note that `network.local.*` attributes are not included in these examples since 
 
 `network.connection.subtype` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `cdma` | CDMA | ![Development](https://img.shields.io/badge/-development-blue) |
 | `cdma2000_1xrtt` | CDMA2000 1XRTT | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -338,7 +338,7 @@ Note that `network.local.*` attributes are not included in these examples since 
 
 `network.connection.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `cell` | cell | ![Development](https://img.shields.io/badge/-development-blue) |
 | `unavailable` | unavailable | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -366,7 +366,7 @@ Instrumentations SHOULD provide a way for users to configure this name.
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`peer.service`](/docs/registry/attributes/peer.md) | string | The [`service.name`](/docs/resource/README.md#service) of the remote service. SHOULD be equal to the actual `service.name` resource attribute of the remote service if any. | `AuthTokenCache` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -392,7 +392,7 @@ a thread that started a span.
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`thread.id`](/docs/registry/attributes/thread.md) | int | Current "managed" thread ID (as opposed to OS thread ID). | `42` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`thread.name`](/docs/registry/attributes/thread.md) | string | Current thread name. | `main` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |

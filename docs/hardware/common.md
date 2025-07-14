@@ -33,7 +33,7 @@ monitored component:
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`hw.id`](/docs/registry/attributes/hardware.md) | string | An identifier for the hardware component, unique within the monitored host | `win32battery_battery_testsysa33_1` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`hw.type`](/docs/registry/attributes/hardware.md) | string | Type of the component [1] | `battery`; `cpu`; `disk_controller` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -46,7 +46,7 @@ monitored component:
 
 `hw.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `battery` | Battery | ![Development](https://img.shields.io/badge/-development-blue) |
 | `cpu` | CPU | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -83,7 +83,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `hw.energy` | Counter | `J` | Energy consumed by the component | ![Development](https://img.shields.io/badge/-development-blue) |  |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`hw.id`](/docs/registry/attributes/hardware.md) | string | An identifier for the hardware component, unique within the monitored host | `win32battery_battery_testsysa33_1` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`hw.type`](/docs/registry/attributes/hardware.md) | string | Type of the component [1] | `battery`; `cpu`; `disk_controller` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -96,7 +96,7 @@ This metric is [recommended][MetricRecommended].
 
 `hw.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `battery` | Battery | ![Development](https://img.shields.io/badge/-development-blue) |
 | `cpu` | CPU | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -133,7 +133,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `hw.errors` | Counter | `{error}` | Number of errors encountered by the component | ![Development](https://img.shields.io/badge/-development-blue) |  |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`hw.id`](/docs/registry/attributes/hardware.md) | string | An identifier for the hardware component, unique within the monitored host | `win32battery_battery_testsysa33_1` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`hw.type`](/docs/registry/attributes/hardware.md) | string | Type of the component [1] | `battery`; `cpu`; `disk_controller` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -149,7 +149,7 @@ This metric is [recommended][MetricRecommended].
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -157,7 +157,7 @@ This metric is [recommended][MetricRecommended].
 
 `hw.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `battery` | Battery | ![Development](https://img.shields.io/badge/-development-blue) |
 | `cpu` | CPU | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -196,7 +196,7 @@ This metric is [recommended][MetricRecommended].
 
 **[1]:** It is recommended to report `hw.energy` instead of `hw.power` when possible.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`hw.id`](/docs/registry/attributes/hardware.md) | string | An identifier for the hardware component, unique within the monitored host | `win32battery_battery_testsysa33_1` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`hw.type`](/docs/registry/attributes/hardware.md) | string | Type of the component [1] | `battery`; `cpu`; `disk_controller` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -209,7 +209,7 @@ This metric is [recommended][MetricRecommended].
 
 `hw.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `battery` | Battery | ![Development](https://img.shields.io/badge/-development-blue) |
 | `cpu` | CPU | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -248,7 +248,7 @@ This metric is [recommended][MetricRecommended].
 
 **[1]:** `hw.status` is currently specified as an *UpDownCounter* but would ideally be represented using a [*StateSet* as defined in OpenMetrics](https://github.com/prometheus/OpenMetrics/blob/v1.0.0/specification/OpenMetrics.md#stateset). This semantic convention will be updated once *StateSet* is specified in OpenTelemetry. This planned change is not expected to have any consequence on the way users query their timeseries backend to retrieve the values of `hw.status` over time.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`hw.id`](/docs/registry/attributes/hardware.md) | string | An identifier for the hardware component, unique within the monitored host | `win32battery_battery_testsysa33_1` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`hw.state`](/docs/registry/attributes/hardware.md) | string | The current state of the component | `ok`; `degraded`; `failed` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -262,7 +262,7 @@ This metric is [recommended][MetricRecommended].
 
 `hw.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `degraded` | Degraded | ![Development](https://img.shields.io/badge/-development-blue) |
 | `failed` | Failed | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -272,7 +272,7 @@ This metric is [recommended][MetricRecommended].
 
 `hw.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `battery` | Battery | ![Development](https://img.shields.io/badge/-development-blue) |
 | `cpu` | CPU | ![Development](https://img.shields.io/badge/-development-blue) |

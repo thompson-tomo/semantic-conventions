@@ -50,7 +50,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `cicd.pipeline.run.duration` | Histogram | `s` | Duration of a pipeline run grouped by pipeline, state and result. | ![Development](https://img.shields.io/badge/-development-blue) | [`cicd.pipeline`](/docs/registry/entities/cicd.md#cicd-pipeline) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`cicd.pipeline.run.state`](/docs/registry/attributes/cicd.md) | string | The pipeline run goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -83,7 +83,7 @@ it's RECOMMENDED to:
 
 `cicd.pipeline.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `cancellation` | The pipeline run was cancelled, eg. by a user manually cancelling the pipeline run. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `error` | The pipeline run failed due to an error in the CICD system, eg. due to the worker being killed. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -96,7 +96,7 @@ it's RECOMMENDED to:
 
 `cicd.pipeline.run.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `executing` | The executing state spans the execution of any run tasks (eg. build, test). | ![Development](https://img.shields.io/badge/-development-blue) |
 | `finalizing` | The finalizing state spans from when the run has finished executing (eg. cleanup of run resources). | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -106,7 +106,7 @@ it's RECOMMENDED to:
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -130,7 +130,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `cicd.pipeline.run.active` | UpDownCounter | `{run}` | The number of pipeline runs currently active in the system by state. | ![Development](https://img.shields.io/badge/-development-blue) | [`cicd.pipeline`](/docs/registry/entities/cicd.md#cicd-pipeline) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`cicd.pipeline.run.state`](/docs/registry/attributes/cicd.md) | string | The pipeline run goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -139,7 +139,7 @@ This metric is [recommended][MetricRecommended].
 
 `cicd.pipeline.run.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `executing` | The executing state spans the execution of any run tasks (eg. build, test). | ![Development](https://img.shields.io/badge/-development-blue) |
 | `finalizing` | The finalizing state spans from when the run has finished executing (eg. cleanup of run resources). | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -165,7 +165,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `cicd.worker.count` | UpDownCounter | `{count}` | The number of workers on the CICD system by state. | ![Development](https://img.shields.io/badge/-development-blue) |  |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cicd.worker.state`](/docs/registry/attributes/cicd.md) | string | The state of a CICD worker / agent. | `idle`; `busy`; `down` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -173,7 +173,7 @@ This metric is [recommended][MetricRecommended].
 
 `cicd.worker.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `available` | The worker is not performing work for the CICD system. It is available to the CICD system to perform work on (online / idle). [1] | ![Development](https://img.shields.io/badge/-development-blue) |
 | `busy` | The worker is performing work for the CICD system. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -204,7 +204,7 @@ This metric is [recommended][MetricRecommended].
 **[1]:** There might be errors in a pipeline run that are non fatal (eg. they are suppressed) or in a parallel stage multiple stages could have a fatal error.
 This means that this error count might not be the same as the count of metric `cicd.pipeline.run.duration` with run result `failure`.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -233,7 +233,7 @@ it's RECOMMENDED to:
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -259,7 +259,7 @@ This metric is [recommended][MetricRecommended].
 
 **[1]:** Errors in pipeline run execution are explicitly excluded. Ie a test failure is not counted in this metric.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cicd.system.component`](/docs/registry/attributes/cicd.md) | string | The name of a component of the CICD system. | `controller`; `scheduler`; `agent` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -288,7 +288,7 @@ it's RECOMMENDED to:
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -319,7 +319,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `vcs.change.count` | UpDownCounter | `{change}` | The number of changes (pull requests/merge requests/changelists) in a repository, categorized by their state (e.g. open or merged) | ![Development](https://img.shields.io/badge/-development-blue) | [`vcs.repo`](/docs/registry/entities/vcs.md#vcs-repo) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`vcs.change.state`](/docs/registry/attributes/vcs.md) | string | The state of the change (pull request/merge request/changelist). | `open`; `closed`; `merged` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`vcs.repository.url.full`](/docs/registry/attributes/vcs.md) | string | The [canonical URL](https://support.google.com/webmasters/answer/10347851?hl=en#:~:text=A%20canonical%20URL%20is%20the,Google%20chooses%20one%20as%20canonical.) of the repository providing the complete HTTP(S) address in order to locate and identify the repository through a browser. [1] | `https://github.com/opentelemetry/open-telemetry-collector-contrib`; `https://gitlab.com/my-org/my-project/my-projects-project/repo` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -338,7 +338,7 @@ the same backends.
 
 `vcs.change.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `closed` | Closed means the merge request has been closed without merging. This can happen for various reasons, such as the changes being deemed unnecessary, the issue being resolved in another way, or the author deciding to withdraw the request. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `merged` | Merged indicates that the change has been successfully integrated into the target codebase. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -349,7 +349,7 @@ the same backends.
 
 `vcs.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bitbucket` | [Bitbucket](https://bitbucket.org) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gitea` | [Gitea](https://gitea.io) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -376,7 +376,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `vcs.change.duration` | Gauge | `s` | The time duration a change (pull request/merge request/changelist) has been in a given state. | ![Development](https://img.shields.io/badge/-development-blue) | [`vcs.repo`](/docs/registry/entities/vcs.md#vcs-repo) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`vcs.change.state`](/docs/registry/attributes/vcs.md) | string | The state of the change (pull request/merge request/changelist). | `open`; `closed`; `merged` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`vcs.ref.head.name`](/docs/registry/attributes/vcs.md) | string | The name of the [reference](https://git-scm.com/docs/gitglossary#def_ref) such as **branch** or **tag** in the repository. [1] | `my-feature-branch`; `tag-1-test` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -399,7 +399,7 @@ the same backends.
 
 `vcs.change.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `closed` | Closed means the merge request has been closed without merging. This can happen for various reasons, such as the changes being deemed unnecessary, the issue being resolved in another way, or the author deciding to withdraw the request. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `merged` | Merged indicates that the change has been successfully integrated into the target codebase. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -410,7 +410,7 @@ the same backends.
 
 `vcs.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bitbucket` | [Bitbucket](https://bitbucket.org) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gitea` | [Gitea](https://gitea.io) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -437,7 +437,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `vcs.change.time_to_approval` | Gauge | `s` | The amount of time since its creation it took a change (pull request/merge request/changelist) to get the first approval. | ![Development](https://img.shields.io/badge/-development-blue) | [`vcs.repo`](/docs/registry/entities/vcs.md#vcs-repo); [`vcs.ref`](/docs/registry/entities/vcs.md#vcs-ref) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`vcs.ref.head.name`](/docs/registry/attributes/vcs.md) | string | The name of the [reference](https://git-scm.com/docs/gitglossary#def_ref) such as **branch** or **tag** in the repository. [1] | `my-feature-branch`; `tag-1-test` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`vcs.repository.url.full`](/docs/registry/attributes/vcs.md) | string | The [canonical URL](https://support.google.com/webmasters/answer/10347851?hl=en#:~:text=A%20canonical%20URL%20is%20the,Google%20chooses%20one%20as%20canonical.) of the repository providing the complete HTTP(S) address in order to locate and identify the repository through a browser. [2] | `https://github.com/opentelemetry/open-telemetry-collector-contrib`; `https://gitlab.com/my-org/my-project/my-projects-project/repo` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -492,7 +492,7 @@ revision based on the VCS system and situational context.
 
 `vcs.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bitbucket` | [Bitbucket](https://bitbucket.org) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gitea` | [Gitea](https://gitea.io) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -519,7 +519,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `vcs.change.time_to_merge` | Gauge | `s` | The amount of time since its creation it took a change (pull request/merge request/changelist) to get merged into the target(base) ref. | ![Development](https://img.shields.io/badge/-development-blue) | [`vcs.repo`](/docs/registry/entities/vcs.md#vcs-repo); [`vcs.ref`](/docs/registry/entities/vcs.md#vcs-ref) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`vcs.ref.head.name`](/docs/registry/attributes/vcs.md) | string | The name of the [reference](https://git-scm.com/docs/gitglossary#def_ref) such as **branch** or **tag** in the repository. [1] | `my-feature-branch`; `tag-1-test` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`vcs.repository.url.full`](/docs/registry/attributes/vcs.md) | string | The [canonical URL](https://support.google.com/webmasters/answer/10347851?hl=en#:~:text=A%20canonical%20URL%20is%20the,Google%20chooses%20one%20as%20canonical.) of the repository providing the complete HTTP(S) address in order to locate and identify the repository through a browser. [2] | `https://github.com/opentelemetry/open-telemetry-collector-contrib`; `https://gitlab.com/my-org/my-project/my-projects-project/repo` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -574,7 +574,7 @@ revision based on the VCS system and situational context.
 
 `vcs.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bitbucket` | [Bitbucket](https://bitbucket.org) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gitea` | [Gitea](https://gitea.io) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -601,7 +601,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `vcs.repository.count` | UpDownCounter | `{repository}` | The number of repositories in an organization. | ![Development](https://img.shields.io/badge/-development-blue) |  |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`vcs.owner.name`](/docs/registry/attributes/vcs.md) | string | The group owner within the version control system. | `my-org`; `myteam`; `business-unit` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`vcs.provider.name`](/docs/registry/attributes/vcs.md) | string | The name of the version control system provider. | `github`; `gitlab`; `gitea`; `bitbucket` | `Opt-In` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -610,7 +610,7 @@ This metric is [recommended][MetricRecommended].
 
 `vcs.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bitbucket` | [Bitbucket](https://bitbucket.org) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gitea` | [Gitea](https://gitea.io) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -637,7 +637,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `vcs.ref.count` | UpDownCounter | `{ref}` | The number of refs of type branch or tag in a repository. | ![Development](https://img.shields.io/badge/-development-blue) | [`vcs.repo`](/docs/registry/entities/vcs.md#vcs-repo) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`vcs.ref.type`](/docs/registry/attributes/vcs.md) | string | The type of the [reference](https://git-scm.com/docs/gitglossary#def_ref) in the repository. | `branch`; `tag` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`vcs.repository.url.full`](/docs/registry/attributes/vcs.md) | string | The [canonical URL](https://support.google.com/webmasters/answer/10347851?hl=en#:~:text=A%20canonical%20URL%20is%20the,Google%20chooses%20one%20as%20canonical.) of the repository providing the complete HTTP(S) address in order to locate and identify the repository through a browser. [1] | `https://github.com/opentelemetry/open-telemetry-collector-contrib`; `https://gitlab.com/my-org/my-project/my-projects-project/repo` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -656,7 +656,7 @@ the same backends.
 
 `vcs.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bitbucket` | [Bitbucket](https://bitbucket.org) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gitea` | [Gitea](https://gitea.io) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -667,7 +667,7 @@ the same backends.
 
 `vcs.ref.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `branch` | [branch](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefbranchabranch) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `tag` | [tag](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddeftagatag) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -696,7 +696,7 @@ This metric is [recommended][MetricRecommended].
 instrumentation SHOULD report two measurements: 3 and 2 (both positive numbers).
 If number of lines added/removed should be calculated from the start of time, then `vcs.ref.base.name` SHOULD be set to an empty string.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`vcs.line_change.type`](/docs/registry/attributes/vcs.md) | string | The type of line change being measured on a branch or change. | `added`; `removed` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`vcs.ref.base.name`](/docs/registry/attributes/vcs.md) | string | The name of the [reference](https://git-scm.com/docs/gitglossary#def_ref) such as **branch** or **tag** in the repository. [1] | `my-feature-branch`; `tag-1-test` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -734,7 +734,7 @@ the same backends.
 
 `vcs.line_change.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `added` | How many lines were added. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `removed` | How many lines were removed. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -743,7 +743,7 @@ the same backends.
 
 `vcs.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bitbucket` | [Bitbucket](https://bitbucket.org) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gitea` | [Gitea](https://gitea.io) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -754,7 +754,7 @@ the same backends.
 
 `vcs.ref.base.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `branch` | [branch](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefbranchabranch) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `tag` | [tag](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddeftagatag) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -763,7 +763,7 @@ the same backends.
 
 `vcs.ref.head.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `branch` | [branch](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefbranchabranch) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `tag` | [tag](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddeftagatag) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -791,7 +791,7 @@ This metric is [recommended][MetricRecommended].
 **[1]:** This metric should be reported for each `vcs.revision_delta.direction` value. For example if branch `a` is 3 commits behind and 2 commits ahead of `trunk`,
 instrumentation SHOULD report two measurements: 3 and 2 (both positive numbers) and `vcs.ref.base.name` is set to `trunk`.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`vcs.ref.base.name`](/docs/registry/attributes/vcs.md) | string | The name of the [reference](https://git-scm.com/docs/gitglossary#def_ref) such as **branch** or **tag** in the repository. [1] | `my-feature-branch`; `tag-1-test` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`vcs.ref.base.type`](/docs/registry/attributes/vcs.md) | string | The type of the [reference](https://git-scm.com/docs/gitglossary#def_ref) in the repository. [2] | `branch`; `tag` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -829,7 +829,7 @@ the same backends.
 
 `vcs.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bitbucket` | [Bitbucket](https://bitbucket.org) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gitea` | [Gitea](https://gitea.io) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -840,7 +840,7 @@ the same backends.
 
 `vcs.ref.base.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `branch` | [branch](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefbranchabranch) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `tag` | [tag](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddeftagatag) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -849,7 +849,7 @@ the same backends.
 
 `vcs.ref.head.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `branch` | [branch](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefbranchabranch) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `tag` | [tag](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddeftagatag) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -858,7 +858,7 @@ the same backends.
 
 `vcs.revision_delta.direction` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ahead` | How many revisions the change is ahead of the target ref. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `behind` | How many revisions the change is behind the target ref. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -883,7 +883,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `vcs.ref.time` | Gauge | `s` | Time a ref (branch) created from the default branch (trunk) has existed. The `ref.type` attribute will always be `branch` | ![Development](https://img.shields.io/badge/-development-blue) | [`vcs.repo`](/docs/registry/entities/vcs.md#vcs-repo) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`vcs.ref.head.name`](/docs/registry/attributes/vcs.md) | string | The name of the [reference](https://git-scm.com/docs/gitglossary#def_ref) such as **branch** or **tag** in the repository. [1] | `my-feature-branch`; `tag-1-test` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`vcs.ref.head.type`](/docs/registry/attributes/vcs.md) | string | The type of the [reference](https://git-scm.com/docs/gitglossary#def_ref) in the repository. [2] | `branch`; `tag` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -909,7 +909,7 @@ the same backends.
 
 `vcs.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bitbucket` | [Bitbucket](https://bitbucket.org) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gitea` | [Gitea](https://gitea.io) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -920,7 +920,7 @@ the same backends.
 
 `vcs.ref.head.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `branch` | [branch](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefbranchabranch) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `tag` | [tag](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddeftagatag) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -945,7 +945,7 @@ This metric is [opt-in][MetricOptIn].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `vcs.contributor.count` | Gauge | `{contributor}` | The number of unique contributors to a repository | ![Development](https://img.shields.io/badge/-development-blue) | [`vcs.repo`](/docs/registry/entities/vcs.md#vcs-repo) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`vcs.repository.url.full`](/docs/registry/attributes/vcs.md) | string | The [canonical URL](https://support.google.com/webmasters/answer/10347851?hl=en#:~:text=A%20canonical%20URL%20is%20the,Google%20chooses%20one%20as%20canonical.) of the repository providing the complete HTTP(S) address in order to locate and identify the repository through a browser. [1] | `https://github.com/opentelemetry/open-telemetry-collector-contrib`; `https://gitlab.com/my-org/my-project/my-projects-project/repo` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`vcs.owner.name`](/docs/registry/attributes/vcs.md) | string | The group owner within the version control system. | `my-org`; `myteam`; `business-unit` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -963,7 +963,7 @@ the same backends.
 
 `vcs.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bitbucket` | [Bitbucket](https://bitbucket.org) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gitea` | [Gitea](https://gitea.io) | ![Development](https://img.shields.io/badge/-development-blue) |

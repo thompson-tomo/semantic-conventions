@@ -50,7 +50,7 @@ The following additional attributes are defined:
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`messaging.operation.name`](/docs/registry/attributes/messaging.md) | string | Azure Service Bus operation name. [1] | `send`; `receive`; `complete`; `process`; `peek` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [2] | `amqp:decode-error`; `KAFKA_STORAGE_ERROR`; `channel-error` | `Conditionally Required` If and only if the messaging operation has failed. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -128,7 +128,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -136,7 +136,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `messaging.operation.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `create` | A message is created. "Create" spans always refer to a single message and are used to provide a unique creation context for messages in batch sending scenarios. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `process` | One or more messages are processed by a consumer. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -148,7 +148,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `messaging.servicebus.disposition_status` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `abandon` | Message is abandoned | ![Development](https://img.shields.io/badge/-development-blue) |
 | `complete` | Message is completed | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -174,7 +174,7 @@ The following additional attributes are defined:
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`messaging.operation.name`](/docs/registry/attributes/messaging.md) | string | Azure Event Hubs operation name. [1] | `send`; `receive`; `checkpoint` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [2] | `amqp:decode-error`; `KAFKA_STORAGE_ERROR`; `channel-error` | `Conditionally Required` If and only if the messaging operation has failed. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -250,7 +250,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -258,7 +258,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `messaging.operation.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `create` | A message is created. "Create" spans always refer to a single message and are used to provide a unique creation context for messages in batch sending scenarios. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `process` | One or more messages are processed by a consumer. | ![Development](https://img.shields.io/badge/-development-blue) |

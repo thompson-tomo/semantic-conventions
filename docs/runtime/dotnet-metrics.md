@@ -86,7 +86,7 @@ This metric is [recommended][MetricRecommended].
 **[1]:** Meter name: `System.Runtime`; Added in: .NET 9.0.
 This metric reports the same values as accessing the corresponding processor time properties on [`System.Diagnostics.Process`](https://learn.microsoft.com/dotnet/api/system.diagnostics.process).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cpu.mode`](/docs/registry/attributes/cpu.md) | string | The mode of the CPU | `user`; `system` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -94,7 +94,7 @@ This metric reports the same values as accessing the corresponding processor tim
 
 `cpu.mode` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `idle` | idle | ![Development](https://img.shields.io/badge/-development-blue) |
 | `interrupt` | interrupt | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -157,7 +157,7 @@ This metric is [recommended][MetricRecommended].
 **[1]:** Meter name: `System.Runtime`; Added in: .NET 9.0.
 This metric uses the [`GC.CollectionCount(int generation)`](https://learn.microsoft.com/dotnet/api/system.gc.collectioncount) API to calculate exclusive collections per generation.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`dotnet.gc.heap.generation`](/docs/registry/attributes/dotnet.md) | string | Name of the garbage collector managed heap generation. | `gen0`; `gen1`; `gen2` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -165,7 +165,7 @@ This metric uses the [`GC.CollectionCount(int generation)`](https://learn.micros
 
 `dotnet.gc.heap.generation` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `gen0` | Generation 0 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `gen1` | Generation 1 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -242,7 +242,7 @@ This metric is [recommended][MetricRecommended].
 **[1]:** Meter name: `System.Runtime`; Added in: .NET 9.0.
 This metric reports the same values as calling [`GC.GetGCMemoryInfo().GenerationInfo.SizeAfterBytes`](https://learn.microsoft.com/dotnet/api/system.gcgenerationinfo.sizeafterbytes).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`dotnet.gc.heap.generation`](/docs/registry/attributes/dotnet.md) | string | Name of the garbage collector managed heap generation. | `gen0`; `gen1`; `gen2` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -250,7 +250,7 @@ This metric reports the same values as calling [`GC.GetGCMemoryInfo().Generation
 
 `dotnet.gc.heap.generation` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `gen0` | Generation 0 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `gen1` | Generation 1 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -281,7 +281,7 @@ This metric is [recommended][MetricRecommended].
 **[1]:** Meter name: `System.Runtime`; Added in: .NET 9.0.
 This metric reports the same values as calling [`GC.GetGCMemoryInfo().GenerationInfo.FragmentationAfterBytes`](https://learn.microsoft.com/dotnet/api/system.gcgenerationinfo.fragmentationafterbytes).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`dotnet.gc.heap.generation`](/docs/registry/attributes/dotnet.md) | string | Name of the garbage collector managed heap generation. | `gen0`; `gen1`; `gen2` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -289,7 +289,7 @@ This metric reports the same values as calling [`GC.GetGCMemoryInfo().Generation
 
 `dotnet.gc.heap.generation` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `gen0` | Generation 0 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `gen1` | Generation 1 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -568,7 +568,7 @@ This metric is [recommended][MetricRecommended].
 **[1]:** Meter name: `System.Runtime`; Added in: .NET 9.0.
 This metric reports the same values as counting calls to [`AppDomain.CurrentDomain.FirstChanceException`](https://learn.microsoft.com/dotnet/api/system.appdomain.firstchanceexception).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. | `System.OperationCanceledException`; `Contoso.MyException` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -576,7 +576,7 @@ This metric reports the same values as counting calls to [`AppDomain.CurrentDoma
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 

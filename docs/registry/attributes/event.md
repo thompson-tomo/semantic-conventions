@@ -5,8 +5,8 @@
 
 ## Event Attributes
 
-Attributes for Events represented using Log Records.
+**Summary:** Attributes for Events represented using Log Records.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="event-name" href="#event-name">`event.name`</a> | string | Identifies the class / type of event. | `browser.mouse.click`; `device.app.lifecycle` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by EventName top-level field on the LogRecord. |

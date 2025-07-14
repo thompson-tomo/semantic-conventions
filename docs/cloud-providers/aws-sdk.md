@@ -22,23 +22,23 @@ See [compatibility](../non-normative/compatibility/aws.md#context-propagation).
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span describes an AWS SDK client call.
-
-**Span name** MUST be of the format `Service.Operation` as per the
-AWS HTTP API, e.g., `DynamoDB.GetItem`, `S3.ListBuckets`. This is
-equivalent to concatenating `rpc.service` and `rpc.method` with `.` and
-consistent with the naming guidelines for RPC client spans.
+**Summary:** This span describes an AWS SDK client call.
 
 AWS SDK span attributes are based on the request or response parameters
 in AWS SDK API calls. The conventions have been collected over time based
 on feedback from AWS users of tracing and will continue to increase as new
 interesting conventions are found.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Name:** MUST be of the format `Service.Operation` as per the
+AWS HTTP API, e.g., `DynamoDB.GetItem`, `S3.ListBuckets`. This is
+equivalent to concatenating `rpc.service` and `rpc.method` with `.` and
+consistent with the naming guidelines for RPC client spans.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Kind:** SHOULD be `CLIENT`.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -57,7 +57,7 @@ interesting conventions are found.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |

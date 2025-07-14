@@ -321,7 +321,7 @@ measurements.
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | A string identifying the remoting system. See below for a list of well-known identifiers. | `grpc`; `java_rmi`; `dotnet_wcf` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`network.transport`](/docs/registry/attributes/network.md) | string | [OSI transport layer](https://wikipedia.org/wiki/Transport_layer) or [inter-process communication method](https://wikipedia.org/wiki/Inter-process_communication). [1] | `tcp`; `udp` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -351,7 +351,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -363,7 +363,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -372,7 +372,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |

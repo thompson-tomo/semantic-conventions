@@ -5,9 +5,9 @@
 
 ## ASP.NET Core Attributes
 
-ASP.NET Core attributes
+**Summary:** ASP.NET Core attributes
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="aspnetcore-diagnostics-exception-result" href="#aspnetcore-diagnostics-exception-result">`aspnetcore.diagnostics.exception.result`</a> | string | ASP.NET Core exception middleware handling result | `handled`; `unhandled` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | <a id="aspnetcore-diagnostics-handler-type" href="#aspnetcore-diagnostics-handler-type">`aspnetcore.diagnostics.handler.type`</a> | string | Full type name of the [`IExceptionHandler`](https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.diagnostics.iexceptionhandler) implementation that handled the exception. | `Contoso.MyHandler` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -21,7 +21,7 @@ ASP.NET Core attributes
 
 `aspnetcore.diagnostics.exception.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `aborted` | Exception handling didn't run because the request was aborted. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `handled` | Exception was handled by the exception handling middleware. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -32,7 +32,7 @@ ASP.NET Core attributes
 
 `aspnetcore.rate_limiting.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `acquired` | Lease was acquired | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `endpoint_limiter` | Lease request was rejected by the endpoint limiter | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -43,7 +43,7 @@ ASP.NET Core attributes
 
 `aspnetcore.routing.match_status` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `failure` | Match failed | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `success` | Match succeeded | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |

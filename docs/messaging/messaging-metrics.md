@@ -71,7 +71,7 @@ of `[ 0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1, 2.5, 5, 7.5, 10 
 
 **[1]:** This metric SHOULD NOT be used to report processing duration - processing duration is reported in `messaging.process.duration` metric.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`messaging.operation.name`](/docs/registry/attributes/messaging.md) | string | The system-specific name of the messaging operation. | `send`; `receive`; `ack` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`messaging.system`](/docs/registry/attributes/messaging.md) | string | The messaging system as identified by the client instrumentation. [1] | `activemq`; `aws_sqs`; `eventgrid` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -128,7 +128,7 @@ the broker doesn't have such notion, the destination name SHOULD uniquely identi
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -136,7 +136,7 @@ the broker doesn't have such notion, the destination name SHOULD uniquely identi
 
 `messaging.operation.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `create` | A message is created. "Create" spans always refer to a single message and are used to provide a unique creation context for messages in batch sending scenarios. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `process` | One or more messages are processed by a consumer. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -148,7 +148,7 @@ the broker doesn't have such notion, the destination name SHOULD uniquely identi
 
 `messaging.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `activemq` | Apache ActiveMQ | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws_sqs` | Amazon Simple Queue Service (SQS) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -186,7 +186,7 @@ This metric is [required][MetricRequired].
 
 **[1]:** This metric MUST NOT count messages that were created but haven't yet been sent.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`messaging.operation.name`](/docs/registry/attributes/messaging.md) | string | The system-specific name of the messaging operation. | `send`; `schedule`; `enqueue` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`messaging.system`](/docs/registry/attributes/messaging.md) | string | The messaging system as identified by the client instrumentation. [1] | `activemq`; `aws_sqs`; `eventgrid` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -234,7 +234,7 @@ the broker doesn't have such notion, the destination name SHOULD uniquely identi
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -242,7 +242,7 @@ the broker doesn't have such notion, the destination name SHOULD uniquely identi
 
 `messaging.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `activemq` | Apache ActiveMQ | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws_sqs` | Amazon Simple Queue Service (SQS) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -281,7 +281,7 @@ This metric is [required][MetricRequired].
 **[1]:** Records the number of messages pulled from the broker or number of messages dispatched to the application in push-based scenarios.
 The metric SHOULD be reported once per message delivery. For example, if receiving and processing operations are both instrumented for a single message delivery, this counter is incremented when the message is received and not reported when it is processed.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`messaging.operation.name`](/docs/registry/attributes/messaging.md) | string | The system-specific name of the messaging operation. | `receive`; `peek`; `poll`; `consume` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`messaging.system`](/docs/registry/attributes/messaging.md) | string | The messaging system as identified by the client instrumentation. [1] | `activemq`; `aws_sqs`; `eventgrid` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -335,7 +335,7 @@ the broker doesn't have such notion, the destination name SHOULD uniquely identi
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -343,7 +343,7 @@ the broker doesn't have such notion, the destination name SHOULD uniquely identi
 
 `messaging.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `activemq` | Apache ActiveMQ | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws_sqs` | Amazon Simple Queue Service (SQS) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -385,7 +385,7 @@ of `[ 0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1, 2.5, 5, 7.5, 10 
 
 **[1]:** This metric MUST be reported for operations with `messaging.operation.type` that matches `process`.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`messaging.operation.name`](/docs/registry/attributes/messaging.md) | string | The system-specific name of the messaging operation. | `process`; `consume`; `handle` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`messaging.system`](/docs/registry/attributes/messaging.md) | string | The messaging system as identified by the client instrumentation. [1] | `activemq`; `aws_sqs`; `eventgrid` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -439,7 +439,7 @@ the broker doesn't have such notion, the destination name SHOULD uniquely identi
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -447,7 +447,7 @@ the broker doesn't have such notion, the destination name SHOULD uniquely identi
 
 `messaging.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `activemq` | Apache ActiveMQ | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws_sqs` | Amazon Simple Queue Service (SQS) | ![Development](https://img.shields.io/badge/-development-blue) |

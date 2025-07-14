@@ -32,11 +32,11 @@ They align with the Bosh deployment tool of CloudFoundry.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `cloudfoundry.org`
+**Type:** `cloudfoundry.org`
 
-**Description:** The organization of the application which is monitored.
+**Summary:** The organization of the application which is monitored.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cloudfoundry.org.id`](/docs/registry/attributes/cloudfoundry.md) | string | The guid of the CloudFoundry org the application is running in. [1] | `218fc5a9-a5f1-4b54-aa05-46717d0ab26d` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`cloudfoundry.org.name`](/docs/registry/attributes/cloudfoundry.md) | string | The name of the CloudFoundry organization the app is running in. [2] | `my-org-name` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -66,11 +66,11 @@ reported by `cf orgs`.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `cloudfoundry.space`
+**Type:** `cloudfoundry.space`
 
-**Description:** The space of the application which is monitored.
+**Summary:** The space of the application which is monitored.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cloudfoundry.space.id`](/docs/registry/attributes/cloudfoundry.md) | string | The guid of the CloudFoundry space the application is running in. [1] | `218fc5a9-a5f1-4b54-aa05-46717d0ab26d` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`cloudfoundry.space.name`](/docs/registry/attributes/cloudfoundry.md) | string | The name of the CloudFoundry space the application is running in. [2] | `my-space-name` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -100,11 +100,11 @@ reported by `cf spaces`.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `cloudfoundry.app`
+**Type:** `cloudfoundry.app`
 
-**Description:** The application which is monitored.
+**Summary:** The application which is monitored.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cloudfoundry.app.id`](/docs/registry/attributes/cloudfoundry.md) | string | The guid of the application. [1] | `218fc5a9-a5f1-4b54-aa05-46717d0ab26d` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`cloudfoundry.app.name`](/docs/registry/attributes/cloudfoundry.md) | string | The name of the application. [2] | `my-app-name` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -134,11 +134,11 @@ as reported by `cf apps`.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `cloudfoundry.process`
+**Type:** `cloudfoundry.process`
 
-**Description:** The process of the application which is monitored.
+**Summary:** The process of the application which is monitored.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cloudfoundry.process.id`](/docs/registry/attributes/cloudfoundry.md) | string | The UID identifying the process. [1] | `218fc5a9-a5f1-4b54-aa05-46717d0ab26d` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`cloudfoundry.process.type`](/docs/registry/attributes/cloudfoundry.md) | string | The type of process. [2] | `web` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -169,11 +169,11 @@ tasks or side-cars with different process types.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `cloudfoundry.system`
+**Type:** `cloudfoundry.system`
 
-**Description:** The system component which is monitored.
+**Summary:** The system component which is monitored.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cloudfoundry.system.id`](/docs/registry/attributes/cloudfoundry.md) | string | A guid or another name describing the event source. [1] | `cf/gorouter` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`cloudfoundry.system.instance.id`](/docs/registry/attributes/cloudfoundry.md) | string | A guid describing the concrete instance of the event source. [2] | `218fc5a9-a5f1-4b54-aa05-46717d0ab26d` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |

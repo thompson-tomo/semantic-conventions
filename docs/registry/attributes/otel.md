@@ -10,9 +10,9 @@
 
 ## OTel Attributes
 
-Attributes reserved for OpenTelemetry
+**Summary:** Attributes reserved for OpenTelemetry
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="otel-span-parent-origin" href="#otel-span-parent-origin">`otel.span.parent.origin`</a> | string | Determines whether the span has a parent span, and if so, [whether it is a remote parent](https://opentelemetry.io/docs/specs/otel/trace/api/#isremote) | `none`; `local`; `remote` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="otel-span-sampling-result" href="#otel-span-sampling-result">`otel.span.sampling_result`</a> | string | The result value of the sampler for this span | `DROP`; `RECORD_ONLY`; `RECORD_AND_SAMPLE` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -23,7 +23,7 @@ Attributes reserved for OpenTelemetry
 
 `otel.span.parent.origin` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `local` | The span has a parent and the parent's span context [isRemote()](https://opentelemetry.io/docs/specs/otel/trace/api/#isremote) is false | ![Development](https://img.shields.io/badge/-development-blue) |
 | `none` | The span does not have a parent, it is a root span | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -33,7 +33,7 @@ Attributes reserved for OpenTelemetry
 
 `otel.span.sampling_result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `DROP` | The span is not sampled and not recording | ![Development](https://img.shields.io/badge/-development-blue) |
 | `RECORD_AND_SAMPLE` | The span is sampled and recording | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -43,16 +43,16 @@ Attributes reserved for OpenTelemetry
 
 `otel.status_code` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ERROR` | The operation contains an error. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `OK` | The operation has been validated by an Application developer or Operator to have completed successfully. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
 ## OTel Component Attributes
 
-Attributes used for OpenTelemetry component self-monitoring
+**Summary:** Attributes used for OpenTelemetry component self-monitoring
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="otel-component-name" href="#otel-component-name">`otel.component.name`</a> | string | A name uniquely identifying the instance of the OpenTelemetry component within its containing SDK instance. [1] | `otlp_grpc_span_exporter/0`; `custom-name` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="otel-component-type" href="#otel-component-type">`otel.component.type`</a> | string | A name identifying the type of the OpenTelemetry component. [2] | `batching_span_processor`; `com.example.MySpanExporter` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -78,7 +78,7 @@ E.g. for Java the fully qualified classname SHOULD be used in this case.
 
 `otel.component.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `batching_log_processor` | The builtin SDK batching log record processor | ![Development](https://img.shields.io/badge/-development-blue) |
 | `batching_span_processor` | The builtin SDK batching span processor | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -99,18 +99,18 @@ E.g. for Java the fully qualified classname SHOULD be used in this case.
 
 ## OTel Scope Attributes
 
-Attributes used by non-OTLP exporters to represent OpenTelemetry Scope's concepts.
+**Summary:** Attributes used by non-OTLP exporters to represent OpenTelemetry Scope's concepts.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="otel-scope-name" href="#otel-scope-name">`otel.scope.name`</a> | string | The name of the instrumentation scope - (`InstrumentationScope.Name` in OTLP). | `io.opentelemetry.contrib.mongodb` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | <a id="otel-scope-version" href="#otel-scope-version">`otel.scope.version`</a> | string | The version of the instrumentation scope - (`InstrumentationScope.Version` in OTLP). | `1.0.0` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
 ## Deprecated OTel Library Attributes
 
-Describes deprecated otel.library attributes.
+**Summary:** Describes deprecated otel.library attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="otel-library-name" href="#otel-library-name">`otel.library.name`</a> | string | Deprecated. Use the `otel.scope.name` attribute | `io.opentelemetry.contrib.mongodb` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `otel.scope.name`. |
 | <a id="otel-library-version" href="#otel-library-version">`otel.library.version`</a> | string | Deprecated. Use the `otel.scope.version` attribute. | `1.0.0` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `otel.scope.version`. |

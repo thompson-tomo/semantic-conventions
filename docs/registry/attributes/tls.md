@@ -8,9 +8,9 @@
 
 ## TLS Attributes
 
-This document defines semantic convention attributes in the TLS namespace.
+**Summary:** This document defines semantic convention attributes in the TLS namespace.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="tls-cipher" href="#tls-cipher">`tls.cipher`</a> | string | String indicating the [cipher](https://datatracker.ietf.org/doc/html/rfc5246#appendix-A.5) used during the current connection. [1] | `TLS_RSA_WITH_3DES_EDE_CBC_SHA`; `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="tls-client-certificate" href="#tls-client-certificate">`tls.client.certificate`</a> | string | PEM-encoded stand-alone certificate offered by the client. This is usually mutually-exclusive of `client.certificate_chain` since this value also exists in that list. | `MII...` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -47,15 +47,15 @@ This document defines semantic convention attributes in the TLS namespace.
 
 `tls.protocol.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ssl` | ssl | ![Development](https://img.shields.io/badge/-development-blue) |
 | `tls` | tls | ![Development](https://img.shields.io/badge/-development-blue) |
 
 ## TLS Deprecated Attributes
 
-Describes deprecated `tls` attributes.
+**Summary:** Describes deprecated `tls` attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="tls-client-server-name" href="#tls-client-server-name">`tls.client.server_name`</a> | string | Deprecated, use `server.address` instead. | `opentelemetry.io` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `server.address`. |

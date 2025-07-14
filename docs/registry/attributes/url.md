@@ -5,9 +5,9 @@
 
 ## URL Attributes
 
-Attributes describing URL.
+**Summary:** Attributes describing URL.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="url-domain" href="#url-domain">`url.domain`</a> | string | Domain extracted from the `url.full`, such as "opentelemetry.io". [1] | `www.foo.bar`; `opentelemetry.io`; `3.12.167.2`; `[1080:0:0:0:8:800:200C:417A]` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="url-extension" href="#url-extension">`url.extension`</a> | string | The file extension extracted from the `url.full`, excluding the leading dot. [2] | `png`; `gz` | ![Development](https://img.shields.io/badge/-development-blue) |

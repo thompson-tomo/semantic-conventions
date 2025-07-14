@@ -12,17 +12,17 @@
 
 ## General System Attributes
 
-Describes System attributes
+**Summary:** Describes System attributes
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="system-device" href="#system-device">`system.device`</a> | string | The device identifier | `(identifier)` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 ## Filesystem Attributes
 
-Describes Filesystem attributes
+**Summary:** Describes Filesystem attributes
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="system-filesystem-mode" href="#system-filesystem-mode">`system.filesystem.mode`</a> | string | The filesystem mode | `rw, ro` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="system-filesystem-mountpoint" href="#system-filesystem-mountpoint">`system.filesystem.mountpoint`</a> | string | The filesystem mount path | `/mnt/data` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -33,7 +33,7 @@ Describes Filesystem attributes
 
 `system.filesystem.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `free` | free | ![Development](https://img.shields.io/badge/-development-blue) |
 | `reserved` | reserved | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -43,7 +43,7 @@ Describes Filesystem attributes
 
 `system.filesystem.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `exfat` | exfat | ![Development](https://img.shields.io/badge/-development-blue) |
 | `ext4` | ext4 | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -54,9 +54,9 @@ Describes Filesystem attributes
 
 ## System Memory Attributes
 
-Describes System Memory attributes
+**Summary:** Describes System Memory attributes
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="system-memory-state" href="#system-memory-state">`system.memory.state`</a> | string | The memory state | `free`; `cached` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -64,7 +64,7 @@ Describes System Memory attributes
 
 `system.memory.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `buffers` | buffers | ![Development](https://img.shields.io/badge/-development-blue) |
 | `cached` | cached | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -73,9 +73,9 @@ Describes System Memory attributes
 
 ## System Paging Attributes
 
-Describes System Memory Paging attributes
+**Summary:** Describes System Memory Paging attributes
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="system-paging-direction" href="#system-paging-direction">`system.paging.direction`</a> | string | The paging access direction | `in` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="system-paging-state" href="#system-paging-state">`system.paging.state`</a> | string | The memory paging state | `free` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -85,7 +85,7 @@ Describes System Memory Paging attributes
 
 `system.paging.direction` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `in` | in | ![Development](https://img.shields.io/badge/-development-blue) |
 | `out` | out | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -94,7 +94,7 @@ Describes System Memory Paging attributes
 
 `system.paging.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `free` | free | ![Development](https://img.shields.io/badge/-development-blue) |
 | `used` | used | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -103,16 +103,16 @@ Describes System Memory Paging attributes
 
 `system.paging.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `major` | major | ![Development](https://img.shields.io/badge/-development-blue) |
 | `minor` | minor | ![Development](https://img.shields.io/badge/-development-blue) |
 
 ## System Process Attributes
 
-Describes System Process attributes
+**Summary:** Describes System Process attributes
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="system-process-status" href="#system-process-status">`system.process.status`</a> | string | The process state, e.g., [Linux Process State Codes](https://man7.org/linux/man-pages/man1/ps.1.html#PROCESS_STATE_CODES) | `running` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -120,7 +120,7 @@ Describes System Process attributes
 
 `system.process.status` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `defunct` | defunct | ![Development](https://img.shields.io/badge/-development-blue) |
 | `running` | running | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -129,9 +129,9 @@ Describes System Process attributes
 
 ## Deprecated System Attributes
 
-Deprecated system attributes.
+**Summary:** Deprecated system attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="system-cpu-logical-number" href="#system-cpu-logical-number">`system.cpu.logical_number`</a> | int | Deprecated, use `cpu.logical_number` instead. | `1` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="system-cpu-state" href="#system-cpu-state">`system.cpu.state`</a> | string | Deprecated, use `cpu.mode` instead. | `idle`; `interrupt` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `cpu.mode`. |
@@ -142,7 +142,7 @@ Deprecated system attributes.
 
 `system.cpu.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `idle` | idle | ![Development](https://img.shields.io/badge/-development-blue) |
 | `interrupt` | interrupt | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -156,7 +156,7 @@ Deprecated system attributes.
 
 `system.network.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `close` | close | ![Development](https://img.shields.io/badge/-development-blue) |
 | `close_wait` | close_wait | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -175,7 +175,7 @@ Deprecated system attributes.
 
 `system.processes.status` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `defunct` | defunct | ![Development](https://img.shields.io/badge/-development-blue) |
 | `running` | running | ![Development](https://img.shields.io/badge/-development-blue) |

@@ -49,7 +49,7 @@ Specific attributes for Apache RocketMQ are defined below.
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`messaging.consumer.group.name`](/docs/registry/attributes/messaging.md) | string | RocketMQ [consumer group name](https://rocketmq.apache.org/docs/domainModel/07consumergroup). | `my-group`; `indexer` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`messaging.operation.name`](/docs/registry/attributes/messaging.md) | string | The system-specific name of the messaging operation. | `ack`; `nack`; `send` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -127,7 +127,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -135,7 +135,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `messaging.operation.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `create` | A message is created. "Create" spans always refer to a single message and are used to provide a unique creation context for messages in batch sending scenarios. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `process` | One or more messages are processed by a consumer. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -147,7 +147,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `messaging.rocketmq.consumption_model` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `broadcasting` | Broadcasting consumption model | ![Development](https://img.shields.io/badge/-development-blue) |
 | `clustering` | Clustering consumption model | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -156,7 +156,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `messaging.rocketmq.message.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `delay` | Delay message | ![Development](https://img.shields.io/badge/-development-blue) |
 | `fifo` | FIFO message | ![Development](https://img.shields.io/badge/-development-blue) |

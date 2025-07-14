@@ -9,13 +9,15 @@
 
 **Status:** ![Stable](https://img.shields.io/badge/-stable-lightgreen)
 
-**type:** `service`
+**Type:** `service`
 
-**Description:** A service instance.
+**Summary:** A service instance.
+
+
 
 **Identifying Attributes:**
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`service.name`](/docs/registry/attributes/service.md) | string | Logical name of the service. [1] | `shoppingcart` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`service.instance.id`](/docs/registry/attributes/service.md) | string | The string ID of the service instance. [2] | `627cc493-f310-47de-96bd-71410b7dec09` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -54,7 +56,7 @@ port.
 
 **Descriptive Attributes:**
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`service.version`](/docs/registry/attributes/service.md) | string | The version string of the service API or implementation. The format is not defined by these conventions. | `2.0.0`; `a01dbef8a` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 

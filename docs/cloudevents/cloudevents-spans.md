@@ -54,7 +54,7 @@ attributes on spans created from the conventions described above.
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cloudevents.event_id`](/docs/registry/attributes/cloudevents.md) | string | The [event_id](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#id) uniquely identifies the event. | `123e4567-e89b-12d3-a456-426614174000`; `0001` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`cloudevents.event_source`](/docs/registry/attributes/cloudevents.md) | string | The [source](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#source-1) identifies the context in which an event happened. | `https://github.com/cloudevents`; `/cloudevents/spec/pull/123`; `my-service` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |

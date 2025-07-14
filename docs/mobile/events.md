@@ -41,7 +41,7 @@ The event body fields MUST be used to describe the state of the application at t
 This event is meant to be used in conjunction with `os.name` [resource semantic convention](/docs/resource/os.md) to identify the mobile operating system (e.g. Android, iOS).
 The `android.app.state` and `ios.app.state` fields are mutually exclusive and MUST NOT be used together, each field MUST be used with its corresponding `os.name` value.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`android.app.state`](/docs/registry/attributes/android.md) | string | This attribute represents the state of the application. [1] | `created` | `Conditionally Required` if and only if `os.name` is `android` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`ios.app.state`](/docs/registry/attributes/ios.md) | string | This attribute represents the state of the application. [2] | `active`; `inactive`; `background` | `Conditionally Required` if and only if `os.name` is `ios` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -54,7 +54,7 @@ The `android.app.state` and `ios.app.state` fields are mutually exclusive and MU
 
 `android.app.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `background` | Any time after Activity.onPause() or, if the app has no Activity, Context.stopService() has been called when the app was in the foreground state. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `created` | Any time before Activity.onResume() or, if the app has no Activity, Context.startService() has been called in the app for the first time. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -64,7 +64,7 @@ The `android.app.state` and `ios.app.state` fields are mutually exclusive and MU
 
 `ios.app.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `active` | The app has become `active`. Associated with UIKit notification `applicationDidBecomeActive`. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `background` | The app is now in the background. This value is associated with UIKit notification `applicationDidEnterBackground`. | ![Development](https://img.shields.io/badge/-development-blue) |

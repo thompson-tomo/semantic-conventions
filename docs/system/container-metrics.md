@@ -52,7 +52,7 @@ This metric is [opt-in][MetricOptIn].
 
 **[1]:** Total CPU time consumed by the specific container on all available CPU cores
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cpu.mode`](/docs/registry/attributes/cpu.md) | string | The CPU mode for this data point. A container's CPU metric SHOULD be characterized _either_ by data points with no `mode` labels, _or only_ data points with `mode` labels. [1] | `user`; `system` | `Conditionally Required` [2] | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -64,7 +64,7 @@ This metric is [opt-in][MetricOptIn].
 
 `cpu.mode` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `idle` | idle | ![Development](https://img.shields.io/badge/-development-blue) |
 | `interrupt` | interrupt | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -97,7 +97,7 @@ This metric is [opt-in][MetricOptIn].
 
 **[1]:** CPU usage of the specific container on all available CPU cores, averaged over the sample window
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cpu.mode`](/docs/registry/attributes/cpu.md) | string | The CPU mode for this data point. A container's CPU metric SHOULD be characterized _either_ by data points with no `mode` labels, _or only_ data points with `mode` labels. [1] | `user`; `system` | `Conditionally Required` [2] | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -109,7 +109,7 @@ This metric is [opt-in][MetricOptIn].
 
 `cpu.mode` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `idle` | idle | ![Development](https://img.shields.io/badge/-development-blue) |
 | `interrupt` | interrupt | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -164,7 +164,7 @@ This metric is [opt-in][MetricOptIn].
 
 **[1]:** The total number of bytes read/written successfully (aggregated from all disks).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`disk.io.direction`](/docs/registry/attributes/disk.md) | string | The disk IO operation direction. | `read` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`system.device`](/docs/registry/attributes/system.md) | string | The device identifier | `(identifier)` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -173,7 +173,7 @@ This metric is [opt-in][MetricOptIn].
 
 `disk.io.direction` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `read` | read | ![Development](https://img.shields.io/badge/-development-blue) |
 | `write` | write | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -200,7 +200,7 @@ This metric is [opt-in][MetricOptIn].
 
 **[1]:** The number of bytes sent/received on all network interfaces by the container.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.interface.name`](/docs/registry/attributes/network.md) | string | The network interface name. | `lo`; `eth0` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`network.io.direction`](/docs/registry/attributes/network.md) | string | The network IO operation direction. | `transmit` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -209,7 +209,7 @@ This metric is [opt-in][MetricOptIn].
 
 `network.io.direction` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `receive` | receive | ![Development](https://img.shields.io/badge/-development-blue) |
 | `transmit` | transmit | ![Development](https://img.shields.io/badge/-development-blue) |

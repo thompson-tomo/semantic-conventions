@@ -55,17 +55,17 @@ The Semantic Conventions for [OpenAI](https://openai.com/) extend and override t
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-Semantic Conventions for [OpenAI](https://openai.com/) client spans extend and override the semantic conventions for [Gen AI Spans](gen-ai-spans.md).
+**Summary:** Semantic Conventions for [OpenAI](https://openai.com/) client spans extend and override the semantic conventions for [Gen AI Spans](gen-ai-spans.md).
 
 `gen_ai.provider.name` MUST be set to `"openai"` and SHOULD be provided **at span creation time**.
 
-**Span name** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
+**Span Name:** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gen_ai.operation.name`](/docs/registry/attributes/gen-ai.md) | string | The name of the operation being performed. [1] | `chat`; `generate_content`; `text_completion` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`gen_ai.request.model`](/docs/registry/attributes/gen-ai.md) | string | The name of the GenAI model a request is being made to. [2] | `gpt-4` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -142,7 +142,7 @@ Additional output format details may be recorded in the future in the
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -150,7 +150,7 @@ Additional output format details may be recorded in the future in the
 
 `gen_ai.operation.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `chat` | Chat completion operation such as [OpenAI Chat API](https://platform.openai.com/docs/api-reference/chat) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `create_agent` | Create GenAI agent | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -164,7 +164,7 @@ Additional output format details may be recorded in the future in the
 
 `gen_ai.output.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `image` | Image | ![Development](https://img.shields.io/badge/-development-blue) |
 | `json` | JSON object with known or unknown schema | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -175,7 +175,7 @@ Additional output format details may be recorded in the future in the
 
 `openai.request.service_tier` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `auto` | The system will utilize scale tier credits until they are exhausted. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `default` | The system will utilize the default scale tier. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -207,7 +207,7 @@ Additional attributes:
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`openai.response.service_tier`](/docs/registry/attributes/openai.md) | string | The service tier used for the response. | `scale`; `default` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`openai.response.system_fingerprint`](/docs/registry/attributes/openai.md) | string | A fingerprint to track any eventual change in the Generative AI environment. | `fp_44709d6fcb` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -230,7 +230,7 @@ Additional attributes:
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`openai.response.service_tier`](/docs/registry/attributes/openai.md) | string | The service tier used for the response. | `scale`; `default` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`openai.response.system_fingerprint`](/docs/registry/attributes/openai.md) | string | A fingerprint to track any eventual change in the Generative AI environment. | `fp_44709d6fcb` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |

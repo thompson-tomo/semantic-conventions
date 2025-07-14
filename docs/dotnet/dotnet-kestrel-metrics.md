@@ -45,7 +45,7 @@ In case instrumentation does not recognize `EndPoint` implementation, it sets th
 
 **[1]:** Meter name: `Microsoft.AspNetCore.Server.Kestrel`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.transport`](/docs/registry/attributes/network.md) | string | [OSI transport layer](https://wikipedia.org/wiki/Transport_layer) or [inter-process communication method](https://wikipedia.org/wiki/Inter-process_communication). [1] | `tcp`; `unix` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`network.type`](/docs/registry/attributes/network.md) | string | [OSI network layer](https://wikipedia.org/wiki/Network_layer) or non-OSI equivalent. [2] | `ipv4`; `ipv6` | `Recommended` if the transport is `tcp` or `udp` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -68,7 +68,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -80,7 +80,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -109,7 +109,7 @@ of `[ 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, 30, 60, 120, 300 ]`.
 
 **[1]:** Meter name: `Microsoft.AspNetCore.Server.Kestrel`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`error.type`](/docs/registry/attributes/error.md) | string | The full name of exception type. [1] | `connection_reset`; `invalid_handshake` | `Conditionally Required` if and only if an error has occurred. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`network.protocol.name`](/docs/registry/attributes/network.md) | string | [OSI application layer](https://wikipedia.org/wiki/Application_layer) or non-OSI equivalent. [2] | `http`; `web_sockets` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -123,7 +123,7 @@ of `[ 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, 30, 60, 120, 300 ]`.
 **[1] `error.type`:** Starting from .NET 9, Kestrel `kestrel.connection.duration` metric reports
 the following errors types when a corresponding error occurs:
 
-| Value  | Description | Stability |
+| Value  | Summary     | Stability |
 |---|---|---|
 | `aborted_by_app` | The HTTP/1.1 connection was aborted when app code aborted an HTTP request with `HttpContext.Abort()`. |
 | `app_shutdown_timeout` | The connection was aborted during app shutdown. During shutdown, the server stops accepting new connections and HTTP requests, and it is given time for active requests to complete. If the app shutdown timeout is exceeded, all remaining connections are aborted. |
@@ -192,7 +192,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -200,7 +200,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -212,7 +212,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -238,7 +238,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 **[1]:** Connections are rejected when the currently active count exceeds the value configured with `MaxConcurrentConnections`.
 Meter name: `Microsoft.AspNetCore.Server.Kestrel`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.transport`](/docs/registry/attributes/network.md) | string | [OSI transport layer](https://wikipedia.org/wiki/Transport_layer) or [inter-process communication method](https://wikipedia.org/wiki/Inter-process_communication). [1] | `tcp`; `unix` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`network.type`](/docs/registry/attributes/network.md) | string | [OSI network layer](https://wikipedia.org/wiki/Network_layer) or non-OSI equivalent. [2] | `ipv4`; `ipv6` | `Recommended` if the transport is `tcp` or `udp` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -261,7 +261,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -273,7 +273,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -298,7 +298,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 **[1]:** Meter name: `Microsoft.AspNetCore.Server.Kestrel`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.transport`](/docs/registry/attributes/network.md) | string | [OSI transport layer](https://wikipedia.org/wiki/Transport_layer) or [inter-process communication method](https://wikipedia.org/wiki/Inter-process_communication). [1] | `tcp`; `unix` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`network.type`](/docs/registry/attributes/network.md) | string | [OSI network layer](https://wikipedia.org/wiki/Network_layer) or non-OSI equivalent. [2] | `ipv4`; `ipv6` | `Recommended` if the transport is `tcp` or `udp` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -321,7 +321,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -333,7 +333,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -358,7 +358,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 **[1]:** Meter name: `Microsoft.AspNetCore.Server.Kestrel`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.protocol.name`](/docs/registry/attributes/network.md) | string | [OSI application layer](https://wikipedia.org/wiki/Application_layer) or non-OSI equivalent. [1] | `http`; `web_sockets` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`network.protocol.version`](/docs/registry/attributes/network.md) | string | The actual version of the protocol used for network communication. [2] | `1.1`; `2` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -387,7 +387,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -399,7 +399,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -426,7 +426,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 Meter name: `Microsoft.AspNetCore.Server.Kestrel`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.transport`](/docs/registry/attributes/network.md) | string | [OSI transport layer](https://wikipedia.org/wiki/Transport_layer) or [inter-process communication method](https://wikipedia.org/wiki/Inter-process_communication). [1] | `tcp`; `unix` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`network.type`](/docs/registry/attributes/network.md) | string | [OSI network layer](https://wikipedia.org/wiki/Network_layer) or non-OSI equivalent. [2] | `ipv4`; `ipv6` | `Recommended` if the transport is `tcp` or `udp` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -449,7 +449,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -461,7 +461,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -490,7 +490,7 @@ of `[ 0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1, 2.5, 5, 7.5, 10 
 
 **[1]:** Meter name: `Microsoft.AspNetCore.Server.Kestrel`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`error.type`](/docs/registry/attributes/error.md) | string | The full name of exception type. [1] | `System.OperationCanceledException`; `Contoso.MyException` | `Conditionally Required` if and only if an error has occurred. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`network.transport`](/docs/registry/attributes/network.md) | string | [OSI transport layer](https://wikipedia.org/wiki/Transport_layer) or [inter-process communication method](https://wikipedia.org/wiki/Inter-process_communication). [2] | `tcp`; `unix` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -517,7 +517,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -525,7 +525,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -537,7 +537,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -562,7 +562,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 **[1]:** Meter name: `Microsoft.AspNetCore.Server.Kestrel`; Added in: ASP.NET Core 8.0
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.transport`](/docs/registry/attributes/network.md) | string | [OSI transport layer](https://wikipedia.org/wiki/Transport_layer) or [inter-process communication method](https://wikipedia.org/wiki/Inter-process_communication). [1] | `tcp`; `unix` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`network.type`](/docs/registry/attributes/network.md) | string | [OSI network layer](https://wikipedia.org/wiki/Network_layer) or non-OSI equivalent. [2] | `ipv4`; `ipv6` | `Recommended` if the transport is `tcp` or `udp` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -585,7 +585,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -597,7 +597,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |

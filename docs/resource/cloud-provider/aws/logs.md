@@ -14,11 +14,11 @@ linkTitle: Logs
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `aws.log`
+**Type:** `aws.log`
 
-**Description:** Entities specific to Amazon Web Services.
+**Summary:** Entities specific to Amazon Web Services.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aws.log.group.arns`](/docs/registry/attributes/aws.md) | string[] | The Amazon Resource Name(s) (ARN) of the AWS log group(s). [1] | `["arn:aws:logs:us-west-1:123456789012:log-group:/aws/my/group:*"]` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.log.group.names`](/docs/registry/attributes/aws.md) | string[] | The name(s) of the AWS log group(s) an application is writing to. [2] | `["/aws/lambda/my-function", "opentelemetry-service"]` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |

@@ -21,18 +21,18 @@ This document defines semantic conventions to apply when instrumenting CLI progr
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span describes CLI (Command Line Interfaces) program execution from a callee perspective.
+**Summary:** This span describes CLI (Command Line Interfaces) program execution from a callee perspective.
 
-**Span name** SHOULD be set to {process.executable.name}.
+**Span Name:** SHOULD be set to {process.executable.name}.
 Instrumentations that have additional context about executed commands MAY use
 a different low-cardinality span name format and SHOULD document it.
 
-**Span status** SHOULD be set to Error if {process.exit.code} is not 0. Refer to
+**Span Status:** SHOULD be set to Error if {process.exit.code} is not 0. Refer to
 the [Recording Errors](/docs/general/recording-errors.md) document for details on how to record span status.
 
-**Span kind** SHOULD be `INTERNAL`.
+**Span Kind:** SHOULD be `INTERNAL`.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`process.executable.name`](/docs/registry/attributes/process.md) | string | The name of the process executable. On Linux based systems, this SHOULD be set to the base name of the target of `/proc/[pid]/exe`. On Windows, this SHOULD be set to the base name of `GetProcessImageFileNameW`. | `otelcol` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`process.exit.code`](/docs/registry/attributes/process.md) | int | The exit code of the process. | `127` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -65,7 +65,7 @@ it's RECOMMENDED to:
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -85,18 +85,18 @@ it's RECOMMENDED to:
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span describes CLI (Command Line Interfaces) program execution from a caller perspective.
+**Summary:** This span describes CLI (Command Line Interfaces) program execution from a caller perspective.
 
-**Span name** SHOULD be set to {process.executable.name}.
+**Span Name:** SHOULD be set to {process.executable.name}.
 Instrumentations that have additional context about executed commands MAY use
 a different low-cardinality span name format and SHOULD document it.
 
-**Span status** SHOULD be set to Error if {process.exit.code} is not 0. Refer to
+**Span Status:** SHOULD be set to Error if {process.exit.code} is not 0. Refer to
 the [Recording Errors](/docs/general/recording-errors.md) document for details on how to record span status.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`process.executable.name`](/docs/registry/attributes/process.md) | string | The name of the process executable. On Linux based systems, this SHOULD be set to the base name of the target of `/proc/[pid]/exe`. On Windows, this SHOULD be set to the base name of `GetProcessImageFileNameW`. | `otelcol` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`process.exit.code`](/docs/registry/attributes/process.md) | int | The exit code of the process. | `127` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -129,7 +129,7 @@ it's RECOMMENDED to:
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 

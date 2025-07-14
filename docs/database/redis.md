@@ -18,19 +18,19 @@ The Semantic Conventions for [Redis](https://redis.com/) extend and override the
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-Spans representing calls to Redis adhere to the general [Semantic Conventions for Database Client Spans](/docs/database/database-spans.md).
+**Summary:** Spans representing calls to Redis adhere to the general [Semantic Conventions for Database Client Spans](/docs/database/database-spans.md).
 
 `db.system.name` MUST be set to `"redis"` and SHOULD be provided **at span creation time**.
 
-**Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+**Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
 except that `db.namespace` SHOULD NOT be used in the span name since it is a numeric value that ends up
 looking confusing.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`db.operation.name`](/docs/registry/attributes/db.md) | string | The Redis command name. [1] | `HMSET`; `GET`; `SET` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`db.namespace`](/docs/registry/attributes/db.md) | string | The [database index] associated with the connection, represented as a string. [2] | `0`; `1`; `15` | `Conditionally Required` If and only if it can be captured reliably. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -92,7 +92,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 

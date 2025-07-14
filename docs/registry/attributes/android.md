@@ -8,9 +8,9 @@
 
 ## Android Attributes
 
-The Android platform on which the Android application is running.
+**Summary:** The Android platform on which the Android application is running.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="android-app-state" href="#android-app-state">`android.app.state`</a> | string | This attribute represents the state of the application. [1] | `created` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="android-os-api-level" href="#android-os-api-level">`android.os.api_level`</a> | string | Uniquely identifies the framework API revision offered by a version (`os.version`) of the android operating system. More information can be found [here](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels). | `33`; `32` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -21,7 +21,7 @@ The Android platform on which the Android application is running.
 
 `android.app.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `background` | Any time after Activity.onPause() or, if the app has no Activity, Context.stopService() has been called when the app was in the foreground state. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `created` | Any time before Activity.onResume() or, if the app has no Activity, Context.startService() has been called in the app for the first time. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -29,9 +29,9 @@ The Android platform on which the Android application is running.
 
 ## Deprecated Android Attributes
 
-This document defines attributes that represents an occurrence of a lifecycle transition on the Android platform.
+**Summary:** This document defines attributes that represents an occurrence of a lifecycle transition on the Android platform.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="android-state" href="#android-state">`android.state`</a> | string | Deprecated. Use `android.app.state` body field instead. | `created`; `background`; `foreground` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Use `android.app.state` body field instead. |
 
@@ -39,7 +39,7 @@ This document defines attributes that represents an occurrence of a lifecycle tr
 
 `android.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `background` | Any time after Activity.onPause() or, if the app has no Activity, Context.stopService() has been called when the app was in the foreground state. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `created` | Any time before Activity.onResume() or, if the app has no Activity, Context.startService() has been called in the app for the first time. | ![Development](https://img.shields.io/badge/-development-blue) |

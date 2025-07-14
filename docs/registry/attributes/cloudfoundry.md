@@ -5,9 +5,9 @@
 
 ## CloudFoundry Attributes
 
-CloudFoundry resource attributes.
+**Summary:** CloudFoundry resource attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="cloudfoundry-app-id" href="#cloudfoundry-app-id">`cloudfoundry.app.id`</a> | string | The guid of the application. [1] | `218fc5a9-a5f1-4b54-aa05-46717d0ab26d` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="cloudfoundry-app-instance-id" href="#cloudfoundry-app-instance-id">`cloudfoundry.app.instance.id`</a> | string | The index of the application instance. 0 when just one instance is active. [2] | `0`; `1` | ![Development](https://img.shields.io/badge/-development-blue) |

@@ -10,9 +10,9 @@
 
 ## GCP - AppHub Attributes
 
-This document defines attributes AppHub will apply to resources in GCP. See [AppHub overview](https://cloud.google.com/app-hub/docs/overview).
+**Summary:** This document defines attributes AppHub will apply to resources in GCP. See [AppHub overview](https://cloud.google.com/app-hub/docs/overview).
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="gcp-apphub-application-container" href="#gcp-apphub-application-container">`gcp.apphub.application.container`</a> | string | The container within GCP where the AppHub application is defined. | `projects/my-container-project` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="gcp-apphub-application-id" href="#gcp-apphub-application-id">`gcp.apphub.application.id`</a> | string | The name of the application as configured in AppHub. | `my-application` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -36,7 +36,7 @@ This document defines attributes AppHub will apply to resources in GCP. See [App
 
 `gcp.apphub.service.criticality_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `HIGH` | High impact. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `LOW` | Low impact. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -47,7 +47,7 @@ This document defines attributes AppHub will apply to resources in GCP. See [App
 
 `gcp.apphub.service.environment_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `DEVELOPMENT` | Development environment. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `PRODUCTION` | Production environment. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -58,7 +58,7 @@ This document defines attributes AppHub will apply to resources in GCP. See [App
 
 `gcp.apphub.workload.criticality_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `HIGH` | High impact. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `LOW` | Low impact. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -69,7 +69,7 @@ This document defines attributes AppHub will apply to resources in GCP. See [App
 
 `gcp.apphub.workload.environment_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `DEVELOPMENT` | Development environment. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `PRODUCTION` | Production environment. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -78,9 +78,9 @@ This document defines attributes AppHub will apply to resources in GCP. See [App
 
 ## GCP Client Attributes
 
-Attributes for Google Cloud client libraries.
+**Summary:** Attributes for Google Cloud client libraries.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="gcp-client-service" href="#gcp-client-service">`gcp.client.service`</a> | string | Identifies the Google Cloud service for which the official client library is intended. [5] | `appengine`; `run`; `firestore`; `alloydb`; `spanner` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -88,18 +88,18 @@ Attributes for Google Cloud client libraries.
 
 ## GCP - Google Cloud Run Attributes
 
-This document defines attributes for Google Cloud Run.
+**Summary:** This document defines attributes for Google Cloud Run.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="gcp-cloud-run-job-execution" href="#gcp-cloud-run-job-execution">`gcp.cloud_run.job.execution`</a> | string | The name of the Cloud Run [execution](https://cloud.google.com/run/docs/managing/job-executions) being run for the Job, as set by the [`CLOUD_RUN_EXECUTION`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable. | `job-name-xxxx`; `sample-job-mdw84` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="gcp-cloud-run-job-task-index" href="#gcp-cloud-run-job-task-index">`gcp.cloud_run.job.task_index`</a> | int | The index for a task within an execution as provided by the [`CLOUD_RUN_TASK_INDEX`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable. | `0`; `1` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 ## GCP - Google Compute Engine (GCE) Attributes
 
-This document defines attributes for Google Compute Engine (GCE).
+**Summary:** This document defines attributes for Google Compute Engine (GCE).
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="gcp-gce-instance-hostname" href="#gcp-gce-instance-hostname">`gcp.gce.instance.hostname`</a> | string | The hostname of a GCE instance. This is the full value of the default or [custom hostname](https://cloud.google.com/compute/docs/instances/custom-hostname-vm). | `my-host1234.example.com`; `sample-vm.us-west1-b.c.my-project.internal` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="gcp-gce-instance-name" href="#gcp-gce-instance-name">`gcp.gce.instance.name`</a> | string | The instance name of a GCE instance. This is the value provided by `host.name`, the visible name of the instance in the Cloud Console UI, and the prefix for the default hostname of the instance as defined by the [default internal DNS name](https://cloud.google.com/compute/docs/internal-dns#instance-fully-qualified-domain-names). | `instance-1`; `my-vm-name` | ![Development](https://img.shields.io/badge/-development-blue) |

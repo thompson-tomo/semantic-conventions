@@ -53,18 +53,18 @@ The Semantic Conventions for [Azure AI Inference](https://learn.microsoft.com/az
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-Semantic Conventions for [Azure AI Inference](https://learn.microsoft.com/azure/ai-studio/reference/reference-model-inference-api) client spans extend and override the semantic conventions for [Gen AI Spans](gen-ai-spans.md).
+**Summary:** Semantic Conventions for [Azure AI Inference](https://learn.microsoft.com/azure/ai-studio/reference/reference-model-inference-api) client spans extend and override the semantic conventions for [Gen AI Spans](gen-ai-spans.md).
 
 `gen_ai.provider.name` MUST be set to `"azure.ai.inference"` and SHOULD be provided **at span creation time**.
 
-**Span name** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}` when the
+**Span Name:** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}` when the
 model name is available and `{gen_ai.operation.name}` otherwise.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gen_ai.operation.name`](/docs/registry/attributes/gen-ai.md) | string | The name of the operation being performed. [1] | `chat`; `generate_content`; `text_completion` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [2] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` if the operation ended in an error | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -137,7 +137,7 @@ Additional output format details may be recorded in the future in the
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -145,7 +145,7 @@ Additional output format details may be recorded in the future in the
 
 `gen_ai.operation.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `chat` | Chat completion operation such as [OpenAI Chat API](https://platform.openai.com/docs/api-reference/chat) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `create_agent` | Create GenAI agent | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -159,7 +159,7 @@ Additional output format details may be recorded in the future in the
 
 `gen_ai.output.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `image` | Image | ![Development](https://img.shields.io/badge/-development-blue) |
 | `json` | JSON object with known or unknown schema | ![Development](https://img.shields.io/badge/-development-blue) |

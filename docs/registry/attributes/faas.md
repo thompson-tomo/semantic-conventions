@@ -5,9 +5,9 @@
 
 ## Function as a Service Attributes
 
-FaaS attributes
+**Summary:** FaaS attributes
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="faas-coldstart" href="#faas-coldstart">`faas.coldstart`</a> | boolean | A boolean that is true if the serverless function is executed for the first time (aka cold-start). |  | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="faas-cron" href="#faas-cron">`faas.cron`</a> | string | A string containing the schedule period as [Cron Expression](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm). | `0/5 * * * ? *` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -67,7 +67,7 @@ definition of function name MUST be used for this attribute
 
 `faas.document.operation` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `delete` | When an object is deleted. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `edit` | When an object is modified. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -77,7 +77,7 @@ definition of function name MUST be used for this attribute
 
 `faas.invoked_provider` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `alibaba_cloud` | Alibaba Cloud | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws` | Amazon Web Services | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -89,7 +89,7 @@ definition of function name MUST be used for this attribute
 
 `faas.trigger` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `datasource` | A response to some data source operation such as a database or filesystem read/write | ![Development](https://img.shields.io/badge/-development-blue) |
 | `http` | To provide an answer to an inbound HTTP request | ![Development](https://img.shields.io/badge/-development-blue) |

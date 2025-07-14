@@ -8,9 +8,9 @@
 
 ## Kubernetes Attributes
 
-Kubernetes resource attributes.
+**Summary:** Kubernetes resource attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="k8s-cluster-name" href="#k8s-cluster-name">`k8s.cluster.name`</a> | string | The name of the cluster. | `opentelemetry-cluster` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="k8s-cluster-uid" href="#k8s-cluster-uid">`k8s.cluster.uid`</a> | string | A pseudo-ID for the cluster, set to the UID of the `kube-system` namespace. [1] | `218fc5a9-a5f1-4b54-aa05-46717d0ab26d` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -256,7 +256,7 @@ When this occurs, the exact value as reported by the Kubernetes API SHOULD be us
 
 `k8s.container.status.reason` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `Completed` | The container has completed execution. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `ContainerCannotRun` | The container cannot run. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -272,7 +272,7 @@ When this occurs, the exact value as reported by the Kubernetes API SHOULD be us
 
 `k8s.container.status.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `running` | The container is running. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `terminated` | The container has terminated. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -282,7 +282,7 @@ When this occurs, the exact value as reported by the Kubernetes API SHOULD be us
 
 `k8s.namespace.phase` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `active` | Active namespace phase as described by [K8s API](https://pkg.go.dev/k8s.io/api@v0.31.3/core/v1#NamespacePhase) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `terminating` | Terminating namespace phase as described by [K8s API](https://pkg.go.dev/k8s.io/api@v0.31.3/core/v1#NamespacePhase) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -291,7 +291,7 @@ When this occurs, the exact value as reported by the Kubernetes API SHOULD be us
 
 `k8s.node.condition.status` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `false` | condition_false | ![Development](https://img.shields.io/badge/-development-blue) |
 | `true` | condition_true | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -301,7 +301,7 @@ When this occurs, the exact value as reported by the Kubernetes API SHOULD be us
 
 `k8s.node.condition.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `DiskPressure` | Pressure exists on the disk size—that is, if the disk capacity is low | ![Development](https://img.shields.io/badge/-development-blue) |
 | `MemoryPressure` | Pressure exists on the node memory—that is, if the node memory is low | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -313,7 +313,7 @@ When this occurs, the exact value as reported by the Kubernetes API SHOULD be us
 
 `k8s.volume.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `configMap` | A [configMap](https://v1-30.docs.kubernetes.io/docs/concepts/storage/volumes/#configmap) volume | ![Development](https://img.shields.io/badge/-development-blue) |
 | `downwardAPI` | A [downwardAPI](https://v1-30.docs.kubernetes.io/docs/concepts/storage/volumes/#downwardapi) volume | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -324,8 +324,8 @@ When this occurs, the exact value as reported by the Kubernetes API SHOULD be us
 
 ## Deprecated Kubernetes Attributes
 
-Describes deprecated k8s attributes.
+**Summary:** Describes deprecated k8s attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="k8s-pod-labels" href="#k8s-pod-labels">`k8s.pod.labels.<key>`</a> | string | Deprecated, use `k8s.pod.label` instead. | `my-app` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `k8s.pod.label`. |

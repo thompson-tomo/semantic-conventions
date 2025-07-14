@@ -5,9 +5,9 @@
 
 ## Application Attributes
 
-Describes attributes related to client-side applications (e.g. web apps or mobile apps).
+**Summary:** Describes attributes related to client-side applications (e.g. web apps or mobile apps).
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="app-installation-id" href="#app-installation-id">`app.installation.id`</a> | string | A unique identifier representing the installation of an application on a specific device [1] | `2ab2916d-a51f-4ac8-80ee-45ac31a28092` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="app-screen-coordinate-x" href="#app-screen-coordinate-x">`app.screen.coordinate.x`</a> | int | The x (horizontal) coordinate of a screen coordinate, in screen pixels. | `0`; `131` | ![Development](https://img.shields.io/badge/-development-blue) |

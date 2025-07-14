@@ -5,9 +5,9 @@
 
 ## OpenAI Attributes
 
-This group defines attributes for OpenAI.
+**Summary:** This group defines attributes for OpenAI.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="openai-request-service-tier" href="#openai-request-service-tier">`openai.request.service_tier`</a> | string | The service tier requested. May be a specific tier, default, or auto. | `auto`; `default` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="openai-response-service-tier" href="#openai-response-service-tier">`openai.response.service_tier`</a> | string | The service tier used for the response. | `scale`; `default` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -17,7 +17,7 @@ This group defines attributes for OpenAI.
 
 `openai.request.service_tier` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `auto` | The system will utilize scale tier credits until they are exhausted. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `default` | The system will utilize the default scale tier. | ![Development](https://img.shields.io/badge/-development-blue) |

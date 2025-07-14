@@ -8,9 +8,9 @@
 
 ## Remote Procedure Call (RPC) Attributes
 
-This document defines attributes for remote procedure calls.
+**Summary:** This document defines attributes for remote procedure calls.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="rpc-connect-rpc-error-code" href="#rpc-connect-rpc-error-code">`rpc.connect_rpc.error_code`</a> | string | The [error codes](https://connectrpc.com//docs/protocol/#error-codes) of the Connect request. Error codes are always string values. | `cancelled`; `unknown`; `invalid_argument` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="rpc-connect-rpc-request-metadata" href="#rpc-connect-rpc-request-metadata">`rpc.connect_rpc.request.metadata.<key>`</a> | string[] | Connect request metadata, `<key>` being the normalized Connect Metadata key (lowercase), the value being the metadata values. [1] | `["1.2.3.4", "1.2.3.5"]` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -64,7 +64,7 @@ the `rpc.grpc.response.metadata.my-custom-key` attribute with value `["attribute
 
 `rpc.connect_rpc.error_code` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `aborted` | aborted | ![Development](https://img.shields.io/badge/-development-blue) |
 | `already_exists` | already_exists | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -87,7 +87,7 @@ the `rpc.grpc.response.metadata.my-custom-key` attribute with value `["attribute
 
 `rpc.grpc.status_code` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `0` | OK | ![Development](https://img.shields.io/badge/-development-blue) |
 | `1` | CANCELLED | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -111,7 +111,7 @@ the `rpc.grpc.response.metadata.my-custom-key` attribute with value `["attribute
 
 `rpc.message.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `RECEIVED` | received | ![Development](https://img.shields.io/badge/-development-blue) |
 | `SENT` | sent | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -120,7 +120,7 @@ the `rpc.grpc.response.metadata.my-custom-key` attribute with value `["attribute
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -130,9 +130,9 @@ the `rpc.grpc.response.metadata.my-custom-key` attribute with value `["attribute
 
 ## Deprecated RPC Attributes
 
-Deprecated rpc message attributes.
+**Summary:** Deprecated rpc message attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="message-compressed-size" href="#message-compressed-size">`message.compressed_size`</a> | int | Deprecated, use `rpc.message.compressed_size` instead. |  | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `rpc.message.compressed_size`. |
 | <a id="message-id" href="#message-id">`message.id`</a> | int | Deprecated, use `rpc.message.id` instead. |  | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `rpc.message.id`. |
@@ -143,7 +143,7 @@ Deprecated rpc message attributes.
 
 `message.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `RECEIVED` | received | ![Development](https://img.shields.io/badge/-development-blue) |
 | `SENT` | sent | ![Development](https://img.shields.io/badge/-development-blue) |

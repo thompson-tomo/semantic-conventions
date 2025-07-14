@@ -122,15 +122,15 @@ groups:
       These often allow setting `db.operation.*` attributes, which usually are not
       readily available at the generic query level.
 
-      **Span name** is covered in the [Name](/docs/database/database-spans.md#name) section.
+      **Span Name:** is covered in the [Name](/docs/database/database-spans.md#name) section.
 
-      **Span kind** SHOULD be `CLIENT`. It MAY be set to `INTERNAL` on spans representing
+      **Span Kind:** SHOULD be `CLIENT`. It MAY be set to `INTERNAL` on spans representing
       in-memory database calls.
       It's RECOMMENDED to use `CLIENT` kind when database system being instrumented usually
       runs in a different process than its client or when database calls happen over
       instrumented protocol such as HTTP.
 
-      **Span status** Refer to the [Recording Errors](/docs/general/recording-errors.md)
+      **Span Status:** Refer to the [Recording Errors](/docs/general/recording-errors.md)
       document for details on how to record span status. Semantic conventions for
       individual systems SHOULD specify which values of `db.response.status_code`
       classify as errors.
@@ -303,7 +303,7 @@ groups:
     note: |
       `db.system.name` MUST be set to `"cassandra"` and SHOULD be provided **at span creation time**.
 
-      **Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+      **Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
     attributes:
       - ref: db.namespace
         sampling_relevant: true
@@ -350,7 +350,7 @@ groups:
     note: |
       `db.system.name` MUST be set to `"hbase"` and SHOULD be provided **at span creation time**.
 
-      **Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+      **Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
     attributes:
       - ref: db.namespace
         sampling_relevant: true
@@ -392,7 +392,7 @@ groups:
     note: |
       `db.system.name` MUST be set to `"couchdb"` and SHOULD be provided **at span creation time**.
 
-      **Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+      **Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
     attributes:
       - ref: db.operation.name
         sampling_relevant: true
@@ -431,7 +431,7 @@ groups:
     note: |
       `db.system.name` MUST be set to `"redis"` and SHOULD be provided **at span creation time**.
 
-      **Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+      **Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
       except that `db.namespace` SHOULD NOT be used in the span name since it is a numeric value that ends up
       looking confusing.
     attributes:
@@ -517,7 +517,7 @@ groups:
     note: >
       `db.system.name` MUST be set to `"mongodb"` and SHOULD be provided **at span creation time**.
 
-      **Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+      **Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
     attributes:
       - ref: db.operation.name
         sampling_relevant: true
@@ -561,7 +561,7 @@ groups:
     note: |
       `db.system.name` MUST be set to `"elasticsearch"` and SHOULD be provided **at span creation time**.
 
-      **Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+      **Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
       with the endpoint identifier stored in `db.operation.name`, and the index stored in `db.collection.name`.
     attributes:
       - ref: http.request.method
@@ -664,7 +664,7 @@ groups:
       Many other database systems support SQL and can be accessed via generic database driver such as JDBC or ODBC.
       Instrumentations applied to generic SQL drivers SHOULD adhere to SQL semantic conventions.
 
-      **Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+      **Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
     attributes:
       - ref: db.namespace
         brief: >
@@ -767,7 +767,7 @@ groups:
 
       `db.system.name` MUST be set to `"azure.cosmosdb"` and SHOULD be provided **at span creation time**.
 
-      **Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+      **Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
     attributes:
       - ref: azure.client.id
       - ref: user_agent.original

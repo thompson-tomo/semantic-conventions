@@ -9,9 +9,9 @@
 
 ## General Database Attributes
 
-This group defines the attributes used to describe telemetry in the context of databases.
+**Summary:** This group defines the attributes used to describe telemetry in the context of databases.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="db-client-connection-pool-name" href="#db-client-connection-pool-name">`db.client.connection.pool.name`</a> | string | The name of the connection pool; unique within the instrumented application. In case the connection pool implementation doesn't provide a name, instrumentation SHOULD use a combination of parameters that would make the name unique, for example, combining attributes `server.address`, `server.port`, and `db.namespace`, formatted as `server.address:server.port/db.namespace`. Instrumentations that generate connection pool name following different patterns SHOULD document it. | `myDataSource` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="db-client-connection-state" href="#db-client-connection-state">`db.client.connection.state`</a> | string | The state of a connection in the pool | `idle` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -110,7 +110,7 @@ stored procedure name then that stored procedure name SHOULD be used.
 
 `db.client.connection.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `idle` | idle | ![Development](https://img.shields.io/badge/-development-blue) |
 | `used` | used | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -119,7 +119,7 @@ stored procedure name then that stored procedure name SHOULD be used.
 
 `db.system.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `actian.ingres` | [Actian Ingres](https://www.actian.com/databases/ingres/) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws.dynamodb` | [Amazon DynamoDB](https://aws.amazon.com/pm/dynamodb/) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -165,9 +165,9 @@ stored procedure name then that stored procedure name SHOULD be used.
 
 ## Deprecated Database Attributes
 
-Describes deprecated database attributes.
+**Summary:** Describes deprecated database attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="db-cassandra-consistency-level" href="#db-cassandra-consistency-level">`db.cassandra.consistency_level`</a> | string | Deprecated, use `cassandra.consistency.level` instead. | `all`; `each_quorum`; `quorum` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `cassandra.consistency.level`. |
 | <a id="db-cassandra-coordinator-dc" href="#db-cassandra-coordinator-dc">`db.cassandra.coordinator.dc`</a> | string | Deprecated, use `cassandra.coordinator.dc` instead. | `us-west-2` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `cassandra.coordinator.dc`. |
@@ -206,7 +206,7 @@ Describes deprecated database attributes.
 
 `db.cassandra.consistency_level` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `all` | all | ![Development](https://img.shields.io/badge/-development-blue) |
 | `any` | any | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -224,7 +224,7 @@ Describes deprecated database attributes.
 
 `db.cosmosdb.connection_mode` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `direct` | Direct connection. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gateway` | Gateway (HTTP) connection. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -233,7 +233,7 @@ Describes deprecated database attributes.
 
 `db.cosmosdb.consistency_level` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `BoundedStaleness` | bounded_staleness | ![Development](https://img.shields.io/badge/-development-blue) |
 | `ConsistentPrefix` | consistent_prefix | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -245,7 +245,7 @@ Describes deprecated database attributes.
 
 `db.cosmosdb.operation_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `batch` | batch | ![Development](https://img.shields.io/badge/-development-blue) |
 | `create` | create | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -267,7 +267,7 @@ Describes deprecated database attributes.
 
 `db.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `adabas` | Adabas (Adaptable Database System) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `cassandra` | Apache Cassandra | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -321,9 +321,9 @@ Describes deprecated database attributes.
 
 ## Deprecated Database Metrics
 
-"Describes deprecated db metrics attributes."
+**Summary:** "Describes deprecated db metrics attributes."
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="db-client-connections-pool-name" href="#db-client-connections-pool-name">`db.client.connections.pool.name`</a> | string | Deprecated, use `db.client.connection.pool.name` instead. | `myDataSource` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `db.client.connection.pool.name`. |
 | <a id="db-client-connections-state" href="#db-client-connections-state">`db.client.connections.state`</a> | string | Deprecated, use `db.client.connection.state` instead. | `idle` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `db.client.connection.state`. |
@@ -334,7 +334,7 @@ Describes deprecated database attributes.
 
 `db.client.connections.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `idle` | idle | ![Development](https://img.shields.io/badge/-development-blue) |
 | `used` | used | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -343,7 +343,7 @@ Describes deprecated database attributes.
 
 `state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `idle` | idle | ![Development](https://img.shields.io/badge/-development-blue) |
 | `used` | used | ![Development](https://img.shields.io/badge/-development-blue) |

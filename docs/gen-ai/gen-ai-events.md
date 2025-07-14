@@ -80,7 +80,7 @@ The event name MUST be `gen_ai.system.message`.
 
 This event describes the system instructions passed to the GenAI model.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gen_ai.provider.name`](/docs/registry/attributes/gen-ai.md) | string | The Generative AI provider as identified by the client or server instrumentation. [1] | `openai`; `gcp.gen_ai`; `gcp.vertex_ai` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -107,7 +107,7 @@ applicable `aws.bedrock.*` attributes and are not expected to include
 
 `gen_ai.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `anthropic` | [Anthropic](https://www.anthropic.com/) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws.bedrock` | [AWS Bedrock](https://aws.amazon.com/bedrock) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -137,7 +137,7 @@ applicable `aws.bedrock.*` attributes and are not expected to include
 semantic convention tooling supports complex attributes
 (see [#1870](https://github.com/open-telemetry/semantic-conventions/issues/1870)).
 
-| Body Field  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Body Field  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | `content` | undefined | The contents of the system message. | `You're a helpful bot` | `Opt-In` | ![Development](https://img.shields.io/badge/-development-blue) |
 | `role` | string | The actual role of the message author as passed in the message. | `system`; `instruction` | `Conditionally Required` if available and not equal to `system`. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -162,7 +162,7 @@ The event name MUST be `gen_ai.user.message`.
 
 This event describes the user message passed to the GenAI model.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gen_ai.provider.name`](/docs/registry/attributes/gen-ai.md) | string | The Generative AI provider as identified by the client or server instrumentation. [1] | `openai`; `gcp.gen_ai`; `gcp.vertex_ai` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -189,7 +189,7 @@ applicable `aws.bedrock.*` attributes and are not expected to include
 
 `gen_ai.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `anthropic` | [Anthropic](https://www.anthropic.com/) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws.bedrock` | [AWS Bedrock](https://aws.amazon.com/bedrock) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -219,7 +219,7 @@ applicable `aws.bedrock.*` attributes and are not expected to include
 semantic convention tooling supports complex attributes
 (see [#1870](https://github.com/open-telemetry/semantic-conventions/issues/1870)).
 
-| Body Field  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Body Field  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | `content` | undefined | The contents of the user message. | `What's the weather in Paris?` | `Opt-In` | ![Development](https://img.shields.io/badge/-development-blue) |
 | `role` | string | The actual role of the message author as passed in the message. | `user`; `customer` | `Conditionally Required` if available and not equal to `user`. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -244,7 +244,7 @@ The event name MUST be `gen_ai.assistant.message`.
 
 This event describes the assistant message passed to GenAI system.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gen_ai.provider.name`](/docs/registry/attributes/gen-ai.md) | string | The Generative AI provider as identified by the client or server instrumentation. [1] | `openai`; `gcp.gen_ai`; `gcp.vertex_ai` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -271,7 +271,7 @@ applicable `aws.bedrock.*` attributes and are not expected to include
 
 `gen_ai.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `anthropic` | [Anthropic](https://www.anthropic.com/) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws.bedrock` | [AWS Bedrock](https://aws.amazon.com/bedrock) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -301,7 +301,7 @@ applicable `aws.bedrock.*` attributes and are not expected to include
 semantic convention tooling supports complex attributes
 (see [#1870](https://github.com/open-telemetry/semantic-conventions/issues/1870)).
 
-| Body Field  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Body Field  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | `content` | undefined | The contents of the tool message. | `The weather in Paris is rainy and overcast, with temperatures around 57°F` | `Opt-In` | ![Development](https://img.shields.io/badge/-development-blue) |
 | `role` | string | The actual role of the message author as passed in the message. | `assistant`; `bot` | `Conditionally Required` if available and not equal to `assistant`. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -317,7 +317,7 @@ Semantic conventions for individual systems MAY specify a different type for arg
 
 `type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `function` | Function | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -341,7 +341,7 @@ The event name MUST be `gen_ai.tool.message`.
 
 This event describes the response from a tool or function call passed to the GenAI model.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gen_ai.provider.name`](/docs/registry/attributes/gen-ai.md) | string | The Generative AI provider as identified by the client or server instrumentation. [1] | `openai`; `gcp.gen_ai`; `gcp.vertex_ai` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -368,7 +368,7 @@ applicable `aws.bedrock.*` attributes and are not expected to include
 
 `gen_ai.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `anthropic` | [Anthropic](https://www.anthropic.com/) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws.bedrock` | [AWS Bedrock](https://aws.amazon.com/bedrock) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -398,7 +398,7 @@ applicable `aws.bedrock.*` attributes and are not expected to include
 semantic convention tooling supports complex attributes
 (see [#1870](https://github.com/open-telemetry/semantic-conventions/issues/1870)).
 
-| Body Field  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Body Field  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | `content` | undefined | The contents of the tool message. | `rainy, 57°F` | `Opt-In` | ![Development](https://img.shields.io/badge/-development-blue) |
 | `id` | string | Tool call id that this message is responding to. | `call_mszuSIzqtI65i1wAUOE8w5H4` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -424,7 +424,7 @@ The event name MUST be `gen_ai.choice`.
 
 This event describes the Gen AI response message.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gen_ai.provider.name`](/docs/registry/attributes/gen-ai.md) | string | The Generative AI provider as identified by the client or server instrumentation. [1] | `openai`; `gcp.gen_ai`; `gcp.vertex_ai` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -451,7 +451,7 @@ applicable `aws.bedrock.*` attributes and are not expected to include
 
 `gen_ai.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `anthropic` | [Anthropic](https://www.anthropic.com/) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws.bedrock` | [AWS Bedrock](https://aws.amazon.com/bedrock) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -481,7 +481,7 @@ applicable `aws.bedrock.*` attributes and are not expected to include
 semantic convention tooling supports complex attributes
 (see [#1870](https://github.com/open-telemetry/semantic-conventions/issues/1870)).
 
-| Body Field  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Body Field  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | `finish_reason` | enum | The reason the model stopped generating tokens. | `stop`; `tool_calls`; `content_filter` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | `index` | int | The index of the choice in the list of choices. | `0`; `1` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -500,7 +500,7 @@ Semantic conventions for individual systems MAY specify a different type for arg
 
 `finish_reason` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `content_filter` | Content Filter | ![Development](https://img.shields.io/badge/-development-blue) |
 | `error` | Error | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -510,7 +510,7 @@ Semantic conventions for individual systems MAY specify a different type for arg
 
 `type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `function` | Function | ![Development](https://img.shields.io/badge/-development-blue) |
 

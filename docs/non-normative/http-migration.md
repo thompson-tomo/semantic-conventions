@@ -122,7 +122,7 @@ Metric changes:
 
 - **Name**: `http.client.duration` &rarr; `http.client.request.duration`
 - **Unit**: `ms` &rarr; `s`
-- **Description**: `Measures the duration of outbound HTTP requests.` &rarr;
+- **Summary**: `Measures the duration of outbound HTTP requests.` &rarr;
   `Duration of HTTP client requests.`
 - **Histogram buckets**: boundaries updated to reflect change from milliseconds
   to seconds, and zero bucket boundary removed
@@ -152,7 +152,7 @@ Metric changes:
 
 - **Name**: `http.server.duration` &rarr; `http.server.request.duration`
 - **Unit**: `ms` &rarr; `s`
-- **Description**: `Measures the duration of inbound HTTP requests.` &rarr;
+- **Summary**: `Measures the duration of inbound HTTP requests.` &rarr;
   `Duration of HTTP server requests.`
 - **Histogram buckets**: boundaries updated to reflect change from milliseconds
   to seconds, and zero bucket boundary removed

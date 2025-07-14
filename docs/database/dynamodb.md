@@ -44,15 +44,15 @@ Spans representing calls to AWS DynamoDB adhere to the general [Semantic Convent
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.BatchGetItem` call.
+**Summary:** This span represents a `DynamoDB.BatchGetItem` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -73,7 +73,7 @@ This span represents a `DynamoDB.BatchGetItem` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -97,15 +97,15 @@ This span represents a `DynamoDB.BatchGetItem` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.BatchWriteItem` call.
+**Summary:** This span represents a `DynamoDB.BatchWriteItem` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -127,7 +127,7 @@ This span represents a `DynamoDB.BatchWriteItem` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -151,15 +151,15 @@ This span represents a `DynamoDB.BatchWriteItem` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.CreateTable` call.
+**Summary:** This span represents a `DynamoDB.CreateTable` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -185,7 +185,7 @@ This span represents a `DynamoDB.CreateTable` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -209,15 +209,15 @@ This span represents a `DynamoDB.CreateTable` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.DeleteItem` call.
+**Summary:** This span represents a `DynamoDB.DeleteItem` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -239,7 +239,7 @@ This span represents a `DynamoDB.DeleteItem` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -263,15 +263,15 @@ This span represents a `DynamoDB.DeleteItem` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.DeleteTable` call.
+**Summary:** This span represents a `DynamoDB.DeleteTable` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -291,7 +291,7 @@ This span represents a `DynamoDB.DeleteTable` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -315,15 +315,15 @@ This span represents a `DynamoDB.DeleteTable` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.DescribeTable` call.
+**Summary:** This span represents a `DynamoDB.DescribeTable` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -343,7 +343,7 @@ This span represents a `DynamoDB.DescribeTable` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -367,15 +367,15 @@ This span represents a `DynamoDB.DescribeTable` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.GetItem` call.
+**Summary:** This span represents a `DynamoDB.GetItem` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -398,7 +398,7 @@ This span represents a `DynamoDB.GetItem` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -422,15 +422,15 @@ This span represents a `DynamoDB.GetItem` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.ListTables` call.
+**Summary:** This span represents a `DynamoDB.ListTables` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -452,7 +452,7 @@ This span represents a `DynamoDB.ListTables` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -476,15 +476,15 @@ This span represents a `DynamoDB.ListTables` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.PutItem` call.
+**Summary:** This span represents a `DynamoDB.PutItem` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -506,7 +506,7 @@ This span represents a `DynamoDB.PutItem` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -530,15 +530,15 @@ This span represents a `DynamoDB.PutItem` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.Query` call.
+**Summary:** This span represents a `DynamoDB.Query` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -566,7 +566,7 @@ This span represents a `DynamoDB.Query` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -590,15 +590,15 @@ This span represents a `DynamoDB.Query` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.Scan` call.
+**Summary:** This span represents a `DynamoDB.Scan` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -629,7 +629,7 @@ This span represents a `DynamoDB.Scan` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -653,15 +653,15 @@ This span represents a `DynamoDB.Scan` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.UpdateItem` call.
+**Summary:** This span represents a `DynamoDB.UpdateItem` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -683,7 +683,7 @@ This span represents a `DynamoDB.UpdateItem` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -707,15 +707,15 @@ This span represents a `DynamoDB.UpdateItem` call.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a `DynamoDB.UpdateTable` call.
+**Summary:** This span represents a `DynamoDB.UpdateTable` call.
 
 `db.system.name` MUST be set to `"aws.dynamodb"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | The value `aws-api`. | `aws-api` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.extended_request_id`](/docs/registry/attributes/aws.md) | string | The AWS extended request ID as returned in the response header `x-amz-id-2`. | `wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -740,7 +740,7 @@ This span represents a `DynamoDB.UpdateTable` call.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |

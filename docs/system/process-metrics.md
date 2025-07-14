@@ -59,7 +59,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `process.cpu.time` | Counter | `s` | Total CPU seconds broken down by different states. | ![Development](https://img.shields.io/badge/-development-blue) | [`process`](/docs/registry/entities/process.md#process) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cpu.mode`](/docs/registry/attributes/cpu.md) | string | A process SHOULD be characterized _either_ by data points with no `mode` labels, _or only_ data points with `mode` labels. [1] | `user`; `system` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -69,7 +69,7 @@ This metric is [recommended][MetricRecommended].
 
 `cpu.mode` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `idle` | idle | ![Development](https://img.shields.io/badge/-development-blue) |
 | `interrupt` | interrupt | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -100,7 +100,7 @@ This metric is [opt-in][MetricOptIn].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `process.cpu.utilization` | Gauge | `1` | Difference in process.cpu.time since the last measurement, divided by the elapsed time and number of CPUs available to the process. | ![Development](https://img.shields.io/badge/-development-blue) | [`process`](/docs/registry/entities/process.md#process) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cpu.mode`](/docs/registry/attributes/cpu.md) | string | A process SHOULD be characterized _either_ by data points with no `mode` labels, _or only_ data points with `mode` labels. [1] | `user`; `system` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -110,7 +110,7 @@ This metric is [opt-in][MetricOptIn].
 
 `cpu.mode` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `idle` | idle | ![Development](https://img.shields.io/badge/-development-blue) |
 | `interrupt` | interrupt | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -181,7 +181,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `process.disk.io` | Counter | `By` | Disk bytes transferred. | ![Development](https://img.shields.io/badge/-development-blue) | [`process`](/docs/registry/entities/process.md#process) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`disk.io.direction`](/docs/registry/attributes/disk.md) | string | The disk IO operation direction. | `read` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -189,7 +189,7 @@ This metric is [recommended][MetricRecommended].
 
 `disk.io.direction` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `read` | read | ![Development](https://img.shields.io/badge/-development-blue) |
 | `write` | write | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -214,7 +214,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `process.network.io` | Counter | `By` | Network bytes transferred. | ![Development](https://img.shields.io/badge/-development-blue) | [`process`](/docs/registry/entities/process.md#process) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.io.direction`](/docs/registry/attributes/network.md) | string | The network IO operation direction. | `transmit` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -222,7 +222,7 @@ This metric is [recommended][MetricRecommended].
 
 `network.io.direction` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `receive` | receive | ![Development](https://img.shields.io/badge/-development-blue) |
 | `transmit` | transmit | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -287,7 +287,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `process.context_switches` | Counter | `{context_switch}` | Number of times the process has been context switched. | ![Development](https://img.shields.io/badge/-development-blue) | [`process`](/docs/registry/entities/process.md#process) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`process.context_switch_type`](/docs/registry/attributes/process.md) | string | Specifies whether the context switches for this data point were voluntary or involuntary. | `voluntary`; `involuntary` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -295,7 +295,7 @@ This metric is [recommended][MetricRecommended].
 
 `process.context_switch_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `involuntary` | involuntary | ![Development](https://img.shields.io/badge/-development-blue) |
 | `voluntary` | voluntary | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -320,7 +320,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `process.paging.faults` | Counter | `{fault}` | Number of page faults the process has made. | ![Development](https://img.shields.io/badge/-development-blue) | [`process`](/docs/registry/entities/process.md#process) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`process.paging.fault_type`](/docs/registry/attributes/process.md) | string | The type of page fault for this data point. Type `major` is for major/hard page faults, and `minor` is for minor/soft page faults. | `major`; `minor` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -328,7 +328,7 @@ This metric is [recommended][MetricRecommended].
 
 `process.paging.fault_type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `major` | major | ![Development](https://img.shields.io/badge/-development-blue) |
 | `minor` | minor | ![Development](https://img.shields.io/badge/-development-blue) |

@@ -5,9 +5,9 @@
 
 ## Telemetry Attributes
 
-This document defines attributes for telemetry SDK.
+**Summary:** This document defines attributes for telemetry SDK.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="telemetry-distro-name" href="#telemetry-distro-name">`telemetry.distro.name`</a> | string | The name of the auto instrumentation agent or distribution, if used. [1] | `parts-unlimited-java` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="telemetry-distro-version" href="#telemetry-distro-version">`telemetry.distro.version`</a> | string | The version string of the auto instrumentation agent or distribution, if used. | `1.2.3` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -29,7 +29,7 @@ All custom identifiers SHOULD be stable across different versions of an implemen
 
 `telemetry.sdk.language` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `cpp` | cpp | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `dotnet` | dotnet | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |

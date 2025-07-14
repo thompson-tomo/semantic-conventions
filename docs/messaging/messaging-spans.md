@@ -224,7 +224,7 @@ Examples:
 
 The following operation types related to messages are defined for these semantic conventions:
 
-| Operation type | Description |
+| Operation type | Summary     |
 | -------------- | ----------- |
 | `create`       | A message is created or passed to a client library for sending. "Create" spans always refer to a single message and are used to provide a unique creation context for messages in batch sending scenarios. |
 | `send`         | One or more messages are provided for sending to an intermediary. If a single message is sent, the context of the "Send" span can be used as the creation context and no "Create" span needs to be created. |
@@ -373,7 +373,7 @@ Messaging system-specific attributes MUST be defined in the corresponding `messa
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`messaging.operation.name`](/docs/registry/attributes/messaging.md) | string | The system-specific name of the messaging operation. | `ack`; `nack`; `send` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`messaging.system`](/docs/registry/attributes/messaging.md) | string | The messaging system as identified by the client instrumentation. [1] | `activemq`; `aws_sqs`; `eventgrid` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -474,7 +474,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -482,7 +482,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `messaging.operation.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `create` | A message is created. "Create" spans always refer to a single message and are used to provide a unique creation context for messages in batch sending scenarios. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `process` | One or more messages are processed by a consumer. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -494,7 +494,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `messaging.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `activemq` | Apache ActiveMQ | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws_sqs` | Amazon Simple Queue Service (SQS) | ![Development](https://img.shields.io/badge/-development-blue) |

@@ -9,16 +9,18 @@
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `os`
+**Type:** `os`
 
-**Description:** The operating system (OS) on which the process represented by this resource is running.
+**Summary:** The operating system (OS) on which the process represented by this resource is running.
+
+**Description:** In case of virtualized environments, this is the operating system as it is observed by the process, i.e., the virtualized guest rather than the underlying host.
 
 **Other Attributes:**
 
 > :warning: This entity definition contains attributes without a role.
 > Stable Entities MUST NOT have attributes without a defined role.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`os.type`](/docs/registry/attributes/os.md) | string | The operating system type. | `windows`; `linux`; `darwin` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`os.build_id`](/docs/registry/attributes/os.md) | string | Unique identifier for a particular build or compilation of the operating system. [1] | `TQ3C.230805.001.B2`; `20E247`; `22621` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -38,7 +40,7 @@
 
 `os.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `aix` | AIX (Advanced Interactive eXecutive) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `darwin` | Apple Darwin | ![Development](https://img.shields.io/badge/-development-blue) |

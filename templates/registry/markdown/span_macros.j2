@@ -3,16 +3,16 @@
 {% macro header(span) -%}
 **Status:** {{ stability.badge(span.stability, span.deprecated) }}
 
-{{ span.brief | trim }}
+**Summary:** {{ span.brief | trim }}
 {%- if span.note %}
 
 {{ span.note | trim }}{% endif %}
-{%- if "**Span kind" not in span.note %}
+{%- if "**Span Kind" not in span.note %}
 
-**Span kind** SHOULD be `{{ span.span_kind | upper }}`.{% endif %}
-{%- if "**Span status" not in span.note %}
+**Span Kind:** SHOULD be `{{ span.span_kind | upper }}`.{% endif %}
+{%- if "**Span Status" not in span.note %}
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.{% endif %}
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.{% endif %}
 
 {%- if span.entity_associations is sequence %}
 

@@ -32,20 +32,20 @@ extend and override the [Database Semantic Conventions](README.md).
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-Cosmos DB instrumentations include call-level spans that represent logical database calls and adhere to the general [Semantic Conventions for Database Client Spans](/docs/database/database-spans.md).
+**Summary:** Cosmos DB instrumentations include call-level spans that represent logical database calls and adhere to the general [Semantic Conventions for Database Client Spans](/docs/database/database-spans.md).
 
 Additional spans representing network calls may also be created depending on the connection mode (Gateway or Direct).
 Semantic conventions described in this document apply to the call-level spans only.
 
 `db.system.name` MUST be set to `"azure.cosmosdb"` and SHOULD be provided **at span creation time**.
 
-**Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+**Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`db.operation.name`](/docs/registry/attributes/db.md) | string | The name of the operation or command being executed. [1] | `create_item`; `query_items`; `read_item` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`azure.cosmosdb.connection.mode`](/docs/registry/attributes/azure.md) | string | Cosmos client connection mode. | `gateway`; `direct` | `Conditionally Required` [2] | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -258,7 +258,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `azure.cosmosdb.connection.mode` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `direct` | Direct connection. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gateway` | Gateway (HTTP) connection. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -267,7 +267,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `azure.cosmosdb.consistency.level` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `BoundedStaleness` | bounded_staleness | ![Development](https://img.shields.io/badge/-development-blue) |
 | `ConsistentPrefix` | consistent_prefix | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -279,7 +279,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -354,7 +354,7 @@ Explaining bucket configuration:
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `azure.cosmosdb.client.operation.request_charge` | Histogram | `{request_unit}` | [Request units](https://learn.microsoft.com/azure/cosmos-db/request-units) consumed by the operation | ![Development](https://img.shields.io/badge/-development-blue) |  |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`db.operation.name`](/docs/registry/attributes/db.md) | string | The name of the operation or command being executed. [1] | `findAndModify`; `HMSET`; `SELECT` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`azure.cosmosdb.consistency.level`](/docs/registry/attributes/azure.md) | string | Account or request [consistency level](https://learn.microsoft.com/azure/cosmos-db/consistency-levels). | `Eventual`; `ConsistentPrefix`; `BoundedStaleness`; `Strong`; `Session` | `Conditionally Required` If available. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -405,7 +405,7 @@ Instrumentations SHOULD document how `error.type` is populated.
 
 `azure.cosmosdb.consistency.level` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `BoundedStaleness` | bounded_staleness | ![Development](https://img.shields.io/badge/-development-blue) |
 | `ConsistentPrefix` | consistent_prefix | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -417,7 +417,7 @@ Instrumentations SHOULD document how `error.type` is populated.
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -443,7 +443,7 @@ It captures the number of active instances at any given time. Best practices dic
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `azure.cosmosdb.client.active_instance.count` | UpDownCounter | `{instance}` | Number of active client instances | ![Development](https://img.shields.io/badge/-development-blue) |  |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`server.port`](/docs/registry/attributes/server.md) | int | Server port number. [1] | `80`; `8080`; `443` | `Conditionally Required` [2] | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`server.address`](/docs/registry/attributes/server.md) | string | Name of the database host. [3] | `example.com`; `10.1.2.80`; `/tmp/my.sock` | `Recommended` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |

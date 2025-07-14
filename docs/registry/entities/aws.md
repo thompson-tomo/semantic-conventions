@@ -9,16 +9,17 @@
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `aws.ecs`
+**Type:** `aws.ecs`
 
-**Description:** Entities used by AWS Elastic Container Service (ECS).
+**Summary:** Entities used by AWS Elastic Container Service (ECS).
+
 
 **Other Attributes:**
 
 > :warning: This entity definition contains attributes without a role.
 > Stable Entities MUST NOT have attributes without a defined role.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aws.ecs.task.id`](/docs/registry/attributes/aws.md) | string | The ID of a running ECS task. The ID MUST be extracted from `task.arn`. | `10838bed-421f-43ef-870a-f43feacbbb5b`; `23ebb8ac-c18f-46c6-8bbe-d55d0e37cfbd` | `Conditionally Required` If and only if `task.arn` is populated. | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.ecs.cluster.arn`](/docs/registry/attributes/aws.md) | string | The ARN of an [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html). | `arn:aws:ecs:us-west-2:123456789123:cluster/my-cluster` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -32,7 +33,7 @@
 
 `aws.ecs.launchtype` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ec2` | ec2 | ![Development](https://img.shields.io/badge/-development-blue) |
 | `fargate` | fargate | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -41,16 +42,17 @@
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `aws.eks`
+**Type:** `aws.eks`
 
-**Description:** Entities used by AWS Elastic Kubernetes Service (EKS).
+**Summary:** Entities used by AWS Elastic Kubernetes Service (EKS).
+
 
 **Other Attributes:**
 
 > :warning: This entity definition contains attributes without a role.
 > Stable Entities MUST NOT have attributes without a defined role.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aws.eks.cluster.arn`](/docs/registry/attributes/aws.md) | string | The ARN of an EKS cluster. | `arn:aws:ecs:us-west-2:123456789123:cluster/my-cluster` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -58,16 +60,17 @@
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `aws.log`
+**Type:** `aws.log`
 
-**Description:** Entities specific to Amazon Web Services.
+**Summary:** Entities specific to Amazon Web Services.
+
 
 **Other Attributes:**
 
 > :warning: This entity definition contains attributes without a role.
 > Stable Entities MUST NOT have attributes without a defined role.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`aws.log.group.arns`](/docs/registry/attributes/aws.md) | string[] | The Amazon Resource Name(s) (ARN) of the AWS log group(s). [1] | `["arn:aws:logs:us-west-1:123456789012:log-group:/aws/my/group:*"]` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`aws.log.group.names`](/docs/registry/attributes/aws.md) | string[] | The name(s) of the AWS log group(s) an application is writing to. [2] | `["/aws/lambda/my-function", "opentelemetry-service"]` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |

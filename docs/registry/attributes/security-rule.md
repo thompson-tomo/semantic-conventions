@@ -5,9 +5,9 @@
 
 ## Security Rule
 
-Describes security rule attributes. Rule fields are used to capture the specifics of any observer or agent rules that generate alerts or other notable events.
+**Summary:** Describes security rule attributes. Rule fields are used to capture the specifics of any observer or agent rules that generate alerts or other notable events.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="security-rule-category" href="#security-rule-category">`security_rule.category`</a> | string | A categorization value keyword used by the entity using the rule for detection of this event | `Attempted Information Leak` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="security-rule-description" href="#security-rule-description">`security_rule.description`</a> | string | The description of the rule generating the event. | `Block requests to public DNS over HTTPS / TLS protocols` | ![Development](https://img.shields.io/badge/-development-blue) |

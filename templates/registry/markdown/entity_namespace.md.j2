@@ -16,9 +16,11 @@
 
 **Status:** {{ stability.badge(e.stability, e.deprecated) }}
 
-**type:** `{{ e.name }}`
+**Type:** `{{ e.name }}`
 
-**Description:** {{ e.brief | trim }}
+**Summary:** {{ e.brief | trim }}
+
+{% if e.note %}**Description:** {{e.note}}{%endif %}
 
 {%- if id_attrs | length > 0 %}
 
@@ -33,7 +35,6 @@
 {{ at.generate(desc_attrs, "", "/docs/registry/attributes", e.lineage.attributes) | trim }}
 {%- endif %}
 {%- if misc_attrs | length > 0 %}
-
 **Other Attributes:**
 
 > :warning: This entity definition contains attributes without a role.

@@ -33,11 +33,11 @@ Any resources of the [CICD and VCS resource conventions][cicdres] that apply SHO
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span describes a CICD pipeline run.
+**Summary:** This span describes a CICD pipeline run.
 
 For all pipeline runs, a span with kind `SERVER` SHOULD be created corresponding to the execution of the pipeline run.
 
-**Span name** MUST follow the overall [guidelines for span names](https://github.com/open-telemetry/opentelemetry-specification/tree/v1.43.0/specification/trace/api.md#span).
+**Span Name:** MUST follow the overall [guidelines for span names](https://github.com/open-telemetry/opentelemetry-specification/tree/v1.43.0/specification/trace/api.md#span).
 
 The span name SHOULD be `{action} {pipeline}` if there is a (low-cardinality) pipeline name available.
 If the pipeline name is not available or is likely to have high cardinality, then the span name SHOULD be `{action}`.
@@ -46,11 +46,11 @@ The `{action}` SHOULD be the [`cicd.pipeline.action.name`](/docs/registry/attrib
 
 The `{pipeline}` SHOULD be the [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md#cicd-pipeline-name).
 
-**Span kind** SHOULD be `SERVER`.
+**Span Kind:** SHOULD be `SERVER`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cicd.pipeline.result`](/docs/registry/attributes/cicd.md) | string | The result of a pipeline run. | `success`; `failure`; `timeout`; `skipped` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` if the pipeline result is `failure` or `error` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -80,7 +80,7 @@ it's RECOMMENDED to:
 
 `cicd.pipeline.action.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `BUILD` | The pipeline run is executing a build. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `RUN` | The pipeline run is executing. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -90,7 +90,7 @@ it's RECOMMENDED to:
 
 `cicd.pipeline.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `cancellation` | The pipeline run was cancelled, eg. by a user manually cancelling the pipeline run. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `error` | The pipeline run failed due to an error in the CICD system, eg. due to the worker being killed. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -103,7 +103,7 @@ it's RECOMMENDED to:
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -123,13 +123,13 @@ it's RECOMMENDED to:
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span describes task execution in a pipeline run.
+**Summary:** This span describes task execution in a pipeline run.
 
-**Span kind** SHOULD be `INTERNAL`.
+**Span Kind:** SHOULD be `INTERNAL`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`cicd.pipeline.task.name`](/docs/registry/attributes/cicd.md) | string | The human readable name of a task within a pipeline. Task here most closely aligns with a [computing process](https://wikipedia.org/wiki/Pipeline_(computing)) in a pipeline. Other terms for tasks include commands, steps, and procedures. | `Run GoLang Linter`; `Go Build`; `go-test`; `deploy_binary` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`cicd.pipeline.task.run.id`](/docs/registry/attributes/cicd.md) | string | The unique identifier of a task run within a pipeline. | `12097` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -168,7 +168,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `cicd.pipeline.task.run.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `cancellation` | The task run was cancelled, eg. by a user manually cancelling the task run. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `error` | The task run failed due to an error in the CICD system, eg. due to the worker being killed. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -181,7 +181,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 

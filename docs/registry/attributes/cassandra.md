@@ -5,9 +5,9 @@
 
 ## Cassandra Attributes
 
-This section defines attributes for Cassandra.
+**Summary:** This section defines attributes for Cassandra.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="cassandra-consistency-level" href="#cassandra-consistency-level">`cassandra.consistency.level`</a> | string | The consistency level of the query. Based on consistency values from [CQL](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html). | `all`; `each_quorum`; `quorum` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="cassandra-coordinator-dc" href="#cassandra-coordinator-dc">`cassandra.coordinator.dc`</a> | string | The data center of the coordinating node for a query. | `us-west-2` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -20,7 +20,7 @@ This section defines attributes for Cassandra.
 
 `cassandra.consistency.level` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `all` | all | ![Development](https://img.shields.io/badge/-development-blue) |
 | `any` | any | ![Development](https://img.shields.io/badge/-development-blue) |

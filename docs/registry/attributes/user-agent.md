@@ -8,9 +8,9 @@
 
 ## User-agent Attributes
 
-Describes user-agent attributes.
+**Summary:** Describes user-agent attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="user-agent-name" href="#user-agent-name">`user_agent.name`</a> | string | Name of the user-agent extracted from original. Usually refers to the browser's name. [1] | `Safari`; `YourApp` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="user-agent-original" href="#user-agent-original">`user_agent.original`</a> | string | Value of the [HTTP User-Agent](https://www.rfc-editor.org/rfc/rfc9110.html#field.user-agent) header sent by the client. | `CERN-LineMode/2.15 libwww/2.17b3`; `Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E148 Safari/604.1`; `YourApp/1.0.0 grpc-java-okhttp/1.27.2` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -22,9 +22,9 @@ Describes user-agent attributes.
 
 ## User-agent OS Attributes
 
-Describes the OS user-agent attributes.
+**Summary:** Describes the OS user-agent attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="user-agent-os-name" href="#user-agent-os-name">`user_agent.os.name`</a> | string | Human readable operating system name. [3] | `iOS`; `Android`; `Ubuntu` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="user-agent-os-version" href="#user-agent-os-version">`user_agent.os.version`</a> | string | The version string of the operating system as defined in [Version Attributes](/docs/resource/README.md#version-attributes). [4] | `14.2.1`; `18.04.1` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -40,7 +40,7 @@ Describes the OS user-agent attributes.
 
 `user_agent.synthetic.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bot` | Bot source. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `test` | Synthetic test source. | ![Development](https://img.shields.io/badge/-development-blue) |

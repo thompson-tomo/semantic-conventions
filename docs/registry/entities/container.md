@@ -9,16 +9,17 @@
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `container`
+**Type:** `container`
 
-**Description:** A container instance.
+**Summary:** A container instance.
+
 
 **Other Attributes:**
 
 > :warning: This entity definition contains attributes without a role.
 > Stable Entities MUST NOT have attributes without a defined role.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`container.id`](/docs/registry/attributes/container.md) | string | Container ID. Usually a UUID, as for example used to [identify Docker containers](https://docs.docker.com/engine/containers/run/#container-identification). The UUID might be abbreviated. | `a3bf90e006b2` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`container.image.id`](/docs/registry/attributes/container.md) | string | Runtime specific image identifier. Usually a hash algorithm followed by a UUID. [1] | `sha256:19c92d0a00d1b66d897bceaa7319bee0dd38a10a851c60bcec9474aa3f01e50f` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |

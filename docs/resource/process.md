@@ -33,11 +33,11 @@ linkTitle: Process
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `process`
+**Type:** `process`
 
-**Description:** An operating system process.
+**Summary:** An operating system process.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`process.command`](/docs/registry/attributes/process.md) | string | The command used to launch the process (i.e. the command name). On Linux based systems, can be set to the zeroth string in `proc/[pid]/cmdline`. On Windows, can be set to the first parameter extracted from `GetCommandLineW`. | `cmd/otelcol` | `Conditionally Required` [1] | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`process.command_args`](/docs/registry/attributes/process.md) | string[] | All the command arguments (including the command/executable itself) as received by the process. On Linux-based systems (and some other Unixoid systems supporting procfs), can be set according to the list of null-delimited strings extracted from `proc/[pid]/cmdline`. For libc-based executables, this would be the full argv vector passed to `main`. SHOULD NOT be collected by default unless there is sanitization that excludes sensitive data. | `["cmd/otecol", "--config=config.yaml"]` | `Conditionally Required` [2] | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -92,11 +92,11 @@ On Windows and other systems where the native format of process commands is a si
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `process.runtime`
+**Type:** `process.runtime`
 
-**Description:** The single (language) runtime instance which is monitored.
+**Summary:** The single (language) runtime instance which is monitored.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`process.runtime.description`](/docs/registry/attributes/process.md) | string | An additional description about the runtime of the process, for example a specific vendor customization of the runtime environment. | `Eclipse OpenJ9 Eclipse OpenJ9 VM openj9-0.21.0` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`process.runtime.name`](/docs/registry/attributes/process.md) | string | The name of the runtime of this process. | `OpenJDK Runtime Environment` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -148,7 +148,7 @@ Go Runtimes SHOULD fill in the as follows:
 
 Examples for some Go compilers/runtimes:
 
-| `process.runtime.name` | Description |
+| `process.runtime.name` | Summary |
 | --- | --- |
 | `go` | Official Go compiler. Also known as `cmd/compile`. |
 | `gccgo` | [gccgo](https://go.dev/doc/install/gccgo) is a Go [front end for GCC](https://gcc.gnu.org/frontends.html). |

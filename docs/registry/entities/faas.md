@@ -9,16 +9,17 @@
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `faas`
+**Type:** `faas`
 
-**Description:** A serverless instance.
+**Summary:** A serverless instance.
+
 
 **Other Attributes:**
 
 > :warning: This entity definition contains attributes without a role.
 > Stable Entities MUST NOT have attributes without a defined role.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`faas.name`](/docs/registry/attributes/faas.md) | string | The name of the single function that this runtime instance executes. [1] | `my-function`; `myazurefunctionapp/some-function-name` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`cloud.resource_id`](/docs/registry/attributes/cloud.md) | string | Cloud provider-specific native identifier of the monitored cloud resource (e.g. an [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) on AWS, a [fully qualified resource ID](https://learn.microsoft.com/rest/api/resources/resources/get-by-id) on Azure, a [full resource name](https://google.aip.dev/122#full-resource-names) on GCP) [2] | `arn:aws:lambda:REGION:ACCOUNT_ID:function:my-function`; `//run.googleapis.com/projects/PROJECT_ID/locations/LOCATION_ID/services/SERVICE_ID`; `/subscriptions/<SUBSCRIPTION_GUID>/resourceGroups/<RG>/providers/Microsoft.Web/sites/<FUNCAPP>/functions/<FUNC>` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |

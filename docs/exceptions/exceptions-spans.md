@@ -31,7 +31,7 @@ The event name MUST be `exception`.
 
 This event describes a single exception.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`exception.message`](/docs/registry/attributes/exception.md) | string | The exception message. | `Division by zero`; `Can't convert 'int' object to str implicitly` | `Conditionally Required` [1] | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`exception.type`](/docs/registry/attributes/exception.md) | string | The type of the exception (its fully-qualified class name, if applicable). The dynamic type of the exception should be preferred over the static type in languages that support it. | `java.net.ConnectException`; `OSError` | `Conditionally Required` [2] | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |

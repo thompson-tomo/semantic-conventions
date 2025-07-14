@@ -5,9 +5,9 @@
 
 ## Host Attributes
 
-A host is defined as a computing instance. For example, physical servers, virtual machines, switches or disk array.
+**Summary:** A host is defined as a computing instance. For example, physical servers, virtual machines, switches or disk array.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="host-arch" href="#host-arch">`host.arch`</a> | string | The CPU architecture the host system is running on. | `amd64`; `arm32`; `arm64` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="host-cpu-cache-l2-size" href="#host-cpu-cache-l2-size">`host.cpu.cache.l2.size`</a> | int | The amount of level 2 memory cache available to the processor (in Bytes). | `12288000` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -35,7 +35,7 @@ A host is defined as a computing instance. For example, physical servers, virtua
 
 `host.arch` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `amd64` | AMD64 | ![Development](https://img.shields.io/badge/-development-blue) |
 | `arm32` | ARM32 | ![Development](https://img.shields.io/badge/-development-blue) |

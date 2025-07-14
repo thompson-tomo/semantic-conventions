@@ -5,9 +5,9 @@
 
 ## Open Container Initiative (OCI) Attributes
 
-An OCI image manifest.
+**Summary:** An OCI image manifest.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="oci-manifest-digest" href="#oci-manifest-digest">`oci.manifest.digest`</a> | string | The digest of the OCI image manifest. For container images specifically is the digest by which the container image is known. [1] | `sha256:e4ca62c0d62f3e886e684806dfe9d4e0cda60d54986898173c1083856cfda0f4` | ![Development](https://img.shields.io/badge/-development-blue) |
 

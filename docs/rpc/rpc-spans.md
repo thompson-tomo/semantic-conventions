@@ -96,18 +96,18 @@ Generally, a user SHOULD NOT set `peer.service` to a fully qualified RPC service
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents an outgoing Remote Procedure Call (RPC).
+**Summary:** This span represents an outgoing Remote Procedure Call (RPC).
 
 Remote procedure calls can only be represented with these semantic conventions
 when the names of the called service and method are known and available.
 
-**Span name:** refer to the [Span Name](#span-name) section.
+**Span Name:** refer to the [Span Name](#span-name) section.
 
-**Span kind** MUST be `CLIENT`.
+**Span Kind:** MUST be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | A string identifying the remoting system. See below for a list of well-known identifiers. | `grpc`; `java_rmi`; `dotnet_wcf` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`server.address`](/docs/registry/attributes/server.md) | string | RPC server [host name](https://grpc.github.io/grpc/core/md_doc_naming.html). [1] | `example.com`; `10.1.2.80`; `/tmp/my.sock` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -141,7 +141,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -153,7 +153,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -162,7 +162,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -186,18 +186,18 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents an incoming Remote Procedure Call (RPC).
+**Summary:** This span represents an incoming Remote Procedure Call (RPC).
 
 Remote procedure calls can only be represented with these semantic conventions
 when the names of the called service and method are known and available.
 
-**Span name:** refer to the [Span Name](#span-name) section.
+**Span Name:** refer to the [Span Name](#span-name) section.
 
-**Span kind** MUST be `SERVER`.
+**Span Kind:** MUST be `SERVER`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.system`](/docs/registry/attributes/rpc.md) | string | A string identifying the remoting system. See below for a list of well-known identifiers. | `grpc`; `java_rmi`; `dotnet_wcf` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`server.address`](/docs/registry/attributes/server.md) | string | RPC server [host name](https://grpc.github.io/grpc/core/md_doc_naming.html). [1] | `example.com`; `10.1.2.80`; `/tmp/my.sock` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -237,7 +237,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -249,7 +249,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `network.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `ipv4` | IPv4 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `ipv6` | IPv6 | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -258,7 +258,7 @@ different processes could be listening on TCP port 12345 and UDP port 12345.
 
 `rpc.system` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `apache_dubbo` | Apache Dubbo | ![Development](https://img.shields.io/badge/-development-blue) |
 | `connect_rpc` | Connect RPC | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -290,7 +290,7 @@ Describes a message sent or received within the context of an RPC call.
 
 In the lifetime of an RPC stream, an event for each message sent/received on client and server spans SHOULD be created. In case of unary calls only one sent and one received message will be recorded for both client and server spans.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.message.compressed_size`](/docs/registry/attributes/rpc.md) | int | Compressed size of the message in bytes. |  | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`rpc.message.id`](/docs/registry/attributes/rpc.md) | int | MUST be calculated as two different counters starting from `1` one for sent messages and one for received message. [1] |  | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -303,7 +303,7 @@ In the lifetime of an RPC stream, an event for each message sent/received on cli
 
 `rpc.message.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `RECEIVED` | received | ![Development](https://img.shields.io/badge/-development-blue) |
 | `SENT` | sent | ![Development](https://img.shields.io/badge/-development-blue) |

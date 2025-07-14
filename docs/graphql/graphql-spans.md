@@ -15,9 +15,9 @@ linkTitle: GraphQL server
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents an incoming operation on a GraphQL server implementation.
+**Summary:** This span represents an incoming operation on a GraphQL server implementation.
 
-**Span name** SHOULD be of the format `{graphql.operation.type}` provided
+**Span Name:** SHOULD be of the format `{graphql.operation.type}` provided
 `graphql.operation.type` is available. If `graphql.operation.type` is not available,
 the span SHOULD be named `GraphQL Operation`.
 
@@ -30,11 +30,11 @@ the span SHOULD be named `GraphQL Operation`.
 > span name following `{graphql.operation.type} {graphql.operation.name}` format
 > when `graphql.operation.name` is available.
 
-**Span kind** SHOULD be `SERVER`.
+**Span Kind:** SHOULD be `SERVER`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`graphql.document`](/docs/registry/attributes/graphql.md) | string | The GraphQL document being executed. [1] | `query findBookById { bookById(id: ?) { name } }` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`graphql.operation.name`](/docs/registry/attributes/graphql.md) | string | The name of the operation being executed. | `findBookById` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -46,7 +46,7 @@ the span SHOULD be named `GraphQL Operation`.
 
 `graphql.operation.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `mutation` | GraphQL mutation | ![Development](https://img.shields.io/badge/-development-blue) |
 | `query` | GraphQL query | ![Development](https://img.shields.io/badge/-development-blue) |

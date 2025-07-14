@@ -17,7 +17,7 @@ linkTitle: SQL
 
 **Status:** ![Stable](https://img.shields.io/badge/-stable-lightgreen)
 
-The SQL databases Semantic Conventions describes how common [Database Semantic Conventions](/docs/database/database-spans.md) apply to SQL databases.
+**Summary:** The SQL databases Semantic Conventions describes how common [Database Semantic Conventions](/docs/database/database-spans.md) apply to SQL databases.
 
 The following database systems (defined in the
 [`db.system.name`](/docs/database/database-spans.md#notes-and-well-known-identifiers-for-dbsystemname) set)
@@ -43,13 +43,13 @@ are known to use SQL as their primary query language:
 Many other database systems support SQL and can be accessed via generic database driver such as JDBC or ODBC.
 Instrumentations applied to generic SQL drivers SHOULD adhere to SQL semantic conventions.
 
-**Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+**Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`db.namespace`](/docs/registry/attributes/db.md) | string | The database associated with the connection, fully qualified within the server address and port. [1] | `customers`; `test.users` | `Conditionally Required` If available without an additional network call. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`db.response.status_code`](/docs/registry/attributes/db.md) | string | Database response code recorded as a string. [2] | `ORA-17027`; `1052`; `2201B` | `Conditionally Required` If response has ended with warning or an error. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -194,7 +194,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 

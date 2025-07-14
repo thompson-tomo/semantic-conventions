@@ -126,7 +126,7 @@ general considerations on how to record span status.
 
 **Status:** ![Stable](https://img.shields.io/badge/-stable-lightgreen)
 
-This span represents an outbound HTTP request.
+**Summary:** This span represents an outbound HTTP request.
 
 There are two ways HTTP client spans can be implemented in an instrumentation:
 
@@ -138,13 +138,13 @@ There are two ways HTTP client spans can be implemented in an instrumentation:
    instrumentations MAY create an HTTP span for the top-most operation of the HTTP client.
    In this case, the `url.full` MUST be the absolute URL that was originally requested, before any HTTP-redirects that may happen when executing the request.
 
-**Span name:** refer to the [Span Name](/docs/http/http-spans.md#name) section.
+**Span Name:** refer to the [Span Name](/docs/http/http-spans.md#name) section.
 
-**Span kind** MUST be `CLIENT`.
+**Span Kind:** MUST be `CLIENT`.
 
-**Span status:** refer to the [Span Status](/docs/http/http-spans.md#status) section.
+**Span Status:** refer to the [Span Status](/docs/http/http-spans.md#status) section.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`http.request.method`](/docs/registry/attributes/http.md) | string | HTTP request method. [1] | `GET`; `POST`; `HEAD` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`server.address`](/docs/registry/attributes/server.md) | string | Server domain name if available without reverse DNS lookup; otherwise, IP address or Unix domain socket name. [2] | `example.com`; `10.1.2.80`; `/tmp/my.sock` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -301,7 +301,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -309,7 +309,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `http.request.method` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | Any HTTP method that the instrumentation has no prior knowledge of. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `CONNECT` | CONNECT method. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -326,7 +326,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -338,7 +338,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `user_agent.synthetic.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bot` | Bot source. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `test` | Synthetic test source. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -433,15 +433,15 @@ Application developers MAY overwrite potentially inaccurate values of `server.*`
 
 **Status:** ![Stable](https://img.shields.io/badge/-stable-lightgreen)
 
-This span represents an inbound HTTP request.
+**Summary:** This span represents an inbound HTTP request.
 
-**Span name:** refer to the [Span Name](/docs/http/http-spans.md#name) section.
+**Span Name:** refer to the [Span Name](/docs/http/http-spans.md#name) section.
 
-**Span kind** MUST be `SERVER`.
+**Span Kind:** MUST be `SERVER`.
 
-**Span status:** refer to the [Span Status](/docs/http/http-spans.md#status) section.
+**Span Status:** refer to the [Span Status](/docs/http/http-spans.md#status) section.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`http.request.method`](/docs/registry/attributes/http.md) | string | HTTP request method. [1] | `GET`; `POST`; `HEAD` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`url.path`](/docs/registry/attributes/url.md) | string | The [URI path](https://www.rfc-editor.org/rfc/rfc3986#section-3.3) component [2] | `/search` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -595,7 +595,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -603,7 +603,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `http.request.method` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | Any HTTP method that the instrumentation has no prior knowledge of. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `CONNECT` | CONNECT method. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -620,7 +620,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `network.transport` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `pipe` | Named or anonymous pipe. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `quic` | QUIC | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -632,7 +632,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `user_agent.synthetic.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `bot` | Bot source. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `test` | Synthetic test source. | ![Development](https://img.shields.io/badge/-development-blue) |

@@ -10,11 +10,11 @@
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `webengine`
+**Type:** `webengine`
 
-**Description:** Resource describing the packaged software running the application code. Web engines are typically executed using process.runtime.
+**Summary:** Resource describing the packaged software running the application code. Web engines are typically executed using process.runtime.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`webengine.name`](/docs/registry/attributes/webengine.md) | string | The name of the web engine. | `WildFly` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`webengine.description`](/docs/registry/attributes/webengine.md) | string | Additional description of the web engine (e.g. detailed version and edition information). | `WildFly Full 21.0.0.Final (WildFly Core 13.0.1.Final) - 2.2.2.Final` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |

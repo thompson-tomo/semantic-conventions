@@ -13,11 +13,11 @@ To report host metrics, the `system.*` namespace SHOULD be used.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `host`
+**Type:** `host`
 
-**Description:** A host is defined as a computing instance. For example, physical servers, virtual machines, switches or disk array.
+**Summary:** A host is defined as a computing instance. For example, physical servers, virtual machines, switches or disk array.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`host.arch`](/docs/registry/attributes/host.md) | string | The CPU architecture the host system is running on. | `amd64`; `arm32`; `arm64` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`host.id`](/docs/registry/attributes/host.md) | string | Unique host ID. For Cloud, this must be the instance_id assigned by the cloud provider. For non-containerized systems, this should be the `machine-id`. See the table below for the sources to use to determine the `machine-id` based on operating system. [1] | `fdbf79e8af94cb7f9e8df36789187052` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -63,7 +63,7 @@ privileged lookup of `host.id` is required, the value should be injected via the
 
 `host.arch` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `amd64` | AMD64 | ![Development](https://img.shields.io/badge/-development-blue) |
 | `arm32` | ARM32 | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -91,11 +91,11 @@ privileged lookup of `host.id` is required, the value should be injected via the
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `host.cpu`
+**Type:** `host.cpu`
 
-**Description:** A host's CPU information
+**Summary:** A host's CPU information
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`host.cpu.cache.l2.size`](/docs/registry/attributes/host.md) | int | The amount of level 2 memory cache available to the processor (in Bytes). | `12288000` | `Opt-In` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`host.cpu.family`](/docs/registry/attributes/host.md) | string | Family or generation of the CPU. | `6`; `PA-RISC 1.1e` | `Opt-In` | ![Development](https://img.shields.io/badge/-development-blue) |

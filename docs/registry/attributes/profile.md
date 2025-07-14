@@ -5,9 +5,9 @@
 
 ## Profile Frame Attributes
 
-Describes the origin of a single frame in a Profile.
+**Summary:** Describes the origin of a single frame in a Profile.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="profile-frame-type" href="#profile-frame-type">`profile.frame.type`</a> | string | Describes the interpreter or compiler of a single frame. | `cpython` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -15,7 +15,7 @@ Describes the origin of a single frame in a Profile.
 
 `profile.frame.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `beam` | [Erlang](https://en.wikipedia.org/wiki/BEAM_(Erlang_virtual_machine)) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `cpython` | [Python](https://wikipedia.org/wiki/Python_(programming_language)) | ![Development](https://img.shields.io/badge/-development-blue) |

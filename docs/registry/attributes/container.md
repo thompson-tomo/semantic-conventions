@@ -8,9 +8,9 @@
 
 ## Container Attributes
 
-A container instance.
+**Summary:** A container instance.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="container-command" href="#container-command">`container.command`</a> | string | The command used to run the container (i.e. the command name). [1] | `otelcontribcol` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="container-command-args" href="#container-command-args">`container.command_args`</a> | string[] | All the command arguments (including the command/executable itself) run by the container. | `["otelcontribcol", "--config", "config.yaml"]` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -42,9 +42,9 @@ The ID is assigned by the container runtime and can vary in different environmen
 
 ## Deprecated Container Attributes
 
-Describes deprecated container attributes.
+**Summary:** Describes deprecated container attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="container-cpu-state" href="#container-cpu-state">`container.cpu.state`</a> | string | Deprecated, use `cpu.mode` instead. | `user`; `kernel` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `cpu.mode`. |
 | <a id="container-labels" href="#container-labels">`container.labels.<key>`</a> | string | Deprecated, use `container.label` instead. | `nginx` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `container.label`. |
@@ -53,7 +53,7 @@ Describes deprecated container attributes.
 
 `container.cpu.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `kernel` | When tasks of the cgroup are in kernel mode (Linux). When all container processes are in kernel mode (Windows). | ![Development](https://img.shields.io/badge/-development-blue) |
 | `system` | When CPU is used by the system (host OS) | ![Development](https://img.shields.io/badge/-development-blue) |

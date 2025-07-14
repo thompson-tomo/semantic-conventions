@@ -23,7 +23,7 @@ Below is a table of attributes that SHOULD be included on client and server Conn
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.connect_rpc.error_code`](/docs/registry/attributes/rpc.md) | string | The [error codes](https://connectrpc.com//docs/protocol/#error-codes) of the Connect request. Error codes are always string values. | `cancelled`; `unknown`; `invalid_argument` | `Conditionally Required` [1] | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`rpc.connect_rpc.request.metadata.<key>`](/docs/registry/attributes/rpc.md) | string[] | Connect request metadata, `<key>` being the normalized Connect Metadata key (lowercase), the value being the metadata values. [2] | `["1.2.3.4", "1.2.3.5"]` | `Opt-In` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -47,7 +47,7 @@ the `rpc.connect_rpc.response.metadata.my-custom-key` attribute with value `["at
 
 `rpc.connect_rpc.error_code` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `aborted` | aborted | ![Development](https://img.shields.io/badge/-development-blue) |
 | `already_exists` | already_exists | ![Development](https://img.shields.io/badge/-development-blue) |

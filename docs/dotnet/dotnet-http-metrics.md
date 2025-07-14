@@ -44,13 +44,13 @@ Notes:
 ### Metric: `http.client.open_connections`
 
 <!-- Tables in this document are not auto-generated and are intentionally frozen in time. From the .NET perspective this metric and its attributes are stable till the next major version. They are still experimental in the OpenTelemetry. -->
-| Name     | Instrument Type | Unit (UCUM) | Description    |
+| Name     | Instrument Type | Unit (UCUM) | Summary        |
 | -------- | --------------- | ----------- | -------------- |
 | `http.client.open_connections` | UpDownCounter | `{connection}` | Number of outbound HTTP connections that are currently active or idle on the client. [1] |
 
 **[1]:** Meter name: `System.Net.Http`; Added in: .NET 8.0
 
-| Attribute                                                       | Type | Description  | Examples  | Requirement Level |
+| Attribute                                                       | Type | Summary      | Examples  | Requirement Level |
 |-----------------------------------------------------------------|---|---|---|---|
 | [`http.connection.state`](../registry/attributes/http.md)       | string | State of the HTTP connection in the HTTP connection pool. | `active`; `idle` | Required |
 | [`network.peer.address`](../registry/attributes/network.md)     | string | Remote IP address of the socket connection. | `10.1.2.80` | Recommended |
@@ -69,7 +69,7 @@ Notes:
 
 `http.connection.state` MUST be one of the following:
 
-| Value  | Description |
+| Value  | Summary     |
 |---|---|
 | `active` | active state. |
 | `idle` | idle state. |
@@ -81,13 +81,13 @@ this metric SHOULD be specified with
 of `[ 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, 30, 60, 120, 300 ]`.
 
 <!-- Tables in this document are not auto-generated and are intentionally frozen in time. From the .NET perspective this metric and its attributes are stable till the next major version. They are still experimental in the OpenTelemetry. -->
-| Name     | Instrument Type | Unit (UCUM) | Description    |
+| Name     | Instrument Type | Unit (UCUM) | Summary        |
 | -------- | --------------- | ----------- | -------------- |
 | `http.client.connection.duration` | Histogram | `s` | The duration of the successfully established outbound HTTP connections. [1] |
 
 **[1]:** Meter name: `System.Net.Http`; Added in: .NET 8.0
 
-| Attribute  | Type | Description  | Examples  | Requirement Level |
+| Attribute  | Type | Summary      | Examples  | Requirement Level |
 |---|---|---|---|---|
 | [`network.peer.address`](../registry/attributes/network.md) | string | Peer address of the network connection - IP address or Unix domain socket name. | `10.1.2.80`; `/tmp/my.sock` | Recommended |
 | [`network.protocol.version`](../registry/attributes/network.md) | string | The negotiated version of the protocol associated with connection in the connection pool. [1] | `1.1`; `2`; `3` | Recommended |
@@ -110,13 +110,13 @@ this metric SHOULD be specified with
 of `[ 0.005, 0.01, 0.025, 0.05, 0.075, 0.1, 0.25, 0.5, 0.75, 1, 2.5, 5, 7.5, 10 ]`.
 
 <!-- Tables in this document are not auto-generated and are intentionally frozen in time. From the .NET perspective this metric and its attributes are stable till the next major version. They are still experimental in the OpenTelemetry. -->
-| Name     | Instrument Type | Unit (UCUM) | Description    |
+| Name     | Instrument Type | Unit (UCUM) | Summary        |
 | -------- | --------------- | ----------- | -------------- |
 | `http.client.request.time_in_queue` | Histogram | `s` | The amount of time requests spent on a queue waiting for an available connection. [1] |
 
 **[1]:** Meter name: `System.Net.Http`; Added in: .NET 8.0
 
-| Attribute  | Type | Description  | Examples  | Requirement Level |
+| Attribute  | Type | Summary      | Examples  | Requirement Level |
 |---|---|---|---|---|
 | [`http.request.method`](../registry/attributes/http.md) | string | HTTP request method. [1] | `GET`; `POST`; `HEAD` | Recommended |
 | [`network.protocol.version`](../registry/attributes/network.md) | string | The negotiated version of the protocol associated with connection in the connection pool. [2] | `1.1`; `2`; `3` | Recommended |
@@ -137,7 +137,7 @@ If the HTTP request method isn't known, it sets the `http.request.method` attrib
 
 `http.request.method` has the following list of well-known values. If one of them applies, then the respective value MUST be used, otherwise a custom value MAY be used.
 
-| Value  | Description |
+| Value  | Summary     |
 |---|---|
 | `CONNECT` | CONNECT method. |
 | `DELETE` | DELETE method. |
@@ -153,13 +153,13 @@ If the HTTP request method isn't known, it sets the `http.request.method` attrib
 ### Metric: `http.client.active_requests`
 
 <!-- Tables in this document are not auto-generated and are intentionally frozen in time. From the .NET perspective this metric and its attributes are stable till the next major version. They are still experimental in the OpenTelemetry. -->
-| Name     | Instrument Type | Unit (UCUM) | Description    |
+| Name     | Instrument Type | Unit (UCUM) | Summary        |
 | -------- | --------------- | ----------- | -------------- |
 | `http.client.active_requests` | UpDownCounter | `{request}` | Number of active HTTP requests. [1] |
 
 **[1]:** Meter name: `System.Net.Http`; Added in: .NET 8.0
 
-| Attribute  | Type | Description  | Examples  | Requirement Level |
+| Attribute  | Type | Summary      | Examples  | Requirement Level |
 |---|---|---|---|---|
 | [`http.request.method`](../registry/attributes/http.md) | string | HTTP request method. [1] | `GET`; `POST`; `HEAD` | Recommended |
 | [`server.address`](../registry/attributes/server.md) | string | Host identifier of the ["URI origin"](https://www.rfc-editor.org/rfc/rfc9110.html#name-uri-origin) HTTP request is sent to. [2] | `example.com`; `10.1.2.80`; `/tmp/my.sock` | Required |
@@ -177,7 +177,7 @@ If the HTTP request method isn't known, it sets the `http.request.method` attrib
 
 `http.request.method` has the following list of well-known values. If one of them applies, then the respective value MUST be used, otherwise a custom value MAY be used.
 
-| Value  | Description |
+| Value  | Summary     |
 |---|---|
 | `CONNECT` | CONNECT method. |
 | `DELETE` | DELETE method. |

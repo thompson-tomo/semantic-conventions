@@ -26,15 +26,15 @@ The Semantic Conventions for *MySQL* extend and override the [Database Semantic 
 
 **Status:** ![Stable](https://img.shields.io/badge/-stable-lightgreen)
 
-Spans representing calls to a MySQL Server adhere to the general [Semantic Conventions for Database Client Spans](database-spans.md).
+**Summary:** Spans representing calls to a MySQL Server adhere to the general [Semantic Conventions for Database Client Spans](database-spans.md).
 
 `db.system.name` MUST be set to `"mysql"` and SHOULD be provided **at span creation time**.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`db.namespace`](/docs/registry/attributes/db.md) | string | The database associated with the connection. [1] | `products`; `customers` | `Conditionally Required` If available without an additional network call. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`db.response.status_code`](/docs/registry/attributes/db.md) | string | [MySQL error number](https://dev.mysql.com/doc/mysql-errors/9.0/en/error-reference-introduction.html) recorded as a string. [2] | `1005`; `MY-010016` | `Conditionally Required` If response has ended with warning or an error. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -138,7 +138,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 

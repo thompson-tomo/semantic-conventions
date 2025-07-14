@@ -219,7 +219,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `k8s.pod.network.io` | Counter | `By` | Network bytes for the Pod | ![Development](https://img.shields.io/badge/-development-blue) | [`k8s.pod`](/docs/registry/entities/k8s.md#k8s-pod) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.interface.name`](/docs/registry/attributes/network.md) | string | The network interface name. | `lo`; `eth0` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`network.io.direction`](/docs/registry/attributes/network.md) | string | The network IO operation direction. | `transmit` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -228,7 +228,7 @@ This metric is [recommended][MetricRecommended].
 
 `network.io.direction` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `receive` | receive | ![Development](https://img.shields.io/badge/-development-blue) |
 | `transmit` | transmit | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -253,7 +253,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `k8s.pod.network.errors` | Counter | `{error}` | Pod network errors | ![Development](https://img.shields.io/badge/-development-blue) | [`k8s.pod`](/docs/registry/entities/k8s.md#k8s-pod) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.interface.name`](/docs/registry/attributes/network.md) | string | The network interface name. | `lo`; `eth0` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`network.io.direction`](/docs/registry/attributes/network.md) | string | The network IO operation direction. | `transmit` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -262,7 +262,7 @@ This metric is [recommended][MetricRecommended].
 
 `network.io.direction` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `receive` | receive | ![Development](https://img.shields.io/badge/-development-blue) |
 | `transmit` | transmit | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -294,7 +294,7 @@ This metric is [recommended][MetricRecommended].
 **[1]:** All possible container states will be reported at each time interval to avoid missing metrics.
 Only the value corresponding to the current state will be non-zero.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.container.status.state`](/docs/registry/attributes/k8s.md) | string | The state of the container. [K8s ContainerState](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#containerstate-v1-core) | `terminated`; `running`; `waiting` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -302,7 +302,7 @@ Only the value corresponding to the current state will be non-zero.
 
 `k8s.container.status.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `running` | The container is running. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `terminated` | The container has terminated. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -331,7 +331,7 @@ This metric is [recommended][MetricRecommended].
 **[1]:** All possible container state reasons will be reported at each time interval to avoid missing metrics.
 Only the value corresponding to the current state reason will be non-zero.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.container.status.reason`](/docs/registry/attributes/k8s.md) | string | The reason for the container state. Corresponds to the `reason` field of the: [K8s ContainerStateWaiting](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#containerstatewaiting-v1-core) or [K8s ContainerStateTerminated](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#containerstateterminated-v1-core) | `ContainerCreating`; `CrashLoopBackOff`; `CreateContainerConfigError`; `ErrImagePull`; `ImagePullBackOff`; `OOMKilled`; `Completed`; `Error`; `ContainerCannotRun` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -339,7 +339,7 @@ Only the value corresponding to the current state reason will be non-zero.
 
 `k8s.container.status.reason` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `Completed` | The container has completed execution. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `ContainerCannotRun` | The container cannot run. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -480,7 +480,7 @@ This metric is [recommended][MetricRecommended].
 
 **[1]:** All possible node condition pairs (type and status) will be reported at each time interval to avoid missing metrics. Condition pairs corresponding to the current conditions' statuses will be non-zero.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.node.condition.status`](/docs/registry/attributes/k8s.md) | string | The status of the condition, one of True, False, Unknown. [1] | `true`; `false`; `unknown` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`k8s.node.condition.type`](/docs/registry/attributes/k8s.md) | string | The condition type of a K8s Node. [2] | `Ready`; `DiskPressure` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -502,7 +502,7 @@ When this occurs, the exact value as reported by the Kubernetes API SHOULD be us
 
 `k8s.node.condition.status` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `false` | condition_false | ![Development](https://img.shields.io/badge/-development-blue) |
 | `true` | condition_true | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -512,7 +512,7 @@ When this occurs, the exact value as reported by the Kubernetes API SHOULD be us
 
 `k8s.node.condition.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `DiskPressure` | Pressure exists on the disk size—that is, if the disk capacity is low | ![Development](https://img.shields.io/badge/-development-blue) |
 | `MemoryPressure` | Pressure exists on the node memory—that is, if the node memory is low | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -606,7 +606,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `k8s.node.network.io` | Counter | `By` | Network bytes for the Node | ![Development](https://img.shields.io/badge/-development-blue) | [`k8s.node`](/docs/registry/entities/k8s.md#k8s-node) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.interface.name`](/docs/registry/attributes/network.md) | string | The network interface name. | `lo`; `eth0` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`network.io.direction`](/docs/registry/attributes/network.md) | string | The network IO operation direction. | `transmit` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -615,7 +615,7 @@ This metric is [recommended][MetricRecommended].
 
 `network.io.direction` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `receive` | receive | ![Development](https://img.shields.io/badge/-development-blue) |
 | `transmit` | transmit | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -640,7 +640,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `k8s.node.network.errors` | Counter | `{error}` | Node network errors | ![Development](https://img.shields.io/badge/-development-blue) | [`k8s.node`](/docs/registry/entities/k8s.md#k8s-node) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`network.interface.name`](/docs/registry/attributes/network.md) | string | The network interface name. | `lo`; `eth0` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`network.io.direction`](/docs/registry/attributes/network.md) | string | The network IO operation direction. | `transmit` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -649,7 +649,7 @@ This metric is [recommended][MetricRecommended].
 
 `network.io.direction` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `receive` | receive | ![Development](https://img.shields.io/badge/-development-blue) |
 | `transmit` | transmit | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -1021,7 +1021,7 @@ This metric is [opt-in][MetricOptIn].
 If the type of the metric is [`ContainerResource`](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-metrics-apis),
 the `k8s.container.name` attribute MUST be set to identify the specific container within the pod to which the metric applies.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.container.name`](/docs/registry/attributes/k8s.md) | string | The name of the Container from Pod specification, must be unique within a Pod. Container runtime usually uses different globally unique name (`container.name`). | `redis` | `Conditionally Required` [1] | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`k8s.hpa.metric.type`](/docs/registry/attributes/k8s.md) | string | The type of metric source for the horizontal pod autoscaler. [2] | `Resource`; `ContainerResource` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -1055,7 +1055,7 @@ This metric is [opt-in][MetricOptIn].
 If the type of the metric is [`ContainerResource`](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-metrics-apis),
 the `k8s.container.name` attribute MUST be set to identify the specific container within the pod to which the metric applies.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.container.name`](/docs/registry/attributes/k8s.md) | string | The name of the Container from Pod specification, must be unique within a Pod. Container runtime usually uses different globally unique name (`container.name`). | `redis` | `Conditionally Required` [1] | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`k8s.hpa.metric.type`](/docs/registry/attributes/k8s.md) | string | The type of metric source for the horizontal pod autoscaler. [2] | `Resource`; `ContainerResource` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -1089,7 +1089,7 @@ This metric is [opt-in][MetricOptIn].
 If the type of the metric is [`ContainerResource`](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#support-for-metrics-apis),
 the `k8s.container.name` attribute MUST be set to identify the specific container within the pod to which the metric applies.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.container.name`](/docs/registry/attributes/k8s.md) | string | The name of the Container from Pod specification, must be unique within a Pod. Container runtime usually uses different globally unique name (`container.name`). | `redis` | `Conditionally Required` [1] | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`k8s.hpa.metric.type`](/docs/registry/attributes/k8s.md) | string | The type of metric source for the horizontal pod autoscaler. [2] | `Resource`; `ContainerResource` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -1364,7 +1364,7 @@ This metric is [recommended][MetricRecommended].
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
 | `k8s.namespace.phase` | UpDownCounter | `{namespace}` | Describes number of K8s namespaces that are currently in a given phase. | ![Development](https://img.shields.io/badge/-development-blue) | [`k8s.namespace`](/docs/registry/entities/k8s.md#k8s-namespace) |
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.namespace.phase`](/docs/registry/attributes/k8s.md) | string | The phase of the K8s namespace. [1] | `active`; `terminating` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -1375,7 +1375,7 @@ This metric is [recommended][MetricRecommended].
 
 `k8s.namespace.phase` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `active` | Active namespace phase as described by [K8s API](https://pkg.go.dev/k8s.io/api@v0.31.3/core/v1#NamespacePhase) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `terminating` | Terminating namespace phase as described by [K8s API](https://pkg.go.dev/k8s.io/api@v0.31.3/core/v1#NamespacePhase) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -1829,7 +1829,7 @@ The value represents the configured quota limit of the resource in the namespace
 **[1]:** This metric is retrieved from the `hard` field of the
 [K8s ResourceQuotaStatus](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.32/#resourcequotastatus-v1-core).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.hugepage.size`](/docs/registry/attributes/k8s.md) | string | The size (identifier) of the K8s huge page. | `2Mi` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -1857,7 +1857,7 @@ The value represents the current observed total usage of the resource in the nam
 **[1]:** This metric is retrieved from the `used` field of the
 [K8s ResourceQuotaStatus](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.32/#resourcequotastatus-v1-core).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.hugepage.size`](/docs/registry/attributes/k8s.md) | string | The size (identifier) of the K8s huge page. | `2Mi` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -1888,7 +1888,7 @@ The value represents the configured quota limit of the resource in the namespace
 The `k8s.storageclass.name` should be required when a resource quota is defined for a specific
 storage class.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.storageclass.name`](/docs/registry/attributes/k8s.md) | string | The name of K8s [StorageClass](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#storageclass-v1-storage-k8s-io) object. | `gold.storageclass.storage.k8s.io` | `Conditionally Required` [1] | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -1922,7 +1922,7 @@ The value represents the current observed total usage of the resource in the nam
 The `k8s.storageclass.name` should be required when a resource quota is defined for a specific
 storage class.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.storageclass.name`](/docs/registry/attributes/k8s.md) | string | The name of K8s [StorageClass](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#storageclass-v1-storage-k8s-io) object. | `gold.storageclass.storage.k8s.io` | `Conditionally Required` [1] | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -1956,7 +1956,7 @@ The value represents the configured quota limit of the resource in the namespace
 The `k8s.storageclass.name` should be required when a resource quota is defined for a specific
 storage class.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.storageclass.name`](/docs/registry/attributes/k8s.md) | string | The name of K8s [StorageClass](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#storageclass-v1-storage-k8s-io) object. | `gold.storageclass.storage.k8s.io` | `Conditionally Required` [1] | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -1990,7 +1990,7 @@ The value represents the current observed total usage of the resource in the nam
 The `k8s.storageclass.name` should be required when a resource quota is defined for a specific
 storage class.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.storageclass.name`](/docs/registry/attributes/k8s.md) | string | The name of K8s [StorageClass](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#storageclass-v1-storage-k8s-io) object. | `gold.storageclass.storage.k8s.io` | `Conditionally Required` [1] | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -2117,7 +2117,7 @@ The value represents the configured quota limit of the resource in the namespace
 **[1]:** This metric is retrieved from the `hard` field of the
 [K8s ResourceQuotaStatus](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.32/#resourcequotastatus-v1-core).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.resourcequota.resource_name`](/docs/registry/attributes/k8s.md) | string | The name of the K8s resource a resource quota defines. [1] | `count/replicationcontrollers` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -2147,7 +2147,7 @@ The value represents the current observed total usage of the resource in the nam
 **[1]:** This metric is retrieved from the `used` field of the
 [K8s ResourceQuotaStatus](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.32/#resourcequotastatus-v1-core).
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`k8s.resourcequota.resource_name`](/docs/registry/attributes/k8s.md) | string | The name of the K8s resource a resource quota defines. [1] | `count/replicationcontrollers` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 

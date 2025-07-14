@@ -10,11 +10,11 @@
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `deployment`
+**Type:** `deployment`
 
-**Description:** The software deployment.
+**Summary:** The software deployment.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`deployment.environment.name`](/docs/registry/attributes/deployment.md) | string | Name of the [deployment environment](https://wikipedia.org/wiki/Deployment_environment) (aka deployment tier). [1] | `staging`; `production` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 

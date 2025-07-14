@@ -8,9 +8,9 @@
 
 ## HTTP Attributes
 
-This document defines semantic convention attributes in the HTTP namespace.
+**Summary:** This document defines semantic convention attributes in the HTTP namespace.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="http-connection-state" href="#http-connection-state">`http.connection.state`</a> | string | State of the HTTP connection in the HTTP connection pool. | `active`; `idle` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="http-request-body-size" href="#http-request-body-size">`http.request.body.size`</a> | int | The size of the request payload body in bytes. This is the number of bytes transferred excluding headers and is often, but not always, present as the [Content-Length](https://www.rfc-editor.org/rfc/rfc9110.html#field.content-length) header. For requests using transport encoding, this should be the compressed size. | `3495` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -82,7 +82,7 @@ SHOULD include the [application root](/docs/http/http-spans.md#http-server-defin
 
 `http.connection.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `active` | active state. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `idle` | idle state. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -91,7 +91,7 @@ SHOULD include the [application root](/docs/http/http-spans.md#http-server-defin
 
 `http.request.method` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | Any HTTP method that the instrumentation has no prior knowledge of. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `CONNECT` | CONNECT method. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -106,9 +106,9 @@ SHOULD include the [application root](/docs/http/http-spans.md#http-server-defin
 
 ## Deprecated HTTP Attributes
 
-Describes deprecated HTTP attributes.
+**Summary:** Describes deprecated HTTP attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="http-client-ip" href="#http-client-ip">`http.client_ip`</a> | string | Deprecated, use `client.address` instead. | `83.164.160.102` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `client.address`. |
 | <a id="http-flavor" href="#http-flavor">`http.flavor`</a> | string | Deprecated, use `network.protocol.name` instead. | `1.0`; `1.1`; `2.0` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `network.protocol.name`. |
@@ -129,7 +129,7 @@ Describes deprecated HTTP attributes.
 
 `http.flavor` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `1.0` | HTTP/1.0 | ![Development](https://img.shields.io/badge/-development-blue) |
 | `1.1` | HTTP/1.1 | ![Development](https://img.shields.io/badge/-development-blue) |

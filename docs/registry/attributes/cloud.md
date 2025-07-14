@@ -5,9 +5,9 @@
 
 ## Cloud Attributes
 
-A cloud environment (e.g. GCP, Azure, AWS).
+**Summary:** A cloud environment (e.g. GCP, Azure, AWS).
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="cloud-account-id" href="#cloud-account-id">`cloud.account.id`</a> | string | The cloud account ID the resource is assigned to. | `111111111111`; `opentelemetry` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="cloud-availability-zone" href="#cloud-availability-zone">`cloud.availability_zone`</a> | string | Cloud regions often have multiple, isolated locations known as zones to increase availability. Availability zone represents the zone where the resource is running. [1] | `us-east-1c` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -44,7 +44,7 @@ The following well-known definitions MUST be used if you set this attribute and 
 
 `cloud.platform` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `alibaba_cloud_ecs` | Alibaba Cloud Elastic Compute Service | ![Development](https://img.shields.io/badge/-development-blue) |
 | `alibaba_cloud_fc` | Alibaba Cloud Function Compute | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -81,7 +81,7 @@ The following well-known definitions MUST be used if you set this attribute and 
 
 `cloud.provider` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `alibaba_cloud` | Alibaba Cloud | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws` | Amazon Web Services | ![Development](https://img.shields.io/badge/-development-blue) |

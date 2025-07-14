@@ -21,7 +21,7 @@ described on this page.
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`rpc.method`](/docs/registry/attributes/rpc.md) | string | The name of the (logical) method being called, must be equal to the $method part in the span name. [1] | `exampleMethod` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`rpc.jsonrpc.error_code`](/docs/registry/attributes/rpc.md) | int | `error.code` property of response if it is an error response. | `-32700`; `100` | `Conditionally Required` If response is not successful. | ![Development](https://img.shields.io/badge/-development-blue) |

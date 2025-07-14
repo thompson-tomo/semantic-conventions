@@ -50,20 +50,20 @@ linkTitle: Spans
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-This span represents a client call to Generative AI model or service that generates a response or requests a tool call based on the input prompt.
+**Summary:** This span represents a client call to Generative AI model or service that generates a response or requests a tool call based on the input prompt.
 
-**Span name** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
+**Span Name:** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
 Semantic conventions for individual GenAI systems and frameworks MAY specify different span name format
 and MUST follow the overall [guidelines for span names](https://github.com/open-telemetry/opentelemetry-specification/tree/v1.37.0/specification/trace/api.md#span).
 
-**Span kind** SHOULD be `CLIENT`and MAY be set to `INTERNAL` on spans representing
+**Span Kind:** SHOULD be `CLIENT`and MAY be set to `INTERNAL` on spans representing
 call to models running in the same process. It's RECOMMENDED to use `CLIENT` kind
 when the GenAI system being instrumented usually runs in a different process than its
 client or when the GenAI call happens over instrumented protocol such as HTTP.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gen_ai.operation.name`](/docs/registry/attributes/gen-ai.md) | string | The name of the operation being performed. [1] | `chat`; `generate_content`; `text_completion` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`gen_ai.provider.name`](/docs/registry/attributes/gen-ai.md) | string | The Generative AI provider as identified by the client or server instrumentation. [2] | `openai`; `gcp.gen_ai`; `gcp.vertex_ai` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -145,7 +145,7 @@ Additional output format details may be recorded in the future in the `gen_ai.ou
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -153,7 +153,7 @@ Additional output format details may be recorded in the future in the `gen_ai.ou
 
 `gen_ai.operation.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `chat` | Chat completion operation such as [OpenAI Chat API](https://platform.openai.com/docs/api-reference/chat) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `create_agent` | Create GenAI agent | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -167,7 +167,7 @@ Additional output format details may be recorded in the future in the `gen_ai.ou
 
 `gen_ai.output.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `image` | Image | ![Development](https://img.shields.io/badge/-development-blue) |
 | `json` | JSON object with known or unknown schema | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -178,7 +178,7 @@ Additional output format details may be recorded in the future in the `gen_ai.ou
 
 `gen_ai.provider.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `anthropic` | [Anthropic](https://www.anthropic.com/) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws.bedrock` | [AWS Bedrock](https://aws.amazon.com/bedrock) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -218,15 +218,15 @@ Additional output format details may be recorded in the future in the `gen_ai.ou
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-Describes GenAI embeddings span - a request to a Generative AI model or service that generates an embeddings based on the input.
+**Summary:** Describes GenAI embeddings span - a request to a Generative AI model or service that generates an embeddings based on the input.
 The `gen_ai.operation.name` SHOULD be `embeddings`.
-**Span name** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
+**Span Name:** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`gen_ai.operation.name`](/docs/registry/attributes/gen-ai.md) | string | The name of the operation being performed. [1] | `chat`; `generate_content`; `text_completion` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [2] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` if the operation ended in an error | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -254,7 +254,7 @@ Instrumentations SHOULD document the list of errors they report.
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -262,7 +262,7 @@ Instrumentations SHOULD document the list of errors they report.
 
 `gen_ai.operation.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `chat` | Chat completion operation such as [OpenAI Chat API](https://platform.openai.com/docs/api-reference/chat) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `create_agent` | Create GenAI agent | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -288,22 +288,22 @@ Instrumentations SHOULD document the list of errors they report.
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-Describes tool execution span.
+**Summary:** Describes tool execution span.
 
 `gen_ai.operation.name` SHOULD be `execute_tool`.
 
-**Span name** SHOULD be `execute_tool {gen_ai.tool.name}`.
+**Span Name:** SHOULD be `execute_tool {gen_ai.tool.name}`.
 
 GenAI instrumentations that are able to instrument tool execution call SHOULD do so.
 However, it's common for tools to be executed by the application code. It's recommended
 for the application developers to follow this semantic convention for tools invoked
 by the application code.
 
-**Span kind** SHOULD be `INTERNAL`.
+**Span Kind:** SHOULD be `INTERNAL`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` if the operation ended in an error | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`gen_ai.tool.call.id`](/docs/registry/attributes/gen-ai.md) | string | The tool call identifier. | `call_mszuSIzqtI65i1wAUOE8w5H4` | `Recommended` if available | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -318,7 +318,7 @@ Instrumentations SHOULD document the list of errors they report.
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 

@@ -8,9 +8,9 @@
 
 ## Code Attributes
 
-These attributes provide context about source code
+**Summary:** These attributes provide context about source code
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="code-column-number" href="#code-column-number">`code.column.number`</a> | int | The column number in `code.file.path` best representing the operation. It SHOULD point within the code unit named in `code.function.name`. This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Line'. This constraint is imposed to prevent redundancy and maintain data integrity. | `16` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | <a id="code-file-path" href="#code-file-path">`code.file.path`</a> | string | The source code file name that identifies the code unit as uniquely as possible (preferably an absolute file path). This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Function'. This constraint is imposed to prevent redundancy and maintain data integrity. | `/usr/local/MyApplication/content_root/app/index.php` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -36,9 +36,9 @@ Examples:
 
 ## Deprecated Code Attributes
 
-These deprecated attributes provide context about source code
+**Summary:** These deprecated attributes provide context about source code
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="code-column" href="#code-column">`code.column`</a> | int | Deprecated, use `code.column.number` | `16` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `code.column.number`. |
 | <a id="code-filepath" href="#code-filepath">`code.filepath`</a> | string | Deprecated, use `code.file.path` instead | `/usr/local/MyApplication/content_root/app/index.php` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `code.file.path`. |

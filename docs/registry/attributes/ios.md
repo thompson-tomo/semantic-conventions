@@ -8,9 +8,9 @@
 
 ## iOS Attributes
 
-This group describes iOS-specific attributes.
+**Summary:** This group describes iOS-specific attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="ios-app-state" href="#ios-app-state">`ios.app.state`</a> | string | This attribute represents the state of the application. [1] | `active`; `inactive`; `background` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -20,7 +20,7 @@ This group describes iOS-specific attributes.
 
 `ios.app.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `active` | The app has become `active`. Associated with UIKit notification `applicationDidBecomeActive`. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `background` | The app is now in the background. This value is associated with UIKit notification `applicationDidEnterBackground`. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -30,9 +30,9 @@ This group describes iOS-specific attributes.
 
 ## Deprecated iOS Attributes
 
-The iOS platform on which the iOS application is running.
+**Summary:** The iOS platform on which the iOS application is running.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="ios-state" href="#ios-state">`ios.state`</a> | string |  [2] | `active`; `inactive`; `background` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by the `ios.app.state` event body field. |
 
@@ -42,7 +42,7 @@ The iOS platform on which the iOS application is running.
 
 `ios.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `active` | The app has become `active`. Associated with UIKit notification `applicationDidBecomeActive`. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `background` | The app is now in the background. This value is associated with UIKit notification `applicationDidEnterBackground`. | ![Development](https://img.shields.io/badge/-development-blue) |

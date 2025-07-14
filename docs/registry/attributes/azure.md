@@ -9,9 +9,9 @@
 
 ## Azure Client Library Attributes
 
-This section defines generic attributes used by Azure Client Libraries.
+**Summary:** This section defines generic attributes used by Azure Client Libraries.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="azure-client-id" href="#azure-client-id">`azure.client.id`</a> | string | The unique identifier of the client instance. | `3ba4827d-4422-483f-b59f-85b74211c11d`; `storage-client-1` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="azure-resource-provider-namespace" href="#azure-resource-provider-namespace">`azure.resource_provider.namespace`</a> | string | [Azure Resource Provider Namespace](https://learn.microsoft.com/azure/azure-resource-manager/management/azure-services-resource-providers) as recognized by the client. | `Microsoft.Storage`; `Microsoft.KeyVault`; `Microsoft.ServiceBus` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -19,9 +19,9 @@ This section defines generic attributes used by Azure Client Libraries.
 
 ## Azure Cosmos DB Attributes
 
-This section defines attributes for Azure Cosmos DB.
+**Summary:** This section defines attributes for Azure Cosmos DB.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="azure-cosmosdb-connection-mode" href="#azure-cosmosdb-connection-mode">`azure.cosmosdb.connection.mode`</a> | string | Cosmos client connection mode. | `gateway`; `direct` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="azure-cosmosdb-consistency-level" href="#azure-cosmosdb-consistency-level">`azure.cosmosdb.consistency.level`</a> | string | Account or request [consistency level](https://learn.microsoft.com/azure/cosmos-db/consistency-levels). | `Eventual`; `ConsistentPrefix`; `BoundedStaleness`; `Strong`; `Session` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -36,7 +36,7 @@ This section defines attributes for Azure Cosmos DB.
 
 `azure.cosmosdb.connection.mode` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `direct` | Direct connection. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `gateway` | Gateway (HTTP) connection. | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -45,7 +45,7 @@ This section defines attributes for Azure Cosmos DB.
 
 `azure.cosmosdb.consistency.level` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `BoundedStaleness` | bounded_staleness | ![Development](https://img.shields.io/badge/-development-blue) |
 | `ConsistentPrefix` | consistent_prefix | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -55,9 +55,9 @@ This section defines attributes for Azure Cosmos DB.
 
 ## Deprecated Azure Attributes
 
-This section describes deprecated Azure attributes.
+**Summary:** This section describes deprecated Azure attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="az-namespace" href="#az-namespace">`az.namespace`</a> | string | Deprecated, use `azure.resource_provider.namespace` instead. | `Microsoft.Storage`; `Microsoft.KeyVault`; `Microsoft.ServiceBus` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `azure.resource_provider.namespace`. |
 | <a id="az-service-request-id" href="#az-service-request-id">`az.service_request_id`</a> | string | Deprecated, use `azure.service.request.id` instead. | `00000000-0000-0000-0000-000000000000` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `azure.service.request.id`. |

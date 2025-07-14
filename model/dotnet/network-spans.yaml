@@ -18,7 +18,7 @@ groups:
       Corresponding `Activity.OperationName` is `Experimental.System.Net.Http.Connections.WaitForConnection`, `ActivitySource` name - `Experimental.System.Net.Http`.
       Added in .NET 9.
 
-      **Span name** SHOULD be `HTTP wait_for_connection {server.address}:{server.port}`.
+      **Span Name:** SHOULD be `HTTP wait_for_connection {server.address}:{server.port}`.
     attributes:
       - ref: error.type
         requirement_level:
@@ -48,7 +48,7 @@ groups:
       Corresponding `Activity.OperationName` is `Experimental.System.Net.Http.Connections.ConnectionSetup`, `ActivitySource` name - `Experimental.System.Net.Http.Connections`.
       Added in .NET 9.
 
-      **Span name** SHOULD be `HTTP connection_setup {server.address}:{server.port}`.
+      **Span Name:** SHOULD be `HTTP connection_setup {server.address}:{server.port}`.
     attributes:
       - ref: network.peer.address
         brief: Peer IP address of the socket connection.
@@ -79,7 +79,7 @@ groups:
       Corresponding `Activity.OperationName` is `Experimental.System.Net.Sockets.Connect`, `ActivitySource` name - `Experimental.System.Net.Sockets`.
       Added in .NET 9.
 
-      **Span name** SHOULD be `socket connect {network.peer.address}:{network.peer.port}` when socket address family has a
+      **Span Name:** SHOULD be `socket connect {network.peer.address}:{network.peer.port}` when socket address family has a
       notion of port and `socket connect {network.peer.address}`
       otherwise.
     attributes:
@@ -143,7 +143,7 @@ groups:
       Corresponding `Activity.OperationName` is `Experimental.System.Net.NameResolution.DnsLookup`, `ActivitySource` name - `Experimental.System.Net.NameResolution`.
       Added in .NET 9.
 
-      **Span name** SHOULD be `DNS lookup {dns.question.name}` for DNS lookup (IP addresses from host name)
+      **Span Name:** SHOULD be `DNS lookup {dns.question.name}` for DNS lookup (IP addresses from host name)
       and `DNS reverse lookup {dns.question.name}` for reverse lookup (host names from IP address).
     attributes:
       - ref: dns.question.name
@@ -181,10 +181,10 @@ groups:
       Corresponding `Activity.OperationName` is `Experimental.System.Net.Security.TlsHandshake`, `ActivitySource` name - `Experimental.System.Net.Security`.
       Added in .NET 9.
 
-      **Span name** SHOULD be `TLS client handshake {server.address}` when authenticating on the client
+      **Span Name:** SHOULD be `TLS client handshake {server.address}` when authenticating on the client
       side and `TLS server handshake` when authenticating the server.
 
-      **Span kind** SHOULD be `INTERNAL` in both cases.
+      **Span Kind:** SHOULD be `INTERNAL` in both cases.
     attributes:
       - ref: tls.protocol.name
         requirement_level:

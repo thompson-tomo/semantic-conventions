@@ -97,11 +97,11 @@ groups:
       This span represents a client call to Generative AI model or service that generates
       a response or requests a tool call based on the input prompt.
     note: |
-      **Span name** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
+      **Span Name:** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
       Semantic conventions for individual GenAI systems and frameworks MAY specify different span name format
       and MUST follow the overall [guidelines for span names](https://github.com/open-telemetry/opentelemetry-specification/tree/v1.37.0/specification/trace/api.md#span).
 
-      **Span kind** SHOULD be `CLIENT`and MAY be set to `INTERNAL` on spans representing
+      **Span Kind:** SHOULD be `CLIENT`and MAY be set to `INTERNAL` on spans representing
       call to models running in the same process. It's RECOMMENDED to use `CLIENT` kind
       when the GenAI system being instrumented usually runs in a different process than its
       client or when the GenAI call happens over instrumented protocol such as HTTP.
@@ -146,7 +146,7 @@ groups:
     note: |
       `gen_ai.provider.name` MUST be set to `"openai"` and SHOULD be provided **at span creation time**.
 
-      **Span name** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
+      **Span Name:** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
     attributes:
       - ref: gen_ai.request.model
         requirement_level: required
@@ -170,7 +170,7 @@ groups:
     note: |
       `gen_ai.provider.name` MUST be set to `"azure.ai.inference"` and SHOULD be provided **at span creation time**.
 
-      **Span name** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}` when the
+      **Span Name:** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}` when the
       model name is available and `{gen_ai.operation.name}` otherwise.
     attributes:
       - ref: azure.resource_provider.namespace
@@ -198,7 +198,7 @@ groups:
 
       The `gen_ai.operation.name` SHOULD be `embeddings`.
 
-      **Span name** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
+      **Span Name:** SHOULD be `{gen_ai.operation.name} {gen_ai.request.model}`.
     extends: attributes.gen_ai.common.client
     attributes:
       - ref: gen_ai.request.encoding_formats
@@ -216,7 +216,7 @@ groups:
     note: |
       The `gen_ai.operation.name` SHOULD be `create_agent`.
 
-      **Span name** SHOULD be `create_agent {gen_ai.agent.name}`.
+      **Span Name:** SHOULD be `create_agent {gen_ai.agent.name}`.
       Semantic conventions for individual GenAI systems and frameworks MAY specify different span name format.
     extends: attributes.gen_ai.common.client
     attributes:
@@ -241,7 +241,7 @@ groups:
       with remote agent services.
     note: |
       The `gen_ai.operation.name` SHOULD be `invoke_agent`.
-      The **span name** SHOULD be `invoke_agent {gen_ai.agent.name}` if `gen_ai.agent.name` is readily available.
+      **Span Name:** SHOULD be `invoke_agent {gen_ai.agent.name}` if `gen_ai.agent.name` is readily available.
       When `gen_ai.agent.name` is not available, it SHOULD be `invoke_agent`.
       Semantic conventions for individual GenAI systems and frameworks MAY specify different span name format.
     extends: attributes.gen_ai.inference.client
@@ -269,7 +269,7 @@ groups:
     note: |
       `gen_ai.operation.name` SHOULD be `execute_tool`.
 
-      **Span name** SHOULD be `execute_tool {gen_ai.tool.name}`.
+      **Span Name:** SHOULD be `execute_tool {gen_ai.tool.name}`.
 
       GenAI instrumentations that are able to instrument tool execution call SHOULD do so.
       However, it's common for tools to be executed by the application code. It's recommended

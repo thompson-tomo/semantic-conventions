@@ -83,7 +83,7 @@ For example, for an operation describing SQL query on an anonymous table like `S
 
 **Status:** ![Stable](https://img.shields.io/badge/-stable-lightgreen)
 
-This span describes database client call.
+**Summary:** This span describes database client call.
 
 Instrumentations SHOULD, when possible, record database spans that cover the duration of
 the corresponding API call as if it was observed by the caller (such as client application).
@@ -96,20 +96,20 @@ it is RECOMMENDED to instrument the higher-level convenience APIs.
 These often allow setting `db.operation.*` attributes, which usually are not
 readily available at the generic query level.
 
-**Span name** is covered in the [Name](/docs/database/database-spans.md#name) section.
+**Span Name:** is covered in the [Name](/docs/database/database-spans.md#name) section.
 
-**Span kind** SHOULD be `CLIENT`. It MAY be set to `INTERNAL` on spans representing
+**Span Kind:** SHOULD be `CLIENT`. It MAY be set to `INTERNAL` on spans representing
 in-memory database calls.
 It's RECOMMENDED to use `CLIENT` kind when database system being instrumented usually
 runs in a different process than its client or when database calls happen over
 instrumented protocol such as HTTP.
 
-**Span status** Refer to the [Recording Errors](/docs/general/recording-errors.md)
+**Span Status:** Refer to the [Recording Errors](/docs/general/recording-errors.md)
 document for details on how to record span status. Semantic conventions for
 individual systems SHOULD specify which values of `db.response.status_code`
 classify as errors.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`db.system.name`](/docs/registry/attributes/db.md) | string | The database management system (DBMS) product as identified by the client instrumentation. [1] | `other_sql`; `softwareag.adabas`; `actian.ingres` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`db.collection.name`](/docs/registry/attributes/db.md) | string | The name of a collection (table, container) within the database. [2] | `public.users`; `customers` | `Conditionally Required` [3] | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -242,7 +242,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `db.system.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `actian.ingres` | [Actian Ingres](https://www.actian.com/databases/ingres/) | ![Development](https://img.shields.io/badge/-development-blue) |
 | `aws.dynamodb` | [Amazon DynamoDB](https://aws.amazon.com/pm/dynamodb/) | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -290,7 +290,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 

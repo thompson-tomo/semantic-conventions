@@ -9,16 +9,17 @@
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-**type:** `zos.software`
+**Type:** `zos.software`
 
-**Description:** A software resource running on a z/OS system.
+**Summary:** A software resource running on a z/OS system.
+
 
 **Other Attributes:**
 
 > :warning: This entity definition contains attributes without a role.
 > Stable Entities MUST NOT have attributes without a defined role.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`zos.smf.id`](/docs/registry/attributes/zos.md) | string | The System Management Facility (SMF) Identifier uniquely identified a z/OS system within a SYSPLEX or mainframe environment and is used for system and performance analysis. | `SYS1` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`zos.sysplex.name`](/docs/registry/attributes/zos.md) | string | The name of the SYSPLEX to which the z/OS system belongs too. | `SYSPLEX1` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |

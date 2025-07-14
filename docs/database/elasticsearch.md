@@ -27,18 +27,18 @@ The Semantic Conventions for [Elasticsearch](https://www.elastic.co/) extend and
 
 **Status:** ![Development](https://img.shields.io/badge/-development-blue)
 
-Spans representing calls to Elasticsearch adhere to the general [Semantic Conventions for Database Client Spans](/docs/database/database-spans.md).
+**Summary:** Spans representing calls to Elasticsearch adhere to the general [Semantic Conventions for Database Client Spans](/docs/database/database-spans.md).
 
 `db.system.name` MUST be set to `"elasticsearch"` and SHOULD be provided **at span creation time**.
 
-**Span name** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
+**Span Name:** SHOULD follow the general [database span name convention](/docs/database/database-spans.md#name)
 with the endpoint identifier stored in `db.operation.name`, and the index stored in `db.collection.name`.
 
-**Span kind** SHOULD be `CLIENT`.
+**Span Kind:** SHOULD be `CLIENT`.
 
-**Span status** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
+**Span Status:** SHOULD follow the [Recording Errors](/docs/general/recording-errors.md) document.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`db.operation.name`](/docs/registry/attributes/db.md) | string | The name of the operation or command being executed. [1] | `search`; `ml.close_job`; `cat.aliases` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`http.request.method`](/docs/registry/attributes/http.md) | string | HTTP request method. [2] | `GET`; `POST`; `HEAD` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -140,7 +140,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -148,7 +148,7 @@ and SHOULD be provided **at span creation time** (if provided at all):
 
 `http.request.method` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | Any HTTP method that the instrumentation has no prior knowledge of. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | `CONNECT` | CONNECT method. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |

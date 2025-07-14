@@ -5,9 +5,9 @@
 
 ## Hardware Attributes
 
-Attributes for hardware.
+**Summary:** Attributes for hardware.
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="hw-id" href="#hw-id">`hw.id`</a> | string | An identifier for the hardware component, unique within the monitored host | `win32battery_battery_testsysa33_1` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="hw-name" href="#hw-name">`hw.name`</a> | string | An easily-recognizable name for the hardware component | `eth0` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -21,7 +21,7 @@ Attributes for hardware.
 
 `hw.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `degraded` | Degraded | ![Development](https://img.shields.io/badge/-development-blue) |
 | `failed` | Failed | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -31,7 +31,7 @@ Attributes for hardware.
 
 `hw.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `battery` | Battery | ![Development](https://img.shields.io/badge/-development-blue) |
 | `cpu` | CPU | ![Development](https://img.shields.io/badge/-development-blue) |

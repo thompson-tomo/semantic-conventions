@@ -56,7 +56,7 @@ Defines feature flag evaluation as an event.
 
 A `feature_flag.evaluation` event SHOULD be emitted whenever a feature flag value is evaluated, which may happen many times over the course of an application lifecycle. For example, a website A/B testing different animations may evaluate a flag each time a button is clicked. A `feature_flag.evaluation` event is emitted on each evaluation even if the result is the same.
 
-| Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
+| Attribute  | Type | Summary  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`feature_flag.key`](/docs/registry/attributes/feature-flag.md) | string | The lookup key of the feature flag. | `logo-color` | `Required` | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `provider_not_ready`; `targeting_key_missing`; `provider_fatal`; `general` | `Conditionally Required` [2] | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
@@ -71,7 +71,7 @@ A `feature_flag.evaluation` event SHOULD be emitted whenever a feature flag valu
 
 **[1] `error.type`:** If one of these values applies, then it MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary     | Stability |
 |---|---|---|
 | `flag_not_found` | The flag could not be found. | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) |
 | `invalid_context` | The evaluation context does not meet provider requirements. | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) |
@@ -107,7 +107,7 @@ For example, the variant `red` maybe be used for the value `#c05543`.
 
 `error.type` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `_OTHER` | A fallback error value to be used when the instrumentation doesn't define a custom value. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 
@@ -115,7 +115,7 @@ For example, the variant `red` maybe be used for the value `#c05543`.
 
 `feature_flag.result.reason` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
-| Value  | Description | Stability |
+| Value  | Summary | Stability |
 |---|---|---|
 | `cached` | The resolved value was retrieved from cache. | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) |
 | `default` | The resolved value fell back to a pre-configured value (no dynamic evaluation occurred or dynamic evaluation yielded no result). | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) |

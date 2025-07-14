@@ -5,9 +5,9 @@
 
 ## Browser Attributes
 
-The web browser attributes
+**Summary:** The web browser attributes
 
-| Attribute | Type | Description | Examples | Stability |
+| Attribute | Type | Summary | Examples | Stability |
 |---|---|---|---|---|
 | <a id="browser-brands" href="#browser-brands">`browser.brands`</a> | string[] | Array of brand name and version separated by a space [1] | `[" Not A;Brand 99", "Chromium 99", "Chrome 99"]` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="browser-language" href="#browser-language">`browser.language`</a> | string | Preferred language of the user using the browser [2] | `en`; `en-US`; `fr`; `fr-FR` | ![Development](https://img.shields.io/badge/-development-blue) |

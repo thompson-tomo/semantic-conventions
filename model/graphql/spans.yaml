@@ -6,7 +6,7 @@ groups:
     brief: >
       This span represents an incoming operation on a GraphQL server implementation.
     note: |
-      **Span name** SHOULD be of the format `{graphql.operation.type}` provided
+      **Span Name:** SHOULD be of the format `{graphql.operation.type}` provided
       `graphql.operation.type` is available. If `graphql.operation.type` is not available,
       the span SHOULD be named `GraphQL Operation`.
 
