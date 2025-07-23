@@ -154,7 +154,7 @@ groups:
       code_generation:
         metric_value_type: double
     stability: development
-    brief: TODO
+    brief: Percentage of memory bytes in use.
     instrument: gauge
     unit: "1"
     attributes:
@@ -188,7 +188,7 @@ groups:
       code_generation:
         metric_value_type: double
     stability: development
-    brief: TODO
+    brief: Swap (unix) or pagefile (windows) utilization.
     instrument: gauge
     unit: "1"
     attributes:
@@ -206,7 +206,7 @@ groups:
       code_generation:
         metric_value_type: int
     stability: development
-    brief: TODO
+    brief: The number of page faults.
     instrument: counter
     unit: "{fault}"
     attributes:
@@ -221,7 +221,7 @@ groups:
     annotations:
       code_generation:
         metric_value_type: int
-    brief: TODO
+    brief: The number of paging operations.
     instrument: counter
     unit: "{operation}"
     attributes:
@@ -238,7 +238,7 @@ groups:
       code_generation:
         metric_value_type: int
     stability: development
-    brief: TODO
+    brief: Disk bytes transferred.
     instrument: counter
     unit: "By"
     attributes:
@@ -254,7 +254,7 @@ groups:
       code_generation:
         metric_value_type: int
     stability: development
-    brief: TODO
+    brief: Disk operations count.
     instrument: counter
     unit: "{operation}"
     attributes:
@@ -313,7 +313,7 @@ groups:
       code_generation:
         metric_value_type: int
     stability: development
-    brief: TODO
+    brief: The number of disk reads/writes merged into single physical disk access operations.
     instrument: counter
     unit: "{operation}"
     attributes:
@@ -369,7 +369,7 @@ groups:
       code_generation:
         metric_value_type: double
     stability: development
-    brief: TODO
+    brief: Fraction of filesystem bytes used.
     instrument: gauge
     unit: "1"
     attributes:
@@ -433,7 +433,7 @@ groups:
       code_generation:
         metric_value_type: int
     stability: development
-    brief: TODO
+    brief: The number of packets transferred.
     instrument: counter
     unit: "{packet}"
     attributes:
@@ -471,7 +471,7 @@ groups:
       code_generation:
         metric_value_type: int
     stability: development
-    brief: TODO
+    brief: The number of bytes transmitted and received.
     instrument: counter
     unit: "By"
     attributes:
@@ -487,7 +487,7 @@ groups:
       code_generation:
         metric_value_type: int
     stability: development
-    brief: TODO
+    brief: The number of connections.
     instrument: updowncounter
     unit: "{connection}"
     attributes:
