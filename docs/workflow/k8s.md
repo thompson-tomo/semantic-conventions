@@ -36,23 +36,25 @@ Used to describe Kubernetes cronjobs
 | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- |
 | [`workflow.execution.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| [`workflow.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The UID of the k8s CronJob. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | [`workflow.platform.product`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The product being used to co-ordinate the execution of the tasks. | `k8s` |
 | [`workflow.task.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The UID of the k8s CronJob. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| [`workflow.task.run.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| [`workflow.trigger.type`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | Type of trigger that was called | `cron` |
 | [`host.id`](/docs/registry/attributes/host.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The UID of the k8s Node. | `fdbf79e8af94cb7f9e8df36789187052` |
 | [`host.name`](/docs/registry/attributes/host.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The name of the k8s Node. | `opentelemetry-test` |
-| [`workflow.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The name of the k8s CronJob. | `Build and deploy application` |
+| [`workflow.execution.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
+| [`workflow.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | [`workflow.task.category`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The pipeline run goes through these states during its lifecycle. | `deployment`; `build`; `test` |
 | [`workflow.task.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The name of the k8s CronJob. | `Build application` |
 | [`workflow.trigger.schedule`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | A string containing the schedule period as [Cron Expression](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm). | `0/5 * * * ? *` |
+| [`workflow.trigger.type`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Type of trigger that was called | `cron` |
 | [`container.id`](/docs/registry/attributes/container.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | Container ID. Usually a UUID, as for example used to [identify Docker containers](https://docs.docker.com/engine/containers/run/#container-identification). The UUID might be abbreviated. | `a3bf90e006b2` |
 | [`container.name`](/docs/registry/attributes/container.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The name of the Container from Pod specification, must be unique within a Pod. Container runtime usually uses different globally unique name (`container.name`). | `redis` |
-| [`workflow.execution.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
-| [`workflow.task.run.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
+| [`workflow.execution.attempt`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | int | What number execution attempt is this. [1] | `1` |
+| [`workflow.iteration.annotation.<key>`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The annotation key-value pairs placed on the iteration. [2] | `workflow.iteration.annotation.id=1` |
 | [`workflow.task.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The [URL](https://wikipedia.org/wiki/URL) of the task, providing the complete address in order to locate and identify the task. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
-| [`workflow.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The [URL](https://wikipedia.org/wiki/URL) of the workflow, providing the complete address in order to locate and identify the workflow. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
+
+**[1] `workflow.execution.attempt`:** This counter starts at 1 and is incremented on each re-run of the task. The uniqueness is based upon `workflow.execution.id` & `workflow.execution.item.id`.
+
+**[2] `workflow.iteration.annotation.<key>`:** The `<key>` being the annotation name, the value being the annotation value, even if the value is empty.
 
 ---
 
@@ -63,16 +65,6 @@ Used to describe Kubernetes cronjobs
 | `hangfire` | Hangfire | ![Development](https://img.shields.io/badge/-development-blue) |
 | `k8s` | Kubernetes | ![Development](https://img.shields.io/badge/-development-blue) |
 | `quartz` | Quartz | ![Development](https://img.shields.io/badge/-development-blue) |
-
----
-
-`workflow.task.category` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
-
-| Value | Description | Stability |
-| --- | --- | --- |
-| `build` | Software is being built by this task. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `deployment` | Software is being deployed by this task. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `test` | Software is being tested by this task. | ![Development](https://img.shields.io/badge/-development-blue) |
 
 <!-- prettier-ignore-end -->
 <!-- END AUTOGENERATED TEXT -->
@@ -98,22 +90,24 @@ Used to describe Kubernetes cronjobs
 | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- |
 | [`workflow.execution.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| [`workflow.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The UID of the k8s Job. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | [`workflow.platform.product`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The product being used to co-ordinate the execution of the tasks. | `k8s` |
 | [`workflow.task.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The UID of the k8s Job. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| [`workflow.task.run.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| [`workflow.trigger.type`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | Type of trigger that was called | `cron` |
 | [`host.id`](/docs/registry/attributes/host.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The UID of the k8s Node. | `fdbf79e8af94cb7f9e8df36789187052` |
 | [`host.name`](/docs/registry/attributes/host.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The name of the k8s Node. | `opentelemetry-test` |
-| [`workflow.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The name of the k8s Job. | `Build and deploy application` |
+| [`workflow.execution.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
+| [`workflow.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | [`workflow.task.category`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The pipeline run goes through these states during its lifecycle. | `deployment`; `build`; `test` |
 | [`workflow.task.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The name of the k8s Job. | `Build application` |
+| [`workflow.trigger.type`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Type of trigger that was called | `cron` |
 | [`container.id`](/docs/registry/attributes/container.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | Container ID. Usually a UUID, as for example used to [identify Docker containers](https://docs.docker.com/engine/containers/run/#container-identification). The UUID might be abbreviated. | `a3bf90e006b2` |
 | [`container.name`](/docs/registry/attributes/container.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The name of the Container from Pod specification, must be unique within a Pod. Container runtime usually uses different globally unique name (`container.name`). | `redis` |
-| [`workflow.execution.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
-| [`workflow.task.run.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
+| [`workflow.execution.attempt`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | int | What number execution attempt is this. [1] | `1` |
+| [`workflow.iteration.annotation.<key>`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The annotation key-value pairs placed on the iteration. [2] | `workflow.iteration.annotation.id=1` |
 | [`workflow.task.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The [URL](https://wikipedia.org/wiki/URL) of the task, providing the complete address in order to locate and identify the task. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
-| [`workflow.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The [URL](https://wikipedia.org/wiki/URL) of the workflow, providing the complete address in order to locate and identify the workflow. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
+
+**[1] `workflow.execution.attempt`:** This counter starts at 1 and is incremented on each re-run of the task. The uniqueness is based upon `workflow.execution.id` & `workflow.execution.item.id`.
+
+**[2] `workflow.iteration.annotation.<key>`:** The `<key>` being the annotation name, the value being the annotation value, even if the value is empty.
 
 ---
 
@@ -124,16 +118,6 @@ Used to describe Kubernetes cronjobs
 | `hangfire` | Hangfire | ![Development](https://img.shields.io/badge/-development-blue) |
 | `k8s` | Kubernetes | ![Development](https://img.shields.io/badge/-development-blue) |
 | `quartz` | Quartz | ![Development](https://img.shields.io/badge/-development-blue) |
-
----
-
-`workflow.task.category` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
-
-| Value | Description | Stability |
-| --- | --- | --- |
-| `build` | Software is being built by this task. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `deployment` | Software is being deployed by this task. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `test` | Software is being tested by this task. | ![Development](https://img.shields.io/badge/-development-blue) |
 
 <!-- prettier-ignore-end -->
 <!-- END AUTOGENERATED TEXT -->
