@@ -21,7 +21,7 @@
 
 | Role | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- | --- |
-| Other | [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.name`. | `Recommended` | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` |
+| Other | [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` |
 
 ## CICD Pipeline Run
 
@@ -39,8 +39,8 @@
 
 | Role | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- | --- |
-| Other | [`cicd.pipeline.run.id`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.execution.id`. | `Recommended` | string | The unique identifier of a pipeline run within a CI/CD system. | `120912` |
-| Other | [`cicd.pipeline.run.url.full`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.execution.url.full`. | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
+| Other | [`cicd.pipeline.run.id`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The unique identifier of a pipeline run within a CI/CD system. | `120912` |
+| Other | [`cicd.pipeline.run.url.full`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
 
 ## CICD Worker
 

@@ -65,15 +65,15 @@ This metric is [recommended][MetricRecommended].
 
 | Name | Instrument Type | Unit (UCUM) | Description | Stability | Entity Associations |
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
-| `cicd.pipeline.run.duration` | Histogram | `s` | Duration of a pipeline run grouped by pipeline, state and result. | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.execution.duration`. | [`cicd.pipeline`](/docs/registry/entities/cicd.md#cicd-pipeline) |
+| `cicd.pipeline.run.duration` | Histogram | `s` | Duration of a pipeline run grouped by pipeline, state and result. | ![Development](https://img.shields.io/badge/-development-blue) | [`cicd.pipeline`](/docs/registry/entities/cicd.md#cicd-pipeline) |
 
 **Attributes:**
 
 | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- |
-| [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.name`. | `Required` | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` |
-| [`cicd.pipeline.run.state`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.execution.state`. | `Required` | string | The pipeline run goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` |
-| [`cicd.pipeline.result`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.execution.result`. | `Conditionally Required` [1] | string | The result of a pipeline run. | `success`; `failure`; `timeout`; `skipped` |
+| [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` |
+| [`cicd.pipeline.run.state`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The pipeline run goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` |
+| [`cicd.pipeline.result`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Conditionally Required` [1] | string | The result of a pipeline run. | `success`; `failure`; `timeout`; `skipped` |
 | [`error.type`](/docs/registry/attributes/error.md) | ![Stable](https://img.shields.io/badge/-stable-lightgreen) | `Conditionally Required` If and only if the pipeline run failed. | string | Describes a class of error the operation ended with. [2] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` |
 
 **[1] `cicd.pipeline.result`:** If and only if the pipeline run result has been set during that state.
@@ -144,14 +144,14 @@ This metric is [recommended][MetricRecommended].
 
 | Name | Instrument Type | Unit (UCUM) | Description | Stability | Entity Associations |
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
-| `cicd.pipeline.run.active` | UpDownCounter | `{run}` | The number of pipeline runs currently active in the system by state. | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.execution.state`. | [`cicd.pipeline`](/docs/registry/entities/cicd.md#cicd-pipeline) |
+| `cicd.pipeline.run.active` | UpDownCounter | `{run}` | The number of pipeline runs currently active in the system by state. | ![Development](https://img.shields.io/badge/-development-blue) | [`cicd.pipeline`](/docs/registry/entities/cicd.md#cicd-pipeline) |
 
 **Attributes:**
 
 | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- |
-| [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.name`. | `Required` | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` |
-| [`cicd.pipeline.run.state`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.execution.state`. | `Required` | string | The pipeline run goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` |
+| [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` |
+| [`cicd.pipeline.run.state`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The pipeline run goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` |
 
 ---
 
@@ -213,7 +213,7 @@ This metric is [recommended][MetricRecommended].
 
 | Name | Instrument Type | Unit (UCUM) | Description | Stability | Entity Associations |
 | -------- | --------------- | ----------- | -------------- | --------- | ------ |
-| `cicd.pipeline.run.errors` | Counter | `{error}` | The number of errors encountered in pipeline runs (eg. compile, test failures). [1] | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.execution.errors`. | [`cicd.pipeline`](/docs/registry/entities/cicd.md#cicd-pipeline) |
+| `cicd.pipeline.run.errors` | Counter | `{error}` | The number of errors encountered in pipeline runs (eg. compile, test failures). [1] | ![Development](https://img.shields.io/badge/-development-blue) | [`cicd.pipeline`](/docs/registry/entities/cicd.md#cicd-pipeline) |
 
 **[1]:** There might be errors in a pipeline run that are non fatal (eg. they are suppressed) or in a parallel stage multiple stages could have a fatal error.
 This means that this error count might not be the same as the count of metric `cicd.pipeline.run.duration` with run result `failure`.
@@ -222,7 +222,7 @@ This means that this error count might not be the same as the count of metric `c
 
 | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- |
-| [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.name`. | `Required` | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` |
+| [`cicd.pipeline.name`](/docs/registry/attributes/cicd.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The human readable name of the pipeline within a CI/CD system. | `Build and Test`; `Lint`; `Deploy Go Project`; `deploy_to_environment` |
 | [`error.type`](/docs/registry/attributes/error.md) | ![Stable](https://img.shields.io/badge/-stable-lightgreen) | `Required` | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.

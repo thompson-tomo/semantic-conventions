@@ -6,8 +6,8 @@
 - [GCP - AppHub Attributes](#gcp---apphub-attributes)
 - [GCP - AppHub Destination Attributes](#gcp---apphub-destination-attributes)
 - [GCP Client Attributes](#gcp-client-attributes)
-- [GCP - Google Compute Engine (GCE) Attributes](#gcp---google-compute-engine-gce-attributes)
 - [GCP - Google Cloud Run Attributes](#gcp---google-cloud-run-attributes)
+- [GCP - Google Compute Engine (GCE) Attributes](#gcp---google-compute-engine-gce-attributes)
 
 ## GCP - AppHub Attributes
 
@@ -153,6 +153,17 @@ Attributes for Google Cloud client libraries.
 
 **[5] `gcp.client.service`:** Intended to be a stable identifier for Google Cloud client libraries that is uniform across implementation languages. The value should be derived from the canonical service domain for the service; for example, 'foo.googleapis.com' should result in a value of 'foo'.
 
+## GCP - Google Cloud Run Attributes
+
+This document defines attributes for Google Cloud Run.
+
+**Attributes:**
+
+| Key | Stability | Value Type | Description | Example Values |
+| --- | --- | --- | --- | --- |
+| <a id="gcp-cloud-run-job-execution" href="#gcp-cloud-run-job-execution">`gcp.cloud_run.job.execution`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The name of the Cloud Run [execution](https://cloud.google.com/run/docs/managing/job-executions) being run for the Job, as set by the [`CLOUD_RUN_EXECUTION`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable. | `job-name-xxxx`; `sample-job-mdw84` |
+| <a id="gcp-cloud-run-job-task-index" href="#gcp-cloud-run-job-task-index">`gcp.cloud_run.job.task_index`</a> | ![Development](https://img.shields.io/badge/-development-blue) | int | The index for a task within an execution as provided by the [`CLOUD_RUN_TASK_INDEX`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable. | `0`; `1` |
+
 ## GCP - Google Compute Engine (GCE) Attributes
 
 This document defines attributes for Google Compute Engine (GCE).
@@ -163,14 +174,3 @@ This document defines attributes for Google Compute Engine (GCE).
 | --- | --- | --- | --- | --- |
 | <a id="gcp-gce-instance-hostname" href="#gcp-gce-instance-hostname">`gcp.gce.instance.hostname`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The hostname of a GCE instance. This is the full value of the default or [custom hostname](https://cloud.google.com/compute/docs/instances/custom-hostname-vm). | `my-host1234.example.com`; `sample-vm.us-west1-b.c.my-project.internal` |
 | <a id="gcp-gce-instance-name" href="#gcp-gce-instance-name">`gcp.gce.instance.name`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The instance name of a GCE instance. This is the value provided by `host.name`, the visible name of the instance in the Cloud Console UI, and the prefix for the default hostname of the instance as defined by the [default internal DNS name](https://cloud.google.com/compute/docs/internal-dns#instance-fully-qualified-domain-names). | `instance-1`; `my-vm-name` |
-
-## GCP - Google Cloud Run Attributes
-
-This document defines attributes for Google Cloud Run.
-
-**Attributes:**
-
-| Key | Stability | Value Type | Description | Example Values |
-| --- | --- | --- | --- | --- |
-| <a id="gcp-cloud-run-job-execution" href="#gcp-cloud-run-job-execution">`gcp.cloud_run.job.execution`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.execution.id`. | string | The name of the Cloud Run [execution](https://cloud.google.com/run/docs/managing/job-executions) being run for the Job, as set by the [`CLOUD_RUN_EXECUTION`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable. | `job-name-xxxx`; `sample-job-mdw84` |
-| <a id="gcp-cloud-run-job-task-index" href="#gcp-cloud-run-job-task-index">`gcp.cloud_run.job.task_index`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.id`. | int | The index for a task within an execution as provided by the [`CLOUD_RUN_TASK_INDEX`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable. | `0`; `1` |
