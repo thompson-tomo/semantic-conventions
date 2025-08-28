@@ -441,9 +441,9 @@ successfully terminate.
 
 | Role | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- | --- |
-| Identity | [`k8s.job.uid`](/docs/registry/attributes/k8s.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.id`. | `Recommended` | string | The UID of the Job. | `275ecb36-5aa8-4c2a-9c47-d8bb681b9aff` |
-| Description | [`k8s.job.name`](/docs/registry/attributes/k8s.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.name`. | `Recommended` | string | The name of the Job. | `opentelemetry` |
-| Description | [`k8s.job.annotation.<key>`](/docs/registry/attributes/k8s.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.annotation`. | `Opt-In` | string | The annotation placed on the Job, the `<key>` being the annotation name, the value being the annotation value, even if the value is empty. [1] | `1`; `` |
+| Identity | [`k8s.job.uid`](/docs/registry/attributes/k8s.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The UID of the Job. | `275ecb36-5aa8-4c2a-9c47-d8bb681b9aff` |
+| Description | [`k8s.job.name`](/docs/registry/attributes/k8s.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The name of the Job. | `opentelemetry` |
+| Description | [`k8s.job.annotation.<key>`](/docs/registry/attributes/k8s.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The annotation placed on the Job, the `<key>` being the annotation name, the value being the annotation value, even if the value is empty. [1] | `1`; `` |
 | Description | [`k8s.job.label.<key>`](/docs/registry/attributes/k8s.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The label placed on the Job, the `<key>` being the label name, the value being the label value, even if the value is empty. [2] | `ci`; `` |
 
 **[1] `k8s.job.annotation.<key>`:** Examples:
@@ -485,9 +485,9 @@ A CronJob creates Jobs on a repeating schedule.
 
 | Role | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- | --- |
-| Identity | [`k8s.cronjob.uid`](/docs/registry/attributes/k8s.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.id`. | `Recommended` | string | The UID of the CronJob. | `275ecb36-5aa8-4c2a-9c47-d8bb681b9aff` |
-| Description | [`k8s.cronjob.name`](/docs/registry/attributes/k8s.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.name`. | `Recommended` | string | The name of the CronJob. | `opentelemetry` |
-| Description | [`k8s.cronjob.annotation.<key>`](/docs/registry/attributes/k8s.md) | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `workflow.task.annotation`. | `Opt-In` | string | The cronjob annotation placed on the CronJob, the `<key>` being the annotation name, the value being the annotation value. [1] | `4`; `` |
+| Identity | [`k8s.cronjob.uid`](/docs/registry/attributes/k8s.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The UID of the CronJob. | `275ecb36-5aa8-4c2a-9c47-d8bb681b9aff` |
+| Description | [`k8s.cronjob.name`](/docs/registry/attributes/k8s.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The name of the CronJob. | `opentelemetry` |
+| Description | [`k8s.cronjob.annotation.<key>`](/docs/registry/attributes/k8s.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The cronjob annotation placed on the CronJob, the `<key>` being the annotation name, the value being the annotation value. [1] | `4`; `` |
 | Description | [`k8s.cronjob.label.<key>`](/docs/registry/attributes/k8s.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Opt-In` | string | The label placed on the CronJob, the `<key>` being the label name, the value being the label value. [2] | `weekly`; `` |
 
 **[1] `k8s.cronjob.annotation.<key>`:** Examples:
