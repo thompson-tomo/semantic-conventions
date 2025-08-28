@@ -11,14 +11,13 @@
 
 **type:** `workflow`
 
-**Description:**
+**Description:** An overaching encapsulation of all the tasks which have been run, as a result of the triggering of the workflow.
 
 **Attributes:**
 
 | Role | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- | --- |
 | Identity | [`workflow.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| Description | [`workflow.definition.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Unique ID for this workflow which can be used to correlate multiple executions of this workflow. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | Description | [`workflow.outcome`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` |
 | Description | [`workflow.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
 
@@ -43,17 +42,17 @@
 
 **type:** `workflow.definition`
 
-**Description:**
+**Description:** A reusable block which has been defined to complete an action via a task.
 
 **Attributes:**
 
 | Role | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- | --- |
 | Identity | [`workflow.definition.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Unique ID for this workflow which can be used to correlate multiple executions of this workflow. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
+| Identity | [`workflow.definition.version`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Version of the workflow | `2.1` |
 | Description | [`workflow.definition.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Name of the workflow | `Build and deploy application` |
 | Description | [`workflow.definition.type`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Type of the workflow | `DSL` |
 | Description | [`workflow.definition.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the workflow, providing the complete address in order to locate and identify the workflow. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
-| Description | [`workflow.definition.version`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Version of the workflow | `2.1` |
 
 ## Workflow Execution
 
@@ -61,7 +60,7 @@
 
 **type:** `workflow.execution`
 
-**Description:**
+**Description:** A short lived entity used to capture an instance of a task being performed.
 
 **Attributes:**
 
@@ -72,8 +71,6 @@
 | Description | [`workflow.execution.outcome`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The outcome of executing the task. | `success`; `failure`; `timeout`; `skipped` |
 | Description | [`workflow.execution.state`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The pipeline run goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` |
 | Description | [`workflow.execution.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
-| Description | [`workflow.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| Description | [`workflow.task.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Unique ID for this task which can be used to correlate multiple executions of this task. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 
 **[1] `workflow.execution.attempt`:** This counter starts at 1 and is incremented on each re-run of the task. The uniqueness is based upon `workflow.execution.id` & `workflow.execution.item.id`.
 
@@ -107,18 +104,15 @@
 
 **type:** `workflow.task`
 
-**Description:**
+**Description:** A reusable definition of an action which is to performed via an execution.
 
 **Attributes:**
 
 | Role | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- | --- |
 | Identity | [`workflow.task.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Unique ID for this task which can be used to correlate multiple executions of this task. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| Description | [`workflow.definition.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Unique ID for this workflow which can be used to correlate multiple executions of this workflow. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| Description | [`workflow.task.category`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The pipeline run goes through these states during its lifecycle. | `deployment`; `build`; `test` |
+| Identity | [`workflow.task.version`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Version of the task | `2.1` |
 | Description | [`workflow.task.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Name of the task | `Build application` |
-| Description | [`workflow.task.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the task, providing the complete address in order to locate and identify the task. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
-| Description | [`workflow.task.version`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Version of the task | `2.1` |
 
 ## Workflow Trigger
 
@@ -126,7 +120,7 @@
 
 **type:** `workflow.trigger`
 
-**Description:**
+**Description:** A definition of an interaction which should start a workflow to run.
 
 **Attributes:**
 

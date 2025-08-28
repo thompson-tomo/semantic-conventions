@@ -30,20 +30,17 @@ Workflows can be used to describe cicd, deployments, generic jobs or even cron j
 | <a id="workflow-iteration-skipped" href="#workflow-iteration-skipped">`workflow.iteration.skipped`</a> | ![Development](https://img.shields.io/badge/-development-blue) | int | The number items that were processed by this task. | `2` |
 | <a id="workflow-iteration-success" href="#workflow-iteration-success">`workflow.iteration.success`</a> | ![Development](https://img.shields.io/badge/-development-blue) | int | The number items that were processed by this task. | `7` |
 | <a id="workflow-outcome" href="#workflow-outcome">`workflow.outcome`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` |
-| <a id="workflow-platform-product" href="#workflow-platform-product">`workflow.platform.product`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The product being used to co-ordinate the execution of the tasks. | `k8s` |
+| <a id="workflow-platform-name" href="#workflow-platform-name">`workflow.platform.name`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The product being used to co-ordinate the execution of the tasks. | `hangfire`; `k8s`; `quartz` |
 | <a id="workflow-state" href="#workflow-state">`workflow.state`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The pipeline run goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` |
 | <a id="workflow-task-annotation" href="#workflow-task-annotation">`workflow.task.annotation.<key>`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The annotation key-value pairs placed on the task. [5] | `workflow.task.annotation.replicas=1`; `k8s.task.annotation.data=` |
-| <a id="workflow-task-category" href="#workflow-task-category">`workflow.task.category`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The pipeline run goes through these states during its lifecycle. | `deployment`; `build`; `test` |
 | <a id="workflow-task-id" href="#workflow-task-id">`workflow.task.id`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Unique ID for this task which can be used to correlate multiple executions of this task. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | <a id="workflow-task-name" href="#workflow-task-name">`workflow.task.name`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Name of the task | `Build application` |
-| <a id="workflow-task-url-full" href="#workflow-task-url-full">`workflow.task.url.full`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The [URL](https://wikipedia.org/wiki/URL) of the task, providing the complete address in order to locate and identify the task. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
 | <a id="workflow-task-version" href="#workflow-task-version">`workflow.task.version`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Version of the task | `2.1` |
 | <a id="workflow-trigger-id" href="#workflow-trigger-id">`workflow.trigger.id`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Unique ID for this trigger which can be used to correlate trigger usage | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | <a id="workflow-trigger-name" href="#workflow-trigger-name">`workflow.trigger.name`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Name of the trigger | `Nightly build` |
 | <a id="workflow-trigger-outcome" href="#workflow-trigger-outcome">`workflow.trigger.outcome`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` |
 | <a id="workflow-trigger-schedule" href="#workflow-trigger-schedule">`workflow.trigger.schedule`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | A string containing the schedule period as [Cron Expression](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm). | `0/5 * * * ? *` |
 | <a id="workflow-trigger-type" href="#workflow-trigger-type">`workflow.trigger.type`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Type of trigger that was called | `cron` |
-| <a id="workflow-trigger-url-full" href="#workflow-trigger-url-full">`workflow.trigger.url.full`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The [URL](https://wikipedia.org/wiki/URL) of the task, providing the complete address in order to locate and identify the task. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
 | <a id="workflow-url-full" href="#workflow-url-full">`workflow.url.full`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
 
 **[1] `workflow.execution.attempt`:** This counter starts at 1 and is incremented on each re-run of the task. The uniqueness is based upon `workflow.execution.id` & `workflow.execution.item.id`.
@@ -95,7 +92,7 @@ Workflows can be used to describe cicd, deployments, generic jobs or even cron j
 
 ---
 
-`workflow.platform.product` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
+`workflow.platform.name` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
 | Value | Description | Stability |
 | --- | --- | --- |
