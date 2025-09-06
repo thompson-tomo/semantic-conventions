@@ -11,11 +11,15 @@ groups:
     instrument: histogram
     unit: "s"
     stability: stable
-    extends: attributes.db.client.with_query_and_collection
+    extends: bundle.db.collection_operation+query+server+response
     attributes:
       - ref: db.system.name
         # TODO: Not adding to the minimal because of https://github.com/open-telemetry/weaver/issues/479
         requirement_level: required
+      - ref: db.collection.name
+        requirement_level:
+          conditionally_required: >
+            If readily available and if a database call is performed on a single collection.
       - ref: db.stored_procedure.name
         requirement_level:
           recommended: If operation applies to a specific stored procedure.
@@ -175,11 +179,15 @@ groups:
     instrument: histogram
     unit: "{row}"
     stability: development
-    extends: attributes.db.client.with_query_and_collection
+    extends: bundle.db.collection_operation+query+server+response
     attributes:
       - ref: db.system.name
         # TODO: Not adding to the minimal because of https://github.com/open-telemetry/weaver/issues/479
         requirement_level: required
+      - ref: db.collection.name
+        requirement_level:
+          conditionally_required: >
+            If readily available and if a database call is performed on a single collection.
       - ref: network.peer.address
         brief: Peer address of the database node where the operation was performed.
         requirement_level:
