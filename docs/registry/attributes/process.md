@@ -11,7 +11,8 @@
 
 An operating system process.
 
-| Attribute | Type | Description | Examples | Stability |
+**Current Attributes:**
+| Key | Type | Summary | Example Values | Stability |
 |---|---|---|---|---|
 | <a id="process-args-count" href="#process-args-count">`process.args_count`</a> | int | Length of the process.command_args array [1] | `4` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="process-command" href="#process-command">`process.command`</a> | string | The command used to launch the process (i.e. the command name). On Linux based systems, can be set to the zeroth string in `proc/[pid]/cmdline`. On Windows, can be set to the first parameter extracted from `GetCommandLineW`. | `cmd/otelcol` | ![Development](https://img.shields.io/badge/-development-blue) |
@@ -84,7 +85,8 @@ with value `"/usr/local/bin:/usr/bin"`.
 
 Describes Linux Process attributes
 
-| Attribute | Type | Description | Examples | Stability |
+**Current Attributes:**
+| Key | Type | Summary | Example Values | Stability |
 |---|---|---|---|---|
 | <a id="process-linux-cgroup" href="#process-linux-cgroup">`process.linux.cgroup`</a> | string | The control group associated with the process. [5] | `1:name=systemd:/user.slice/user-1000.slice/session-3.scope`; `0::/user.slice/user-1000.slice/user@1000.service/tmux-spawn-0267755b-4639-4a27-90ed-f19f88e53748.scope` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -94,10 +96,14 @@ Describes Linux Process attributes
 
 Deprecated process attributes.
 
-| Attribute | Type | Description | Examples | Stability |
+**Current Attributes:**
+<details>
+<summary><b>Past Attributes:</b></summary>
+
+| Key | Type | Summary | Example Values | Deprecation Explanation |
 |---|---|---|---|---|
-| <a id="process-cpu-state" href="#process-cpu-state">`process.cpu.state`</a> | string | Deprecated, use `cpu.mode` instead. | `system`; `user`; `wait` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `cpu.mode`. |
-| <a id="process-executable-build-id-profiling" href="#process-executable-build-id-profiling">`process.executable.build_id.profiling`</a> | string | "Deprecated, use `process.executable.build_id.htlhash` instead." | `600DCAFE4A110000F2BF38C493F5FB92` | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `process.executable.build_id.htlhash`. |
+| <a id="process-cpu-state" href="#process-cpu-state">`process.cpu.state`</a> | string | Deprecated, use `cpu.mode` instead. | `system`; `user`; `wait` |  Use `cpu.mode` instead.  |
+| <a id="process-executable-build-id-profiling" href="#process-executable-build-id-profiling">`process.executable.build_id.profiling`</a> | string | "Deprecated, use `process.executable.build_id.htlhash` instead." | `600DCAFE4A110000F2BF38C493F5FB92` |  Use `process.executable.build_id.htlhash` instead.  |
 
 ---
 
@@ -108,3 +114,5 @@ Deprecated process attributes.
 | `system` | system | ![Development](https://img.shields.io/badge/-development-blue) |
 | `user` | user | ![Development](https://img.shields.io/badge/-development-blue) |
 | `wait` | wait | ![Development](https://img.shields.io/badge/-development-blue) |
+
+</details>
