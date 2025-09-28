@@ -1,4 +1,5 @@
 {%- import 'stability.j2' as stability -%}
+{%- import 'property_macros.j2' as prop -%}
 <!--- Hugo front matter used to generate the website version of this page:
 linkTitle:Events
 --->
@@ -15,19 +16,9 @@ The Namespace registry is the catalog of multiple signals grouped based on the n
 > The following registry overview is a work in progress.
 
 Currently, the following namespaces are documented:
-<table>
-<thead>
-<tr>
-  <th>Namespace</th>
-  <th>Entities</th>
-</tr>
-</thead>
-<tbody>
-{% for bundle in ctx %}<tr>
-<td>{{ bundle.namespace | title_case | acronym }}</td>
-<td><a href="../entities/{{bundle.namespace}}.md">{{ bundle.entities | length }}</a></td>
-</tr>
+
+| Namespace | Entities | Events | Metrics | Spans |
+| --- | --- | --- | --- | --- |{% for bundle in ctx %}
+| {% if bundle.namespace %}{{ bundle.namespace | title_case | acronym }}{% else %}{{bundle.id}}{% endif %} | {{prop.signalCount("entities", bundle.namespace, bundle.entities | length) | trim }} | {{ prop.signalCount(undefined, undefined, bundle.events | length) | trim }} | {{ prop.signalCount(undefined, undefined, bundle.metrics | length) | trim }} | {{prop.signalCount(undefined, undefined, bundle.spans | length) | trim }} |
 {%- endfor %}
-</tbody>
-</table>
 

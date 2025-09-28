@@ -14,83 +14,57 @@ The Namespace registry is the catalog of multiple signals grouped based on the n
 > The following registry overview is a work in progress.
 
 Currently, the following namespaces are documented:
-<table>
-<thead>
-<tr>
-  <th>Namespace</th>
-  <th>Entities</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Android</td>
-<td><a href="../entities/android.md">1</a></td>
-</tr><tr>
-<td>App</td>
-<td><a href="../entities/app.md">1</a></td>
-</tr><tr>
-<td>AWS</td>
-<td><a href="../entities/aws.md">3</a></td>
-</tr><tr>
-<td>Browser</td>
-<td><a href="../entities/browser.md">1</a></td>
-</tr><tr>
-<td>CICD</td>
-<td><a href="../entities/cicd.md">3</a></td>
-</tr><tr>
-<td>Cloud</td>
-<td><a href="../entities/cloud.md">1</a></td>
-</tr><tr>
-<td>CloudFoundry</td>
-<td><a href="../entities/cloudfoundry.md">5</a></td>
-</tr><tr>
-<td>Container</td>
-<td><a href="../entities/container.md">1</a></td>
-</tr><tr>
-<td>Deployment</td>
-<td><a href="../entities/deployment.md">1</a></td>
-</tr><tr>
-<td>Device</td>
-<td><a href="../entities/device.md">1</a></td>
-</tr><tr>
-<td>Faas</td>
-<td><a href="../entities/faas.md">1</a></td>
-</tr><tr>
-<td>GCP</td>
-<td><a href="../entities/gcp.md">5</a></td>
-</tr><tr>
-<td>Heroku</td>
-<td><a href="../entities/heroku.md">1</a></td>
-</tr><tr>
-<td>Host</td>
-<td><a href="../entities/host.md">2</a></td>
-</tr><tr>
-<td>K8s</td>
-<td><a href="../entities/k8s.md">14</a></td>
-</tr><tr>
-<td>OS</td>
-<td><a href="../entities/os.md">1</a></td>
-</tr><tr>
-<td>OTel</td>
-<td><a href="../entities/otel.md">1</a></td>
-</tr><tr>
-<td>Process</td>
-<td><a href="../entities/process.md">2</a></td>
-</tr><tr>
-<td>Service</td>
-<td><a href="../entities/service.md">1</a></td>
-</tr><tr>
-<td>Telemetry</td>
-<td><a href="../entities/telemetry.md">2</a></td>
-</tr><tr>
-<td>VCS</td>
-<td><a href="../entities/vcs.md">2</a></td>
-</tr><tr>
-<td>Webengine</td>
-<td><a href="../entities/webengine.md">1</a></td>
-</tr><tr>
-<td>zOS</td>
-<td><a href="../entities/zos.md">1</a></td>
-</tr>
-</tbody>
-</table>
+
+| Namespace | Entities | Events | Metrics | Spans |
+| --- | --- | --- | --- | --- |
+| Android | [1]("/docs/registry/entities/android.md") | - | - | - |
+| App | [1]("/docs/registry/entities/app.md") | 3 | - | - |
+| Aspnetcore | - | - | 29 | - |
+| AWS | [3]("/docs/registry/entities/aws.md") | - | - | 4 |
+| Az | - | 1 | - | - |
+| Azure | - | 1 | 2 | 2 |
+| Browser | [1]("/docs/registry/entities/browser.md") | 1 | - | - |
+| CICD | [3]("/docs/registry/entities/cicd.md") | - | 5 | 2 |
+| Cli | - | - | - | 2 |
+| Cloud | [1]("/docs/registry/entities/cloud.md") | - | - | - |
+| CloudFoundry | [5]("/docs/registry/entities/cloudfoundry.md") | - | - | - |
+| Container | [3]("/docs/registry/entities/container.md") | - | 9 | - |
+| CPU | - | - | 3 | - |
+| CPython | - | - | 3 | - |
+| DB | - | - | 22 | 13 |
+| Deployment | [1]("/docs/registry/entities/deployment.md") | - | - | - |
+| Device | [1]("/docs/registry/entities/device.md") | 1 | - | - |
+| DNS | - | - | 1 | - |
+| Dotnet | - | - | 19 | 5 |
+| DynamoDB | - | - | - | 13 |
+| Exception | - | 1 | - | - |
+| Faas | [1]("/docs/registry/entities/faas.md") | - | 9 | 4 |
+| Feature Flag | - | 1 | - | - |
+| GCP | [5]("/docs/registry/entities/gcp.md") | - | - | - |
+| Gen AI | - | 7 | 5 | 5 |
+| Go | - | - | 9 | - |
+| GraphQL | - | - | - | 1 |
+| Heroku | [1]("/docs/registry/entities/heroku.md") | - | - | - |
+| Host | [2]("/docs/registry/entities/host.md") | - | - | - |
+| HTTP | - | - | 10 | 2 |
+| Hw | - | - | 42 | - |
+| JVM | - | - | 20 | - |
+| K8s | [14]("/docs/registry/entities/k8s.md") | - | 95 | - |
+| Kestrel | - | - | 8 | - |
+| Messaging | - | - | 10 | - |
+| NFS | - | - | 16 | - |
+| NodeJS | - | - | 9 | - |
+| OpenAI | - | - | - | 1 |
+| OS | [1]("/docs/registry/entities/os.md") | - | - | - |
+| OTel | [1]("/docs/registry/entities/otel.md") | - | 23 | - |
+| Process | [2]("/docs/registry/entities/process.md") | - | 11 | - |
+| RPC | - | 1 | 10 | 4 |
+| Service | [1]("/docs/registry/entities/service.md") | - | - | - |
+| Session | - | 2 | - | - |
+| SignalR | - | - | 2 | - |
+| System | - | - | 33 | - |
+| Telemetry | [2]("/docs/registry/entities/telemetry.md") | - | - | - |
+| V8js | - | - | 5 | - |
+| VCS | [2]("/docs/registry/entities/vcs.md") | - | 10 | - |
+| Webengine | [1]("/docs/registry/entities/webengine.md") | - | - | - |
+| zOS | [1]("/docs/registry/entities/zos.md") | - | - | - |
