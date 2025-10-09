@@ -10,6 +10,21 @@ These attributes may be used to describe the receiver of a network exchange/pack
 | Attribute | Type | Description | Examples | Stability |
 |---|---|---|---|---|
 | <a id="destination-address" href="#destination-address">`destination.address`</a> | string | Destination address - domain name if available without reverse DNS lookup; otherwise, IP address or Unix domain socket name. [1] | `destination.example.com`; `10.1.2.80`; `/tmp/my.sock` | ![Development](https://img.shields.io/badge/-development-blue) |
+| <a id="destination-interface-id" href="#destination-interface-id">`destination.interface.id`</a> | int | Destination Interface Id [2] | `10` | ![Development](https://img.shields.io/badge/-development-blue) |
+| <a id="destination-interface-name" href="#destination-interface-name">`destination.interface.name`</a> | string | Destination Interface Name [3] | `eth0` | ![Development](https://img.shields.io/badge/-development-blue) |
 | <a id="destination-port" href="#destination-port">`destination.port`</a> | int | Destination port number | `3389`; `2888` | ![Development](https://img.shields.io/badge/-development-blue) |
+| <a id="destination-vlan-id" href="#destination-vlan-id">`destination.vlan.id`</a> | int | Destination VLAN Id [4] | `10` | ![Development](https://img.shields.io/badge/-development-blue) |
+| <a id="destination-vlan-name" href="#destination-vlan-name">`destination.vlan.name`</a> | string | Destination VLAN Name [5] | `outside`; `DMZ`; `corporate` | ![Development](https://img.shields.io/badge/-development-blue) |
+| <a id="destination-zone" href="#destination-zone">`destination.zone`</a> | string | Zone where traffic can be categorized as going to [6] | `internal`; `External`; `DMZ`; `HR`; `Legal` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `destination.address`:** When observed from the source side, and when communicating through an intermediary, `destination.address` SHOULD represent the destination address behind any intermediaries, for example proxies, if it's available.
+
+**[2] `destination.interface.id`:** Interface ID as reported by an observer (typically SNMP interface ID).
+
+**[3] `destination.interface.name`:** Interface name as reported by the system.
+
+**[4] `destination.vlan.id`:** VLAN ID as reported by the observer.
+
+**[5] `destination.vlan.name`:** VLAN name as reported by the observer.
+
+**[6] `destination.zone`:** Network zone of outgoing traffic as reported by an observer to categorize the destination area of the traffic.
