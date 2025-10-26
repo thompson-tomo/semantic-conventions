@@ -31,9 +31,7 @@ groups:
     brief: >
     note: >
     attributes:
-      - ref: container.name
-        requirement_level: opt_in
-      - ref: host.name
+      - ref: workflow.worker.name
         requirement_level: recommended
       - ref: workflow.definition.name
         requirement_level: required
@@ -48,9 +46,7 @@ groups:
     brief: >
     note: >
     attributes:
-      - ref: container.name
-        requirement_level: opt_in
-      - ref: host.name
+      - ref: workflow.worker.name
         requirement_level: recommended
       - ref: workflow.task.name
         requirement_level: required

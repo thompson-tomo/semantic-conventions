@@ -23,12 +23,12 @@
 
 | Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
-| [`workflow.outcome`](/docs/registry/attributes/workflow.md) | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.result`](/docs/registry/attributes/workflow.md) | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`workflow.url.full`](/docs/registry/attributes/workflow.md) | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 ---
 
-`workflow.outcome` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
+`workflow.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
 | Value  | Description | Stability |
 |---|---|---|
@@ -81,7 +81,7 @@
 | Attribute  | Type | Description  | Examples  | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Stability |
 |---|---|---|---|---|---|
 | [`workflow.execution.attempt`](/docs/registry/attributes/workflow.md) | int | What number execution attempt is this. [1] | `1` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
-| [`workflow.execution.outcome`](/docs/registry/attributes/workflow.md) | string | The outcome of executing the task. | `success`; `failure`; `timeout`; `skipped` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.execution.result`](/docs/registry/attributes/workflow.md) | string | The outcome of executing the task. | `success`; `failure`; `error` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`workflow.execution.state`](/docs/registry/attributes/workflow.md) | string | The pipeline run goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`workflow.execution.url.full`](/docs/registry/attributes/workflow.md) | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
@@ -89,7 +89,7 @@
 
 ---
 
-`workflow.execution.outcome` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
+`workflow.execution.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
 | Value  | Description | Stability |
 |---|---|---|
@@ -106,10 +106,11 @@
 
 | Value  | Description | Stability |
 |---|---|---|
-| `completed` | The completed state spans from when the run has finished finalizing (eg. cleanup of run resources). | ![Development](https://img.shields.io/badge/-development-blue) |
-| `executing` | The executing state spans the execution of any run tasks (eg. build, test). | ![Development](https://img.shields.io/badge/-development-blue) |
-| `finalizing` | The finalizing state spans from when the run has finished executing and covers cleanup of resources etc. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `pending` | The run pending state spans from the event triggering the pipeline run until the execution of the run starts (eg. time spent in a queue, provisioning agents, creating run resources). | ![Development](https://img.shields.io/badge/-development-blue) |
+| `executing` | The executing state spans the execution of any tasks. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `finalizing` | The finalizing state spans from when the execution has finished executing and covers cleanup of resources etc. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `pending` | The pending state spans from the execution being crated until it starts executing. [2] | ![Development](https://img.shields.io/badge/-development-blue) |
+
+**[2]:** This can cover time spent in a queue, provisioning agents, creating resources etc.
 
 ## Workflow Task
 
