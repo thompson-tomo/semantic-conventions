@@ -80,25 +80,12 @@ The result of running the workflow.
 | --- | --- | --- | --- | --- | --- |
 | [`workflow.definition.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The UID of the k8s CronJob/Job. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | [`workflow.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| [`workflow.outcome`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The product being used to co-ordinate the execution of the tasks. | `k8s` |
+| [`workflow.result`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` |
 | [`workflow.definition.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The name of the k8s CronJob/Job. | `Build and deploy application` |
 | [`workflow.definition.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the workflow, providing the complete address in order to locate and identify the workflow. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
 | [`workflow.trigger.type`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Type of trigger that was called | `cron` |
 | [`workflow.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
-
----
-
-`workflow.outcome` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
-
-| Value | Description | Stability |
-| --- | --- | --- |
-| `cancellation` | The task run was cancelled, eg. by a user manually cancelling the task run. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `error` | The task run failed due to an error in the CICD system, eg. due to the worker being killed. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `failure` | The task run did not finish successfully, eg. due to a compile error or a failing test. Such failures are usually detected by non-zero exit codes of the tools executed in the task run. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `skip` | The task run was skipped, eg. due to a precondition not being met. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `success` | The task run finished successfully. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `timeout` | A timeout caused the task run to be interrupted. | ![Development](https://img.shields.io/badge/-development-blue) |
 
 ---
 
@@ -109,6 +96,19 @@ The result of running the workflow.
 | `hangfire` | Hangfire | ![Development](https://img.shields.io/badge/-development-blue) |
 | `k8s` | Kubernetes | ![Development](https://img.shields.io/badge/-development-blue) |
 | `quartz` | Quartz | ![Development](https://img.shields.io/badge/-development-blue) |
+
+---
+
+`workflow.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
+
+| Value | Description | Stability |
+| --- | --- | --- |
+| `cancellation` | The task run was cancelled, eg. by a user manually cancelling the task run. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `error` | The task run failed due to an error in the CICD system, eg. due to the worker being killed. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `failure` | The task run did not finish successfully, eg. due to a compile error or a failing test. Such failures are usually detected by non-zero exit codes of the tools executed in the task run. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `skip` | The task run was skipped, eg. due to a precondition not being met. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `success` | The task run finished successfully. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `timeout` | A timeout caused the task run to be interrupted. | ![Development](https://img.shields.io/badge/-development-blue) |
 
 <!-- prettier-ignore-end -->
 <!-- END AUTOGENERATED TEXT -->
@@ -134,7 +134,7 @@ The status of the workflow.
 | [`workflow.definition.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The UID of the k8s CronJob/Job. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | [`workflow.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The product being used to co-ordinate the execution of the tasks. | `k8s` |
-| [`workflow.state`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The pipeline run goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` |
+| [`workflow.state`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The workflow goes through these states during its lifecycle. | `pending`; `executing`; `finalizing` |
 | [`workflow.definition.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The name of the k8s CronJob/Job. | `Build and deploy application` |
 | [`workflow.definition.url.full`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | The [URL](https://wikipedia.org/wiki/URL) of the workflow, providing the complete address in order to locate and identify the workflow. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
 | [`workflow.trigger.type`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Recommended` | string | Type of trigger that was called | `cron` |
@@ -156,10 +156,13 @@ The status of the workflow.
 
 | Value | Description | Stability |
 | --- | --- | --- |
-| `completed` | The completed state spans from when the run has finished finalizing (eg. cleanup of run resources). | ![Development](https://img.shields.io/badge/-development-blue) |
-| `executing` | The executing state spans the execution of any run tasks (eg. build, test). | ![Development](https://img.shields.io/badge/-development-blue) |
-| `finalizing` | The finalizing state spans from when the run has finished executing and covers cleanup of resources etc. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `pending` | The run pending state spans from the event triggering the pipeline run until the execution of the run starts (eg. time spent in a queue, provisioning agents, creating run resources). | ![Development](https://img.shields.io/badge/-development-blue) |
+| `executing` | The executing state spans from the creation of the first task execution till the completion of the last task execution. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `finalizing` | The finalizing state spans from when all the task executions have finished executing but before the result is set. [1] | ![Development](https://img.shields.io/badge/-development-blue) |
+| `pending` | The pending state spans from the event triggering the workflow until the creation of the first task execution. [2] | ![Development](https://img.shields.io/badge/-development-blue) |
+
+**[1]:** This can cover clean up of resources etc.
+
+**[2]:** This can cover time spent in a queue, provisioning agents, creating resources etc.
 
 <!-- prettier-ignore-end -->
 <!-- END AUTOGENERATED TEXT -->
@@ -184,7 +187,7 @@ The end result of the execution useful know if it was successful etc.
 | Key | Stability | [Requirement Level](https://opentelemetry.io/docs/specs/semconv/general/attribute-requirement-level/) | Value Type | Description | Example Values |
 | --- | --- | --- | --- | --- | --- |
 | [`workflow.execution.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
-| [`workflow.execution.outcome`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The outcome of executing the task. | `success`; `failure`; `timeout`; `skipped` |
+| [`workflow.execution.result`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The outcome of executing the task. | `success`; `failure`; `error` |
 | [`workflow.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | Unique ID for this execution of the workflow and will be shared across all the task runs. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The product being used to co-ordinate the execution of the tasks. | `k8s` |
 | [`workflow.task.id`](/docs/registry/attributes/workflow.md) | ![Development](https://img.shields.io/badge/-development-blue) | `Required` | string | The UID of the k8s CronJob/Job. | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
@@ -204,7 +207,7 @@ The end result of the execution useful know if it was successful etc.
 
 ---
 
-`workflow.execution.outcome` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
+`workflow.execution.result` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
 
 | Value | Description | Stability |
 | --- | --- | --- |
@@ -265,10 +268,11 @@ The current status of the execution of the task so that it can be tracked.
 
 | Value | Description | Stability |
 | --- | --- | --- |
-| `completed` | The completed state spans from when the run has finished finalizing (eg. cleanup of run resources). | ![Development](https://img.shields.io/badge/-development-blue) |
-| `executing` | The executing state spans the execution of any run tasks (eg. build, test). | ![Development](https://img.shields.io/badge/-development-blue) |
-| `finalizing` | The finalizing state spans from when the run has finished executing and covers cleanup of resources etc. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `pending` | The run pending state spans from the event triggering the pipeline run until the execution of the run starts (eg. time spent in a queue, provisioning agents, creating run resources). | ![Development](https://img.shields.io/badge/-development-blue) |
+| `executing` | The executing state spans the execution of any tasks. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `finalizing` | The finalizing state spans from when the execution has finished executing and covers cleanup of resources etc. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `pending` | The pending state spans from the execution being crated until it starts executing. [1] | ![Development](https://img.shields.io/badge/-development-blue) |
+
+**[1]:** This can cover time spent in a queue, provisioning agents, creating resources etc.
 
 ---
 
