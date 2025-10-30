@@ -65,7 +65,7 @@ linkTitle: Spans
 >   for at least six months after it starts emitting both sets of conventions.
 > * SHOULD drop the environment variable in the next major version.
 > * SHOULD emit the new, stable values for span name, span kind and similar "single"
-> valued concepts when `messaging/dup` is present in the list.
+>   valued concepts when `messaging/dup` is present in the list.
 
 ## Definitions
 
@@ -79,7 +79,7 @@ This envelope may offer the possibility to convey additional metadata, often in 
 A message is sent by a message *producer* to:
 
 * Physically: some message *broker* (which can be e.g., a single server, or a cluster, or a local process reached via IPC). The broker handles the actual delivery, re-delivery, persistence, etc. In some messaging systems the broker may be identical or co-located with (some) message consumers.
-With Apache Kafka, the physical broker a message is written to depends on the number of partitions, and which broker is the *leader* of the partition the record is written to.
+  With Apache Kafka, the physical broker a message is written to depends on the number of partitions, and which broker is the *leader* of the partition the record is written to.
 * Logically: some particular message *destination*.
 
 Messages can be delivered to 0, 1, or multiple consumers depending on the dispatching semantic of the protocol.
@@ -257,14 +257,14 @@ details on how to record span status.
 #### Producer spans
 
 "Create" spans MAY be created when a message is created or passed to the client
-library or other component responsible for sending.  A single "Create" span
+library or other component responsible for sending. A single "Create" span
 SHOULD account only for a single message. "Send" spans SHOULD be created
 for operations of sending or publishing a message to an intermediary. A single
 "Send" span can account for a single message, or for multiple messages (in
 the case of sending messages in batches).
 
 If a user provides a custom creation context in a message, this context SHOULD
-NOT be modified and a "Create" span SHOULD NOT be created.  Otherwise, if a
+NOT be modified and a "Create" span SHOULD NOT be created. Otherwise, if a
 "Create" span exists for a message, its context SHOULD be injected into the
 message. If no "Create" span exists and no custom creation context is injected
 into the message, the context of the related "Send" span SHOULD be injected
@@ -310,14 +310,12 @@ messages were received). For each message it accounts for, the "Process" or
 > producers and consumer(s) because:
 >
 > - It is the only consistent trace structure that can be guaranteed,
-> given the many different messaging systems models available.
->
+>   given the many different messaging systems models available.
 > - It is the only option to correlate producer and consumer(s) in batch scenarios
-> as a span can only have a single parent.
->
+>   as a span can only have a single parent.
 > - It is the only option to correlate producer and consumer(s) when message
-> consumption can happen in the scope of another ambient context such as a
-> HTTP server span.
+>   consumption can happen in the scope of another ambient context such as a
+>   HTTP server span.
 
 "Settle" spans SHOULD be created for every manually or automatically triggered
 settlement operation. A single "Settle" span can account for a single message

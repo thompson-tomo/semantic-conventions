@@ -49,7 +49,7 @@ For some cloud providers, the above definition is ambiguous. The following
 definition of function name MUST be used for this attribute
 (and consequently the span name) for the listed cloud providers/products:
 
-- **Azure:**  The full name `<FUNCAPP>/<FUNC>`, i.e., function app name
+- **Azure:** The full name `<FUNCAPP>/<FUNC>`, i.e., function app name
   followed by a forward slash followed by the function name (this form
   can also be seen in the resource JSON for the function).
   This means that a span attribute MUST be used, as an Azure function

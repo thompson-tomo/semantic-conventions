@@ -34,7 +34,7 @@ The Semantic Conventions for [Apache RocketMQ](https://rocketmq.apache.org/) ext
 >   for at least six months after it starts emitting both sets of conventions.
 > * SHOULD drop the environment variable in the next major version.
 > * SHOULD emit the new, stable values for span name, span kind and similar "single"
-> valued concepts when `messaging/dup` is present in the list.
+>   valued concepts when `messaging/dup` is present in the list.
 
 `messaging.system` MUST be set to `"rocketmq"` and SHOULD be provided **at span creation time**.
 

@@ -34,7 +34,7 @@ The Semantic Conventions for [Azure Service Bus](https://learn.microsoft.com/azu
 >   for at least six months after it starts emitting both sets of conventions.
 > * SHOULD drop the environment variable in the next major version.
 > * SHOULD emit the new, stable values for span name, span kind and similar "single"
-> valued concepts when `messaging/dup` is present in the list.
+>   valued concepts when `messaging/dup` is present in the list.
 
 ## Azure Service Bus
 

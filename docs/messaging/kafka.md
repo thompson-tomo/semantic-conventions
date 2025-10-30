@@ -42,7 +42,7 @@ The Semantic Conventions for [Apache Kafka](https://kafka.apache.org/) extend an
 >   for at least six months after it starts emitting both sets of conventions.
 > * SHOULD drop the environment variable in the next major version.
 > * SHOULD emit the new, stable values for span name, span kind and similar "single"
-> valued concepts when `messaging/dup` is present in the list.
+>   valued concepts when `messaging/dup` is present in the list.
 
 `messaging.system` MUST be set to `"kafka"` and SHOULD be provided **at span creation time**.
 
