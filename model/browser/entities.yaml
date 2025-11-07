@@ -9,7 +9,6 @@ groups:
         running in a web browser (regardless of whether running on a mobile or desktop device).
     attributes:
       - ref: browser.brands
-      - ref: browser.platform
       - ref: browser.mobile
       - ref: browser.language
       - ref: user_agent.original
