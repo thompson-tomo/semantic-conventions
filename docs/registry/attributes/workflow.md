@@ -38,7 +38,7 @@ Workflows can be used to describe cicd, deployments, generic jobs or even cron j
 | <a id="workflow-task-version" href="#workflow-task-version">`workflow.task.version`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Version of the task | `2.1` |
 | <a id="workflow-trigger-id" href="#workflow-trigger-id">`workflow.trigger.id`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Unique ID for this trigger which can be used to correlate trigger usage | `5c6e9a4b-69ab-499f-b4a7-4cf5c8720d66` |
 | <a id="workflow-trigger-name" href="#workflow-trigger-name">`workflow.trigger.name`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Name of the trigger | `Nightly build` |
-| <a id="workflow-trigger-result" href="#workflow-trigger-result">`workflow.trigger.result`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` |
+| <a id="workflow-trigger-result" href="#workflow-trigger-result">`workflow.trigger.result`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The result of a triggering an execution of a workflow. | `success`; `failure`; `timeout`; `skipped` |
 | <a id="workflow-trigger-schedule" href="#workflow-trigger-schedule">`workflow.trigger.schedule`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | A string containing the schedule period as [Cron Expression](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm). | `0/5 * * * ? *` |
 | <a id="workflow-trigger-type" href="#workflow-trigger-type">`workflow.trigger.type`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Type of trigger that was called | `cron` |
 | <a id="workflow-url-full" href="#workflow-url-full">`workflow.url.full`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
@@ -122,9 +122,9 @@ Workflows can be used to describe cicd, deployments, generic jobs or even cron j
 
 | Value | Description | Stability |
 | --- | --- | --- |
-| `cancellation` | The task run was cancelled, eg. by a user manually cancelling the task run. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `error` | The task run failed due to an error in the CICD system, eg. due to the worker being killed. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `failure` | The task run did not finish successfully, eg. due to a compile error or a failing test. Such failures are usually detected by non-zero exit codes of the tools executed in the task run. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `skip` | The task run was skipped, eg. due to a precondition not being met. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `success` | The task run finished successfully. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `timeout` | A timeout caused the task run to be interrupted. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `cancellation` | The trigger was cancelled, eg. by a user manually cancelling the trigger. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `error` | The trigger failed due to an error in the CICD system, eg. due to the worker being killed. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `failure` | The trigger did not finish successfully, eg. due to a compile error or a failing test. Such failures are usually detected by non-zero exit codes of the tools executed in the task run. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `skip` | The trigger was skipped, eg. due to a precondition not being met. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `success` | The trigger finished successfully. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `timeout` | A timeout caused the trigger to be interrupted. | ![Development](https://img.shields.io/badge/-development-blue) |
