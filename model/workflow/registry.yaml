@@ -282,6 +282,12 @@ groups:
         brief: >
           Name of the trigger
         examples: [ 'Nightly build' ]
+      - id: workflow.scheduler.returned_items
+        stability: development
+        type: int
+        brief: >
+          The number of items returned by the scheduler to be processed.
+        examples: [ 10 ]
       - id: workflow.trigger.result
         type:
           members:
@@ -323,6 +329,14 @@ groups:
           A string containing the schedule period as
           [Cron Expression](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm).
         examples: "0/5 * * * ? *"
+      - id: workflow.trigger.scheduled_time
+        type: string
+        stability: development
+        brief: >
+          A string containing the time at which the workflow is scheduled to be invoked in the
+          [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
+          format expressed in [UTC](https://www.w3.org/TR/NOTE-datetime).
+        examples: "2020-01-23T13:47:06Z"
       - id: workflow.trigger.type
         stability: development
         type: string
