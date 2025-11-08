@@ -48,3 +48,35 @@ groups:
         requirement_level: recommended
       - ref: workflow.trigger.type
         requirement_level: required
+
+  - id: span.workflow.scheduler.internal
+    type: span
+    span_kind: internal
+    stability: development
+    extends: attribute.span.workflow.core
+    brief: >
+      Used to capture the process of handling an internal scheduler to initiate a workflow to run at a later point in time.
+    attributes:
+      - ref: workflow.definition.id
+        requirement_level: recommended
+      - ref: workflow.definition.name
+        requirement_level: opt_in
+      - ref: workflow.task.id
+        requirement_level: recommended
+      - ref: workflow.task.name
+        requirement_level: opt_in
+      - ref: workflow.trigger.scheduled_time
+        requirement_level: required
+
+  - id: span.workflow.poller.internal
+    type: span
+    span_kind: internal
+    stability: development
+    brief: >
+      Used to capture the process of polling a scheduler to determine if any Workflows need to be triggered.
+    note: This span is expected to generate a child trigger span per workflow that needs to be invoked.
+    attributes:
+      - ref: workflow.platform.name
+        requirement_level: required
+      - ref: workflow.scheduler.returned_items
+        requirement_level: required
