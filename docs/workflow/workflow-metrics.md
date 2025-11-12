@@ -45,7 +45,7 @@ linkTitle: Metrics
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` If and only if the workflow execution failed. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`workflow.result`](/docs/registry/attributes/workflow.md) | string | The result of a task run. | `success`; `failure`; `timeout`; `skipped` | `Conditionally Required` If and only if the state produces a result. | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | string | The product being used to co-ordinate the execution of the tasks. | `hangfire`; `k8s`; `quartz` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
-| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user. | `opentelemetry-test` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | The name of a worker within a system. | `agent-abc`; `controller`; `Ubuntu LTS` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
 
@@ -139,7 +139,7 @@ This means that this error count might not be the same as the count of metric `w
 | [`workflow.definition.name`](/docs/registry/attributes/workflow.md) | string | Name of the workflow | `Build and deploy application` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`workflow.trigger.type`](/docs/registry/attributes/workflow.md) | string | Type of trigger that was called | `cron` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | string | The product being used to co-ordinate the execution of the tasks. | `hangfire`; `k8s`; `quartz` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
-| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user. | `opentelemetry-test` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | The name of a worker within a system. | `agent-abc`; `controller`; `Ubuntu LTS` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
 
@@ -204,7 +204,7 @@ it's RECOMMENDED to:
 | [`workflow.trigger.type`](/docs/registry/attributes/workflow.md) | string | Type of trigger that was called | `cron` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` If and only if the workflow execution failed. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | string | The product being used to co-ordinate the execution of the tasks. | `hangfire`; `k8s`; `quartz` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
-| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user. | `opentelemetry-test` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | The name of a worker within a system. | `agent-abc`; `controller`; `Ubuntu LTS` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
 
@@ -286,7 +286,7 @@ This metric is [recommended][MetricRecommended].
 | [`workflow.trigger.type`](/docs/registry/attributes/workflow.md) | string | Type of trigger that was called | `cron` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` If and only if the workflow execution failed. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | string | The product being used to co-ordinate the execution of the tasks. | `hangfire`; `k8s`; `quartz` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
-| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user. | `opentelemetry-test` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | The name of a worker within a system. | `agent-abc`; `controller`; `Ubuntu LTS` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
 
@@ -367,7 +367,7 @@ it's RECOMMENDED to:
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` If and only if the task run failed. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`workflow.execution.result`](/docs/registry/attributes/workflow.md) | string | The outcome of executing the task. | `success`; `failure`; `error` | `Conditionally Required` If and only if the state produces a result. | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | string | The product being used to co-ordinate the execution of the tasks. | `hangfire`; `k8s`; `quartz` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
-| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user. | `opentelemetry-test` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | The name of a worker within a system. | `agent-abc`; `controller`; `Ubuntu LTS` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
 
@@ -458,7 +458,7 @@ This means that this error count might not be the same as the count of metric `w
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Required` | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`workflow.task.name`](/docs/registry/attributes/workflow.md) | string | Name of the task | `Build application` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | string | The product being used to co-ordinate the execution of the tasks. | `hangfire`; `k8s`; `quartz` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
-| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user. | `opentelemetry-test` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | The name of a worker within a system. | `agent-abc`; `controller`; `Ubuntu LTS` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
 
@@ -524,7 +524,7 @@ This metric is [recommended][MetricRecommended].
 | [`workflow.task.name`](/docs/registry/attributes/workflow.md) | string | Name of the task | `Build application` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` If and only if the task run failed. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | string | The product being used to co-ordinate the execution of the tasks. | `hangfire`; `k8s`; `quartz` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
-| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user. | `opentelemetry-test` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | The name of a worker within a system. | `agent-abc`; `controller`; `Ubuntu LTS` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
 
@@ -605,7 +605,7 @@ This metric is [recommended][MetricRecommended].
 | [`workflow.task.name`](/docs/registry/attributes/workflow.md) | string | Name of the task | `Build application` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` If and only if the task run failed. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | string | The product being used to co-ordinate the execution of the tasks. | `hangfire`; `k8s`; `quartz` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
-| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user. | `opentelemetry-test` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | The name of a worker within a system. | `agent-abc`; `controller`; `Ubuntu LTS` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
 
@@ -683,7 +683,7 @@ This metric is [recommended][MetricRecommended].
 | [`workflow.task.name`](/docs/registry/attributes/workflow.md) | string | Name of the task | `Build application` | `Required` | ![Development](https://img.shields.io/badge/-development-blue) |
 | [`error.type`](/docs/registry/attributes/error.md) | string | Describes a class of error the operation ended with. [1] | `timeout`; `java.net.UnknownHostException`; `server_certificate_invalid`; `500` | `Conditionally Required` If and only if the task run failed. | ![Stable](https://img.shields.io/badge/-stable-lightgreen) |
 | [`workflow.platform.name`](/docs/registry/attributes/workflow.md) | string | The product being used to co-ordinate the execution of the tasks. | `hangfire`; `k8s`; `quartz` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
-| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user. | `opentelemetry-test` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
+| [`workflow.worker.name`](/docs/registry/attributes/workflow.md) | string | The name of a worker within a system. | `agent-abc`; `controller`; `Ubuntu LTS` | `Recommended` | ![Development](https://img.shields.io/badge/-development-blue) |
 
 **[1] `error.type`:** The `error.type` SHOULD be predictable, and SHOULD have low cardinality.
 
