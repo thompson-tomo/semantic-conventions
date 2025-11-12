@@ -17,30 +17,27 @@ groups:
           members:
             - id: success
               value: success
-              brief: "The task run finished successfully."
+              brief: The workflow has finished and returned a zero exit code.
               stability: development
             - id: failure
               value: failure
-              brief: >-
-                The task run did not finish successfully, eg. due to a compile error or a failing test.
-                Such failures are usually detected by non-zero exit codes of the tools executed in the task run.
+              brief: The workflow has finished however returned a non-zero exit code.
               stability: development
             - id: error
               value: error
-              brief: >-
-                The task run failed due to an error in the CICD system, eg. due to the worker being killed.
+              brief: The workflow has failed to complete and no exit code was returned.
               stability: development
             - id: timeout
               value: timeout
-              brief: "A timeout caused the task run to be interrupted."
+              brief: The workflow has timed out resulting in no exit code being returned.
               stability: development
             - id: cancellation
               value: cancellation
-              brief: "The task run was cancelled, eg. by a user manually cancelling the task run."
+              brief: The workflow was cancelled, eg. by a user manually cancelling the workflow.
               stability: development
             - id: skip
               value: skip
-              brief: "The task run was skipped, eg. due to a precondition not being met."
+              brief: The workflow was skipped, eg. due to a precondition not being met.
               stability: development
         stability: development
         brief: >
@@ -172,27 +169,27 @@ groups:
           members:
             - id: success
               value: success
-              brief: "The execution finished successfully."
+              brief: "The execution of the task finished successfully and returned a zero exit code."
               stability: development
             - id: failure
               value: failure
-              brief: The execution failed as a non-zero exit codes was returned.
+              brief: "The execution of the task failed as a non-zero exit code was returned."
               stability: development
             - id: error
               value: error
-              brief: During the execution an error with the worker occurred, ie worker being killed.
+              brief: The execution of the task has failed to complete and no exit code was returned.
               stability: development
             - id: timeout
               value: timeout
-              brief: "The execution timed-out causing the execution to be interrupted."
+              brief: The execution of the task has timed out resulting in no exit code being returned.
               stability: development
             - id: cancellation
               value: cancellation
-              brief: "The execution was cancelled, eg. by a user manually cancelling the execution."
+              brief: The execution of the task was cancelled, eg. by a user manually cancelling the workflow.
               stability: development
             - id: skip
               value: skip
-              brief: "The execution was skipped, eg. due to a precondition not being met."
+              brief: The execution of the task was skipped, eg. due to a precondition not being met.
               stability: development
         stability: development
         brief: The outcome of executing the task.
@@ -293,30 +290,23 @@ groups:
           members:
             - id: success
               value: success
-              brief: "The trigger finished successfully."
+              brief: "The trigger was successfully and returned a zero exit code."
               stability: development
             - id: failure
               value: failure
-              brief: >-
-                The trigger did not finish successfully, eg. due to a compile error or a failing test.
-                Such failures are usually detected by non-zero exit codes of the tools executed in the task run.
+              brief: "The trigger failed as a non-zero exit code was returned."
               stability: development
             - id: error
               value: error
-              brief: >-
-                The trigger failed due to an error in the CICD system, eg. due to the worker being killed.
+              brief: "The trigger has failed to complete and no exit code was returned."
               stability: development
             - id: timeout
               value: timeout
-              brief: "A timeout caused the trigger to be interrupted."
+              brief: "The trigger has timed out resulting in no exit code being returned."
               stability: development
             - id: cancellation
               value: cancellation
-              brief: "The trigger was cancelled, eg. by a user manually cancelling the trigger."
-              stability: development
-            - id: skip
-              value: skip
-              brief: "The trigger was skipped, eg. due to a precondition not being met."
+              brief: "The trigger was cancelled, eg. by a user manually cancelling it."
               stability: development
         stability: development
         brief: >
