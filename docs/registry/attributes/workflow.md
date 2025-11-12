@@ -44,7 +44,10 @@ Workflows can be used to describe cicd, deployments, generic jobs or even cron j
 | <a id="workflow-trigger-scheduled-time" href="#workflow-trigger-scheduled-time">`workflow.trigger.scheduled_time`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | A string containing the time at which the workflow is scheduled to be invoked in the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format expressed in [UTC](https://www.w3.org/TR/NOTE-datetime). | `2020-01-23T13:47:06Z` |
 | <a id="workflow-trigger-type" href="#workflow-trigger-type">`workflow.trigger.type`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Type of trigger that was called | `cron` |
 | <a id="workflow-url-full" href="#workflow-url-full">`workflow.url.full`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run. | `https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075` |
-| <a id="workflow-worker-name" href="#workflow-worker-name">`workflow.worker.name`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user. | `opentelemetry-test` |
+| <a id="workflow-worker-id" href="#workflow-worker-id">`workflow.worker.id`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The unique identifier of a worker within a CICD system. | `abc123`; `10.0.1.2`; `controller` |
+| <a id="workflow-worker-name" href="#workflow-worker-name">`workflow.worker.name`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The name of a worker within a system. | `agent-abc`; `controller`; `Ubuntu LTS` |
+| <a id="workflow-worker-state" href="#workflow-worker-state">`workflow.worker.state`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The state of a worker. | `idle`; `busy`; `down` |
+| <a id="workflow-worker-url-full" href="#workflow-worker-url-full">`workflow.worker.url.full`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The [URL](https://wikipedia.org/wiki/URL) of the worker, providing the complete address in order to locate and identify the worker. | `https://cicd.example.org/worker/abc123` |
 
 **[1] `workflow.execution.attempt`:** This counter starts at 1 and is incremented on each re-run of the task. The uniqueness is based upon `workflow.execution.id` & `workflow.execution.item.id`.
 
@@ -129,3 +132,13 @@ Workflows can be used to describe cicd, deployments, generic jobs or even cron j
 | `failure` | The trigger failed as a non-zero exit code was returned. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `success` | The trigger was successfully and returned a zero exit code. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `timeout` | The trigger has timed out resulting in no exit code being returned. | ![Development](https://img.shields.io/badge/-development-blue) |
+
+---
+
+`workflow.worker.state` has the following list of well-known values. If one of them applies, then the respective value MUST be used; otherwise, a custom value MAY be used.
+
+| Value | Description | Stability |
+| --- | --- | --- |
+| `available` | The worker is not executing tasks but is available to do so. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `busy` | The worker is executing tasks. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `offline` | The worker is not available to execute tasks. | ![Development](https://img.shields.io/badge/-development-blue) |

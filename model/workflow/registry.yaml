@@ -332,12 +332,51 @@ groups:
         type: string
         brief: >
           Type of trigger that was called
-        examples: [ 'cron' ]
+        examples: [ 'cron' ]      
+      - id: workflow.worker.id
+        type: string
+        stability: development
+        brief: The unique identifier of a worker within a CICD system.
+        examples:
+          [
+            "abc123",
+            "10.0.1.2",
+            "controller",
+          ]
       - id: workflow.worker.name
         type: string
         stability: development
-        brief: >
-          Name of the host. On Unix systems, it may contain what the hostname
-          command returns, or the fully qualified hostname, or another name
-          specified by the user.
-        examples: ['opentelemetry-test']
+        brief: The name of a worker within a system.
+        examples:
+          [
+            "agent-abc",
+            "controller",
+            "Ubuntu LTS"
+          ]
+      - id: workflow.worker.url.full
+        type: string
+        stability: development
+        brief: The [URL](https://wikipedia.org/wiki/URL) of the worker,
+          providing the complete address in order to locate and identify the worker.
+        examples:
+          [
+            "https://cicd.example.org/worker/abc123",
+          ]
+      - id: workflow.worker.state
+        type:
+          members:
+            - id: available
+              value: available
+              brief: The worker is not executing tasks but is available to do so.
+              stability: development
+            - id: busy
+              value: busy
+              brief: The worker is executing tasks.
+              stability: development
+            - id: offline
+              value: offline
+              brief: The worker is not available to execute tasks.
+              stability: development
+        stability: development
+        brief: The state of a worker.
+        examples: ["idle", "busy", "down"]
