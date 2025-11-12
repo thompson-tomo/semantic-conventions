@@ -29,12 +29,12 @@
 
 | Value | Description | Stability |
 | --- | --- | --- |
-| `cancellation` | The task run was cancelled, eg. by a user manually cancelling the task run. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `error` | The task run failed due to an error in the CICD system, eg. due to the worker being killed. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `failure` | The task run did not finish successfully, eg. due to a compile error or a failing test. Such failures are usually detected by non-zero exit codes of the tools executed in the task run. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `skip` | The task run was skipped, eg. due to a precondition not being met. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `success` | The task run finished successfully. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `timeout` | A timeout caused the task run to be interrupted. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `cancellation` | The workflow was cancelled, eg. by a user manually cancelling the workflow. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `error` | The workflow has failed to complete and no exit code was returned. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `failure` | The workflow has finished however returned a non-zero exit code. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `skip` | The workflow was skipped, eg. due to a precondition not being met. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `success` | The workflow has finished and returned a zero exit code. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `timeout` | The workflow has timed out resulting in no exit code being returned. | ![Development](https://img.shields.io/badge/-development-blue) |
 
 ## Workflow Definition
 
@@ -80,12 +80,12 @@
 
 | Value | Description | Stability |
 | --- | --- | --- |
-| `cancellation` | The execution was cancelled, eg. by a user manually cancelling the execution. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `error` | During the execution an error with the worker occurred, ie worker being killed. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `failure` | The execution failed as a non-zero exit codes was returned. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `skip` | The execution was skipped, eg. due to a precondition not being met. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `success` | The execution finished successfully. | ![Development](https://img.shields.io/badge/-development-blue) |
-| `timeout` | The execution timed-out causing the execution to be interrupted. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `cancellation` | The execution of the task was cancelled, eg. by a user manually cancelling the workflow. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `error` | The execution of the task has failed to complete and no exit code was returned. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `failure` | The execution of the task failed as a non-zero exit code was returned. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `skip` | The execution of the task was skipped, eg. due to a precondition not being met. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `success` | The execution of the task finished successfully and returned a zero exit code. | ![Development](https://img.shields.io/badge/-development-blue) |
+| `timeout` | The execution of the task has timed out resulting in no exit code being returned. | ![Development](https://img.shields.io/badge/-development-blue) |
 
 ---
 
