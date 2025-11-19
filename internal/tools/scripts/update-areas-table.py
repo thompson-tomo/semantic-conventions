@@ -32,7 +32,7 @@ with open(markdown_file, 'r') as file:
 # Generate the markdown content for each AREA group
 markdown_content = start_marker + '\n'
 markdown_content += "| Name | Owners | Project | Board | Labels | Status | Notes |\n"
-markdown_content += "|------|--------|---------|-------|-------|--------|-------|\n"
+markdown_content += "| --- | --- | --- | --- | --- | --- | --- |\n"
 
 for area in data['areas']:
     name = area['name']
