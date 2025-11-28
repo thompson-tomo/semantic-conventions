@@ -67,6 +67,7 @@ body:
         - area:http
         - area:ios
         - area:jvm
+        - area:kernel
         - area:k8s
         - area:log
         - area:mainframe

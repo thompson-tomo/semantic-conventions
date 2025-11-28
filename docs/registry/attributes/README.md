@@ -75,6 +75,7 @@ Currently, the following namespaces exist:
 - [iOS](ios.md)
 - [JVM](jvm.md)
 - [K8s](k8s.md)
+- [Kernel](kernel.md)
 - [Linux](linux.md)
 - [Log](log.md)
 - [Mainframe](mainframe.md)

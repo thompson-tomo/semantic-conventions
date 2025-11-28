@@ -1,0 +1,15 @@
+groups:
+  - id: entity.kernel
+    type: entity
+    stability: development
+    name: kernel
+    brief: >
+      The kernel on which the os represented by this resource is using.
+    attributes:
+      - ref: kernel.name
+        requirement_level: required
+        role: identifying
+      - ref: kernel.release
+        role: descriptive
+      - ref: kernel.version
+        role: identifying
