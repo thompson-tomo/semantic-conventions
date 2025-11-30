@@ -697,6 +697,7 @@ Span name: `GET /webshop/articles/:article_id`.
 
 Example of retries in the presence of a trace started by an inbound request:
 
+<!-- markdownlint-disable -->
 ```
 request (SERVER, trace=t1, span=s1)
   |
@@ -712,9 +713,11 @@ request (SERVER, trace=t1, span=s1)
       |
       --- server (SERVER, trace=t1, span=s7)
 ```
+<!-- markdownlint-restore -->
 
 Example of retries with no trace started upfront:
 
+<!-- markdownlint-disable -->
 ```
 GET / - 500 (CLIENT, trace=t1, span=s1)
  |
@@ -728,11 +731,13 @@ GET / - 200 (CLIENT, trace=t3, span=s1, http.request.resend_count=2)
  |
  --- server (SERVER, trace=t3, span=s1)
 ```
+<!-- markdownlint-restore -->
 
 ### HTTP client authorization retry examples
 
 Example of retries in the presence of a trace started by an inbound request:
 
+<!-- markdownlint-disable -->
 ```
 request (SERVER, trace=t1, span=s1)
   |
@@ -744,9 +749,11 @@ request (SERVER, trace=t1, span=s1)
       |
       --- server (SERVER, trace=t1, span=s5)
 ```
+<!-- markdownlint-restore -->
 
 Example of retries with no trace started upfront:
 
+<!-- markdownlint-disable -->
 ```
 GET /hello - 401 (CLIENT, trace=t1, span=s1)
  |
@@ -756,11 +763,13 @@ GET /hello - 200 (CLIENT, trace=t2, span=s1, http.request.resend_count=1)
  |
  --- server (SERVER, trace=t2, span=s2)
 ```
+<!-- markdownlint-restore -->
 
 ### HTTP client redirects examples
 
 Example of redirects in the presence of a trace started by an inbound request:
 
+<!-- markdownlint-disable -->
 ```
 request (SERVER, trace=t1, span=s1)
   |
@@ -772,9 +781,11 @@ request (SERVER, trace=t1, span=s1)
       |
       --- server (SERVER, trace=t1, span=s5)
 ```
+<!-- markdownlint-restore -->
 
 Example of redirects with no trace started upfront:
 
+<!-- markdownlint-disable -->
 ```
 GET / - 302 (CLIENT, trace=t1, span=s1)
  |
@@ -784,6 +795,7 @@ GET /hello - 200 (CLIENT, trace=t2, span=s1, http.request.resend_count=1)
  |
  --- server (SERVER, trace=t2, span=s2)
 ```
+<!-- markdownlint-restore -->
 
 ### HTTP client call: DNS error
 

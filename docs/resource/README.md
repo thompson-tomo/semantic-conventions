@@ -126,13 +126,13 @@ port.
 
 Note: `service.namespace` and `service.name` are not intended to be concatenated for the purpose of forming a single globally unique name for the service. For example the following 2 sets of attributes actually describe 2 different services (despite the fact that the concatenation would result in the same string):
 
-```
+```text
 # Resource attributes that describes a service.
 namespace = Company.Shop
 service.name = shoppingcart
 ```
 
-```
+```text
 # Another set of resource attributes that describe a different service.
 namespace = Company
 service.name = Shop.shoppingcart

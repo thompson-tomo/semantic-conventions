@@ -132,7 +132,7 @@ to learn how to make changes to the YAML files.
 
 The YAML (model definition) and Markdown (documentation) files are organized in the following way:
 
-```
+```text
 ├── docs
 │   ├── attribute_registry
 │   ├── {root-namespace}
@@ -179,7 +179,7 @@ When defining new telemetry signals (spans, metrics, events, resources) in YAML,
 make sure to add a new markdown section describing them. Add the following
 code-snippet into the markdown file:
 
-```
+```markdown
 <!-- semconv new-group-id -->
 <!-- endsemconv -->
 ```

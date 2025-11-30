@@ -93,7 +93,7 @@ SDK's that have instrumentation for AWS Lambda SHOULD provide an additional prop
 that can [be configured](#xray-lambda-propagator-configuration) via the `OTEL_PROPAGATORS` environment variable setting as `xray-lambda`.
 This propagator is expected to replace the `xray` propagator in the `OTEL_PROPAGATORS` list. The behavior for this propagator is described in pseudo code below.
 
-```
+```text
 extract(context, carrier) {
     xrayContext = xrayPropagator.extract(context, carrier)
 
@@ -217,11 +217,13 @@ using AWS X-Ray - any observability backend will fully function using this propa
 Given a process C that sends an HTTP request to an API Gateway endpoint with path `/pets/{petId}` configured for
 a Lambda function F:
 
+<!-- markdownlint-disable -->
 ```
 Process C: | Span Client        |
 --
 Function F:    | Span Function |
 ```
+<!-- markdownlint-restore -->
 
 | Field or Attribute | `Span Client` | `Span Function` |
 | --- | --- | --- |
@@ -248,15 +250,18 @@ will be exported to AWS X-Ray by the infrastructure (not instrumentation). All a
 except that in this case, the parent of `APIGW` is `Span Client` and the parent of `Span Function` is
 `Span Lambda`. This means the hierarchy looks like:
 
+<!-- markdownlint-disable -->
 ```
 Span Client --> Span APIGW --> Span Lambda --> Span Function
 ```
+<!-- markdownlint-restore -->
 
 ### SQS (Lambda tracing passive)
 
 Given a process P, that sends two messages to a queue Q on SQS, and a Lambda function F, which processes both of them in one batch (Span ProcBatch) and
 generates a processing span for each message separately (Spans Proc1 and Proc2).
 
+<!-- markdownlint-disable -->
 ```
 Process P: | Span Prod1 | Span Prod2 |
 --
@@ -264,6 +269,7 @@ Function F:                      | Span ProcBatch |
                                         | Span Proc1 |
                                                | Span Proc2 |
 ```
+<!-- markdownlint-restore -->
 
 | Field or Attribute | Span Prod1 | Span Prod2 | Span ProcBatch | Span Proc1 | Span Proc2 |
 | --- | --- | --- | --- | --- | --- |
@@ -293,10 +299,12 @@ Active tracing in Lambda means a Lambda runtime invocation span `Span Lambda` wi
 infrastructure (not instrumentation). In this case, all of the above is the same except `Span ProcBatch` will
 have a parent of `Span Lambda`. This means the hierarchy looks like:
 
+<!-- markdownlint-disable -->
 ```
 Span Lambda --> Span ProcBatch --> Span Proc1 (links to Span Prod1 and Span Prod2)
                                \-> Span Proc2 (links to Span Prod1 and Span Prod2)
 ```
+<!-- markdownlint-restore -->
 
 ## Resource Detector
 

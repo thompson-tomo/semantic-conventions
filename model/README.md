@@ -35,7 +35,7 @@ When defining semantic conventions, follow [contributing guide](/CONTRIBUTING.md
 These YAML files are used by the make targets `attribute-registry-generation` and `table-generation` to generate consistently
 formatted Markdown tables for all semantic conventions in the specification. Run it from the root of this repository using the command
 
-```
+```bash
 make attribute-registry-generation table-generation
 ```
 
@@ -49,7 +49,7 @@ name formatting, and other policies.
 
 You can run it with the following command:
 
-```
+```bash
 make check-policies
 ```
 

@@ -409,6 +409,7 @@ If connection was not immediately available for the request, HTTP client and han
 *Wait for connection* spans. In this example, a new connection was created and the request was executed on it immediately
 after the connection was created. Instrumentation added a link to *HTTP connection_setup* span on the HTTP request `GET` span.
 
+<!-- markdownlint-disable -->
 ```
 <--------- HTTP connection_setup (trace=t1, span=s1) -------->
 <--- DNS --->
@@ -419,6 +420,7 @@ after the connection was created. Instrumentation added a link to *HTTP connecti
 <----------------------- GET / (trace=t2, span=s2, link_to=t1,s1) -------------------------------->
 <--------- HTTP wait_for_connection (trace=t2, span=s3) ------>
 ```
+<!-- markdownlint-restore -->
 
 ### HTTP request has to wait for connection setup and other requests on that connection to complete
 
@@ -426,11 +428,13 @@ If connection was not immediately available for the request, HTTP client and han
 *Wait for connection* spans. In this example, request was performed on an existing connection,
 but this connection served other requests in the queue before it became available for this request.
 
+<!-- markdownlint-disable -->
 ```
 <- HTTP connection_setup - (t1,s1) ->
                                         <--------------------- GET / (trace=t2, span=s2) ----------------------------------------->
                                         <---- HTTP wait_for_connection (trace=t2, span=s2, link_to=t1,s1) ---->
 ```
+<!-- markdownlint-restore -->
 
 The *HTTP connection_setup* span has started before this request, the corresponding connection
 was serving other requests until it became available to the GET request above.
@@ -446,6 +450,7 @@ If HTTP request fails before connection is established:
 - HTTP request `GET` span is recorded with the corresponding error type along with *Wait for connection* span.
 - HTTP request `GET` span is **not** linked to any of the *HTTP connection_setup* spans since these connections were never associated with corresponding request.
 
+<!-- markdownlint-disable -->
 ```
 <- HTTP connection_setup - (trace=t1, span=s1) - ERROR ->
 <------------------- DNS - timeout ---------------->
@@ -453,5 +458,6 @@ If HTTP request fails before connection is established:
 <---------- GET / (trace=t2, span=s2) - ERROR ---------->
 <- HTTP wait_for_connection (trace=t2, span=s3) - ERROR ->
 ```
+<!-- markdownlint-restore -->
 
 [DocumentStatus]: https://opentelemetry.io/docs/specs/otel/document-status

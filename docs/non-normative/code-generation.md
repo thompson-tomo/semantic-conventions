@@ -63,7 +63,7 @@ This section contains suggestions on how to structure semantic convention artifa
 - All supported Schema URLs should be listed to allow different instrumentations in the same application to provide the exact version of conventions they follow.
 - Attributes, metrics, and other convention definitions should be grouped by the convention type and the root namespace. See the example below:
 
-```
+```text
 ├── SchemaUrls.code
 ├── attributes
 │   ├── ClientAttributes.code

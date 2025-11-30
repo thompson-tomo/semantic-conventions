@@ -54,7 +54,7 @@ This document defines how to describe remote procedure calls
 
 The *span name* MUST be the full RPC method name formatted as:
 
-```
+```text
 $package.$service/$method
 ```
 

@@ -380,7 +380,7 @@ Instrumentations that support query parsing SHOULD parse the query and extract a
 list of operations and targets from the query. It SHOULD set `db.query.summary`
 attribute to the value formatted in the following way:
 
-```
+```text
 {operation1} {target1} {operation2} {target2} {target3} ...
 ```
 
