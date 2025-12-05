@@ -6,14 +6,15 @@ linkTitle: Agent spans
 
 **Status**: [Development][DocumentStatus]
 
-<!-- toc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Spans](#spans)
   - [Create agent span](#create-agent-span)
   - [Invoke agent span](#invoke-agent-span)
 - [Execute tool span](#execute-tool-span)
 
-<!-- tocstop -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 > [!IMPORTANT]
 >
