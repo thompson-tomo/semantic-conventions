@@ -6,12 +6,13 @@ linkTitle: Events
 
 **Status**: [Development][DocumentStatus]
 
-<!-- toc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Event: `event.gen_ai.client.inference.operation.details`](#event-eventgen_aiclientinferenceoperationdetails)
 - [Event: `event.gen_ai.evaluation.result`](#event-eventgen_aievaluationresult)
 
-<!-- tocstop -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 > [!IMPORTANT]
 >

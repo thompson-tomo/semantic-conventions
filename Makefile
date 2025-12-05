@@ -124,17 +124,8 @@ markdown-link-check-local-only: normalized-link-check
 #   <!-- tocstop -->
 .PHONY: markdown-toc
 markdown-toc:
-	@if ! npm ls markdown-toc; then npm ci --ignore-scripts; fi
-	@find . -type f -name '*.md' -not -path './.github/*' -not -path './node_modules/*' -not -path './.git/*' | while read -r f; do \
-		if grep -q '<!-- tocstop -->' "$$f"; then \
-			echo markdown-toc: processing "$$f"; \
-			npx --no -- markdown-toc --bullets "-" --no-first-h1 --no-stripHeadingTags -i "$$f" || exit 1; \
-		elif grep -q '<!-- toc -->' "$$f"; then \
-			echo markdown-toc: ERROR: '<!-- tocstop -->' missing from "$$f"; exit 1; \
-		else \
-			echo markdown-toc: no TOC markers, skipping "$$f"; \
-		fi; \
-	done
+	@if ! npm ls doctoc; then npm ci --ignore-scripts; fi
+	npx --no -- doctoc . --update-only || exit 1;
 
 .PHONY: markdownlint
 markdownlint:

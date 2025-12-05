@@ -9,7 +9,8 @@ linkTitle: Spans
 This document defines how to describe remote procedure calls
 (also called "remote method invocations" / "RMI") with spans.
 
-<!-- toc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Common remote procedure call conventions](#common-remote-procedure-call-conventions)
   - [Span name](#span-name)
@@ -21,7 +22,7 @@ This document defines how to describe remote procedure calls
   - [Distinction from HTTP spans](#distinction-from-http-spans)
 - [Semantic conventions for specific RPC technologies](#semantic-conventions-for-specific-rpc-technologies)
 
-<!-- tocstop -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 > [!IMPORTANT]
 > Existing RPC instrumentations that are using

@@ -12,7 +12,8 @@ measurements are aggregated and exported as metrics, which provide insight into
 those operations. By including RPC properties as attributes on measurements, the
 metrics can be filtered for finer grain analysis.
 
-<!-- toc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Metric instruments](#metric-instruments)
   - [RPC server](#rpc-server)
@@ -25,7 +26,7 @@ metrics can be filtered for finer grain analysis.
     - [Metric: `rpc.client.response.size`](#metric-rpcclientresponsesize)
 - [Semantic Conventions for specific RPC technologies](#semantic-conventions-for-specific-rpc-technologies)
 
-<!-- tocstop -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 > [!IMPORTANT]
 > Existing RPC instrumentations that are using
