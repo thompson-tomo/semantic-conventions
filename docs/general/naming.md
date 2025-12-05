@@ -9,7 +9,8 @@ aliases: [attribute-naming]
 <details>
 <summary>Table of Contents</summary>
 
-<!-- toc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [General naming considerations](#general-naming-considerations)
 - [Name abbreviation guidelines](#name-abbreviation-guidelines)
@@ -17,7 +18,7 @@ aliases: [attribute-naming]
 - [Recommendations for OpenTelemetry authors](#recommendations-for-opentelemetry-authors)
 - [Recommendations for application developers](#recommendations-for-application-developers)
 - [Attributes](#attributes)
-  - [otel.\* namespace](#otel-namespace)
+  - [otel.\* namespace](#otel%5C-namespace)
   - [Attribute name pluralization guidelines](#attribute-name-pluralization-guidelines)
   - [Signal-specific attributes](#signal-specific-attributes)
 - [Metrics](#metrics)
@@ -34,7 +35,7 @@ aliases: [attribute-naming]
   - [System-specific metrics](#system-specific-metrics)
   - [Known exceptions](#known-exceptions)
 
-<!-- tocstop -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 </details>
 
