@@ -11,6 +11,12 @@ permissions:
   contents: read
 
 jobs:
+  annotations:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "::error file=docs/README.md,line=18,endLine=18,col=10,endColumn=12,title=TextLint -> foo::Unexpected foo."
+    - run: echo "::warning file=docs/README.md,line=18,endLine=18,col=14,endColumn=18,title=TextLint -> bar::Unexpected bar."
+    - run: echo "::notice file=docs/README.md,line=18,endLine=19,col=4,endColumn=8,title=TextLint -> smith::Unexpected smith."
   markdownlint:
     runs-on: ubuntu-latest
     steps:

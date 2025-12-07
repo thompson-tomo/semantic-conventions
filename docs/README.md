@@ -15,6 +15,8 @@ linkTitle: Semantic conventions
 
 # OpenTelemetry semantic conventions
 
+Test0123456789876543210
+
 The Semantic Conventions define a common set of (semantic) attributes which provide meaning to data when collecting, producing and consuming it.
 The Semantic Conventions specify among other things span names and kind, metric instruments and units as well as attribute names, types, meaning and valid values. For a detailed definition of the Semantic Conventions' scope see [Semantic Conventions Stability](https://opentelemetry.io/docs/specs/otel/versioning-and-stability/#semantic-conventions-stability).
 The benefit to using Semantic Conventions is in following a common naming scheme that can be standardized across a codebase, libraries, and platforms. This allows easier correlation and consumption of data.
