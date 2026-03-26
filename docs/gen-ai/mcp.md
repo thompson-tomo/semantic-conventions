@@ -1019,7 +1019,7 @@ MCP server span (`s4`):
 ### Streamable HTTP
 
 In the HTTP examples, we assume that HTTP instrumentation is enabled on both client
-and server side along with the MCP instrumentation.
+and server-side along with the MCP instrumentation.
 
 #### Initialize
 
