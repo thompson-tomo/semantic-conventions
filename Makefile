@@ -133,12 +133,12 @@ markdown-link-check-local-only: normalized-link-check
 .PHONY: markdown-toc
 markdown-toc:
 	@if ! npm ls doctoc; then npm ci --ignore-scripts; fi
-	npx --no -- doctoc . --update-only --mintocitems 2 --toc-pragma-style compact || exit 1;
+	npx --no -- doctoc . --update-only --mintocitems 1 --toc-pragma-style compact --notitle || exit 1;
 
 .PHONY: markdown-toc-check
 markdown-toc-check:
 	@if ! npm ls doctoc; then npm ci --ignore-scripts; fi
-	npx --no -- doctoc . --update-only --mintocitems 2 --toc-pragma-style compact --dryrun || exit 1;
+	npx --no -- doctoc . --update-only --mintocitems 1 --toc-pragma-style compact --notitle --dryrun || exit 1;
 
 .PHONY: markdownlint
 markdownlint:
