@@ -220,7 +220,7 @@ linkTitle: HTTP
 ```
 
 When creating new Markdown files, you should provide the `linkTitle` attribute.
-This is used to generate the navigation bar on the site,
+This is used to generate the navigation bar on the website,
 and will be listed relative to the "parent" document.
 
 ### 3. Check new convention

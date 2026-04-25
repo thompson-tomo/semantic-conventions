@@ -42,6 +42,7 @@ rules:
       - 'readme(s)?'
       - 'to-?do(s)?(?=[ ,.])'
       - "indexes\\b"
+      - 'web[- ]?site(s)?'
     terms:
       - Actix
       - Ajax
@@ -142,6 +143,7 @@ rules:
       - ['back[- ]end(s)?', 'backend$1']
       - ['bugfix(es?)', 'bug fix$1']
       - [byte code, bytecode]
+      - ['cicd', 'CI/CD']
       - ['(cloud)-(native)', '$1 $2']
       - [cpp, C++]
       - # dotnet|.net -> .NET, but NOT for strings like:
