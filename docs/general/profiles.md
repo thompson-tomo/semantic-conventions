@@ -7,13 +7,13 @@ linkTitle: Profiles
 
 **Status**: [Development][DocumentStatus]
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [General profiles identification attributes](#general-profiles-identification-attributes)
   - [Frame types](#frame-types)
 - [Compatibility with pprof](#compatibility-with-pprof)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 ## General profiles identification attributes
 

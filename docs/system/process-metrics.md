@@ -16,7 +16,7 @@ measurements from the operating system. For runtime environment metrics see
 [semantic conventions for runtime environment
 metrics](/docs/runtime/README.md#metrics).
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [Process metrics](#process-metrics)
   - [Metric: `process.cpu.time`](#metric-processcputime)
@@ -32,7 +32,7 @@ metrics](/docs/runtime/README.md#metrics).
   - [Metric: `process.paging.faults`](#metric-processpagingfaults)
   - [Metric: `process.uptime`](#metric-processuptime)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 > [!IMPORTANT]
 > Existing instrumentations and collector that are using

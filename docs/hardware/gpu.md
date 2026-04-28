@@ -7,7 +7,7 @@ linkTitle: GPU
 
 **Status**: [Development][DocumentStatus]
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [GPU metrics `hw.gpu.*`](#gpu-metrics-hwgpu)
   - [Metric: `hw.errors` (GPU)](#metric-hwerrors-gpu)
@@ -18,7 +18,7 @@ linkTitle: GPU
   - [Metric: `hw.gpu.utilization`](#metric-hwgpuutilization)
   - [Metric: `hw.status` (GPU)](#metric-hwstatus-gpu)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 ## GPU metrics `hw.gpu.*`
 

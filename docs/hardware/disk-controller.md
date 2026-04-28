@@ -7,12 +7,12 @@ linkTitle: Disk Controller
 
 **Status**: [Development][DocumentStatus]
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [Disk controller metrics `hw.disk_controller.*`](#disk-controller-metrics-hwdisk_controller)
   - [Metric: `hw.status` (Disk Controller)](#metric-hwstatus-disk-controller)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 ## Disk controller metrics `hw.disk_controller.*`
 

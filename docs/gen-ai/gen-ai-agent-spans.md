@@ -7,7 +7,7 @@ linkTitle: Agent spans
 
 **Status**: [Development][DocumentStatus]
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [Spans](#spans)
   - [Create agent span](#create-agent-span)
@@ -16,7 +16,7 @@ linkTitle: Agent spans
   - [Invoke workflow span](#invoke-workflow-span)
 - [Execute tool span](#execute-tool-span)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 > [!IMPORTANT]
 >

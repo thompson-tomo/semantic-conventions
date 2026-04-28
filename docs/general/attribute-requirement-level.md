@@ -9,7 +9,7 @@ title: Attribute requirement levels
 <details>
 <summary>Table of Contents</summary>
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [Requirement Levels](#requirement-levels)
   - [Required](#required)
@@ -18,7 +18,7 @@ title: Attribute requirement levels
   - [Opt-In](#opt-in)
 - [Performance suggestions](#performance-suggestions)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 </details>
 

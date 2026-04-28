@@ -4,7 +4,7 @@ title: Generating semantic convention libraries
 
 # Generating semantic convention libraries
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [Stability and versioning](#stability-and-versioning)
   - [Deprecated conventions](#deprecated-conventions)
@@ -14,7 +14,7 @@ title: Generating semantic convention libraries
     - [Weaver config](#weaver-config)
     - [Jinja templates](#jinja-templates)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 The code for OpenTelemetry Semantic Conventions defined in this repository can be auto-generated.
 

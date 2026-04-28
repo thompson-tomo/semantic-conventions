@@ -7,12 +7,12 @@ linkTitle: MariaDB
 
 **Status**: [Stable][DocumentStatus], Unless otherwise specified.
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [Spans](#spans)
 - [Metrics](#metrics)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 ## Spans
 

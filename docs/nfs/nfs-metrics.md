@@ -9,7 +9,7 @@ linkTitle: NFS
 
 This document describes instruments and attributes for NFS and NFSD metrics.
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [NFS metrics](#nfs-metrics)
   - [Metric: `nfs.client.net.count`](#metric-nfsclientnetcount)
@@ -30,7 +30,7 @@ This document describes instruments and attributes for NFS and NFSD metrics.
   - [Metric: `nfs.server.operation.count`](#metric-nfsserveroperationcount)
   - [Metric: `nfs.server.procedure.count`](#metric-nfsserverprocedurecount)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 ## NFS metrics
 
@@ -386,6 +386,12 @@ an error.type of "format", "auth", or "client" for svc_stat.badfmt, svc_stat.bad
 
 When `error.type` is set to a type (e.g., an exception type), its
 canonical class name identifying the type within the artifact SHOULD be used.
+
+If the recorded error type is a wrapper that is not meaningful for
+failure classification, instrumentation MAY use the type of the inner
+error instead. For example, in Go, errors created with `fmt.Errorf`
+using `%w` MAY be unwrapped when the wrapper type does not help
+classify the failure.
 
 Instrumentations SHOULD document the list of errors they report.
 

@@ -12,7 +12,7 @@ or managing of servers (also known as serverless functions or Function as a Serv
 
 See also the [additional instructions for instrumenting AWS Lambda](aws-lambda.md).
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [General attributes](#general-attributes)
   - [Function name](#function-name)
@@ -29,7 +29,7 @@ See also the [additional instructions for instrumenting AWS Lambda](aws-lambda.m
   - [Other](#other)
 - [Example](#example)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 ## General attributes
 

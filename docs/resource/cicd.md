@@ -5,7 +5,7 @@ linkTitle: CICD
 
 # CICD
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [Continuous Integration and Continuous Deployment (CICD)](#continuous-integration-and-continuous-deployment-cicd)
   - [CICD pipeline](#cicd-pipeline)
@@ -15,7 +15,7 @@ linkTitle: CICD
   - [VCS repository](#vcs-repository)
   - [VCS reference](#vcs-reference)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 See also:
 
