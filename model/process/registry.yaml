@@ -81,14 +81,18 @@ groups:
           set to the base name of the target of `/proc/[pid]/exe`. On Windows,
           this SHOULD be set to the base name of `GetProcessImageFileNameW`.
         examples: ['otelcol']
-      - id: process.executable.path
+      - id: process.entrypoint
         type: string
         stability: development
         brief: >
-          The full path to the process executable. On Linux based systems, can
-          be set to the target of `proc/[pid]/exe`. On Windows, can be set to the
-          result of `GetProcessImageFileNameW`.
-        examples: ['/usr/bin/cmd/otelcol']
+          The full path to the file being executed in this process.
+        note: >
+           This is the file that was executed to start the process, which may be
+           different from the process executable in cases where the executable
+           is being used to run a script or other file.
+           For example, `python myscript.py` would have an entrypoint of
+           `/usr/scripts/myscript.py` but the executable would be `python`.
+        examples: ['/usr/bin/cmd/otelcol', '/usr/scripts/myscript.py']
       - id: process.command
         type: string
         stability: development
