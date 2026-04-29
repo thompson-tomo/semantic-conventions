@@ -2,11 +2,11 @@
 linkTitle: Metrics
 --->
 
-# Semantic conventions for CICD metrics
+# Semantic conventions for CI/CD metrics
 
 **Status**: [Development][DocumentStatus]
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [CI/CD Metrics](#cicd-metrics)
   - [Guidance on per pipeline run metrics](#guidance-on-per-pipeline-run-metrics)
@@ -27,7 +27,7 @@ linkTitle: Metrics
   - [Metric: `vcs.ref.time`](#metric-vcsreftime)
   - [Metric: `vcs.contributor.count`](#metric-vcscontributorcount)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 ## CI/CD Metrics
 
@@ -52,7 +52,7 @@ When reporting host, container, runtime, and other metrics in CI/CD pipelines, i
 
 The [`cicd.pipeline.run`](/docs/resource/cicd.md#cicd-pipeline-run) entity identifies a pipeline run. Associating it with metrics inherently causes high cardinality and may increase costs with some metric storage backends. Thus, `cicd.pipeline.run` entity MUST be opt-in.
 
-[cicdres]: /docs/resource/cicd.md "CICD and VCS resource conventions"
+[cicdres]: /docs/resource/cicd.md "CI/CD and VCS resource conventions"
 
 ### Metric: `cicd.pipeline.run.duration`
 

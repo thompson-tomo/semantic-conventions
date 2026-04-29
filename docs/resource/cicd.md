@@ -1,10 +1,10 @@
 <!--- Hugo front matter used to generate the website version of this page:
-linkTitle: CICD
+linkTitle: CI/CD
 --->
 
-# CICD
+# CI/CD
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [Continuous Integration and Continuous Deployment (CI/CD)](#continuous-integration-and-continuous-deployment-cicd)
   - [CI/CD pipeline](#cicd-pipeline)
@@ -14,7 +14,7 @@ linkTitle: CICD
   - [VCS repository](#vcs-repository)
   - [VCS reference](#vcs-reference)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 See also:
 

@@ -2,17 +2,17 @@
 linkTitle: Spans
 --->
 
-# Semantic conventions for CICD spans
+# Semantic conventions for CI/CD spans
 
 **Status**: [Development][DocumentStatus]
 
-<!-- toc -->
+<!-- START doctoc -->
 
 - [CI/CD Spans](#cicd-spans)
   - [Pipeline run](#pipeline-run)
   - [Pipeline task run](#pipeline-task-run)
 
-<!-- tocstop -->
+<!-- END doctoc -->
 
 ## CI/CD Spans
 
@@ -20,7 +20,7 @@ The conventions described in this section are specific to Continuous Integration
 
 Any resources of the [CI/CD and VCS resource conventions][cicdres] that apply SHOULD be used.
 
-[cicdres]: /docs/resource/cicd.md "CICD and VCS resource conventions"
+[cicdres]: /docs/resource/cicd.md "CI/CD and VCS resource conventions"
 
 ### Pipeline run
 
