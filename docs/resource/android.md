@@ -1,5 +1,6 @@
 ---
 title: Android
+linkTitle: Android
 ---
 
 # Android

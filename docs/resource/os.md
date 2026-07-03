@@ -1,5 +1,6 @@
 ---
 title: Operating system
+linkTitle: OS
 ---
 
 # Operating system

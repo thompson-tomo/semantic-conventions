@@ -1,5 +1,6 @@
 ---
 title: Google Compute Engine
+linkTitle: gce
 ---
 
 # Google Compute Engine

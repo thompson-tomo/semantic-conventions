@@ -1,5 +1,6 @@
 ---
 title: Google Cloud AppHub
+linkTitle: AppHub
 ---
 
 # Google Cloud AppHub

@@ -1,5 +1,6 @@
 ---
 title: Browser
+linkTitle: Browser
 ---
 
 # Browser

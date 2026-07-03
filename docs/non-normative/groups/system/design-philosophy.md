@@ -1,5 +1,6 @@
 ---
 title: "System semantic conventions: instrumentation design philosophy"
+linkTitle: System Design Philosophy
 ---
 
 # System semantic conventions: instrumentation design philosophy

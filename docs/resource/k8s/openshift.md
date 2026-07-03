@@ -1,5 +1,6 @@
 ---
 title: Openshift
+linkTitle: Openshift
 ---
 
 # Openshift

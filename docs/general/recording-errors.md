@@ -1,5 +1,6 @@
 ---
 title: Recording errors
+linkTitle: Recording errors
 ---
 
 # Recording errors

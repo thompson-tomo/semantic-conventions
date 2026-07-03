@@ -1,5 +1,6 @@
 ---
 title: Host
+linkTitle: Host
 ---
 
 # Host

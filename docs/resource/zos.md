@@ -1,5 +1,6 @@
 ---
 title: z/OS software
+linkTitle: z/OS
 ---
 
 # z/OS software

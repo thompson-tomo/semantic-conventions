@@ -1,5 +1,6 @@
 ---
 title: Attribute requirement levels
+linkTitle: Attribute requirement levels
 ---
 
 # Attribute requirement levels

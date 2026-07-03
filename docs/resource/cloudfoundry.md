@@ -1,5 +1,6 @@
 ---
 title: CloudFoundry
+linkTitle: CloudFoundry
 ---
 
 # CloudFoundry

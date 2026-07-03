@@ -1,5 +1,6 @@
 ---
 title: Cloud provider
+linkTitle: Cloud Provider
 ---
 
 # Cloud provider

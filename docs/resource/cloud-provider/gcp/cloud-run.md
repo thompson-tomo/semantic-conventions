@@ -1,5 +1,6 @@
 ---
 title: Google Cloud Run
+linkTitle: Cloud Run
 ---
 
 # Google Cloud Run

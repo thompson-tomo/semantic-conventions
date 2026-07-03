@@ -1,5 +1,6 @@
 ---
 title: Generating semantic convention libraries
+linkTitle: Code generation
 ---
 
 # Generating semantic convention libraries

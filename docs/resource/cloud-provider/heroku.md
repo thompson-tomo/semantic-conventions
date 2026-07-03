@@ -1,5 +1,6 @@
 ---
 title: Heroku
+linkTitle: Heroku
 ---
 
 # Heroku
