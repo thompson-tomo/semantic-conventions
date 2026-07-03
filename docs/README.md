@@ -1,5 +1,4 @@
 ---
-# Hugo front matter used to generate the website version of this page:
 title: OpenTelemetry semantic conventions
 cascade:
   body_class: otel-docs-spec
