@@ -1,6 +1,5 @@
 ---
 title: CI/CD
-linkTitle: CI/CD
 ---
 
 # CI/CD

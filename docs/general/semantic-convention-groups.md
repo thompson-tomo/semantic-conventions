@@ -1,6 +1,5 @@
 ---
 title: Semantic convention groups
-linkTitle: Semantic convention groups
 aliases: [group-stability]
 ---
 
