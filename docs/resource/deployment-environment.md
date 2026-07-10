@@ -1,6 +1,5 @@
 ---
 title: Deployment
-linkTitle: Deployment
 ---
 
 # Deployment

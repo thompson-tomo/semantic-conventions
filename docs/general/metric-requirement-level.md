@@ -1,6 +1,5 @@
 ---
 title: Metric requirement levels
-linkTitle: Metric requirement levels
 ---
 
 # Metric requirement levels

@@ -1,6 +1,5 @@
 ---
 title: Cloud
-linkTitle: Cloud
 ---
 
 # Cloud

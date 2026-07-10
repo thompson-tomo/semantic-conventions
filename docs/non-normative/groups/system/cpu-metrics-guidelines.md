@@ -1,6 +1,5 @@
 ---
 title: Recommended vs Opt-In CPU Metrics
-linkTitle: Recommended vs Opt-In CPU Metrics
 ---
 
 # Recommended vs Opt-In CPU Metrics

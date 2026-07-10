@@ -1,6 +1,5 @@
 ---
 title: Device
-linkTitle: Device
 ---
 
 # Device

@@ -1,6 +1,5 @@
 ---
 title: Naming
-linkTitle: Naming
 aliases: [attribute-naming]
 ---
 

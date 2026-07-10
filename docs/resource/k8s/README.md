@@ -1,6 +1,5 @@
 ---
 title: Kubernetes
-linkTitle: Kubernetes
 ---
 
 # Kubernetes
