@@ -9,7 +9,7 @@ title: Process
 
 ## Process
 
-**Status:** ![Development](https://img.shields.io/badge/-development-blue)
+**Status:** ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid)
 
 **type:** `process`
 
