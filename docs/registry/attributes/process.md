@@ -30,7 +30,7 @@ An operating system process.
 | <a id="process-exit-time" href="#process-exit-time">`process.exit.time`</a> | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) | string | The date and time the process exited, in ISO 8601 format. | `2023-11-21T09:26:12.315Z` |
 | <a id="process-group-leader-pid" href="#process-group-leader-pid">`process.group_leader.pid`</a> | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) | int | The PID of the process's group leader. This is also the process group ID (PGID) of the process. | `23` |
 | <a id="process-interactive" href="#process-interactive">`process.interactive`</a> | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) | boolean | Whether the process is connected to an interactive shell. | |
-| <a id="process-launch-path" href="#process-launch-path">`process.launch_path`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The full path to the file being executed in this process as can be seen by external observer/monitors. [4] | `/usr/bin/cmd/otelcol`; `/usr/local/bin/python3` |
+| <a id="process-launch-path" href="#process-launch-path">`process.launch_path`</a> | ![Development](https://img.shields.io/badge/-development-blue) | string | The full path to the file being executed in this process as can be seen by, external observers/monitors. [4] | `/usr/bin/cmd/otelcol`; `/usr/local/bin/python3` |
 | <a id="process-owner" href="#process-owner">`process.owner`</a> | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) | string | The username of the user that owns the process. | `root` |
 | <a id="process-parent-pid" href="#process-parent-pid">`process.parent_pid`</a> | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) | int | Parent Process identifier (PPID). | `111` |
 | <a id="process-pid" href="#process-pid">`process.pid`</a> | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) | int | Process identifier (PID). | `1234` |
@@ -76,7 +76,7 @@ represented as a hex string.
 
 **[4] `process.launch_path`:** This should be the path to the file which was initially launched. For example, the `python myscript.py` command would have a launch_path of `/usr/local/bin/python3` as python is what is launched to execute in the process.
 
-On Linux based systems, the value would match `proc/[pid]/exe` and on Windows, the value would match `GetProcessImageFileNameW`.
+On Linux based systems, the value would match `/proc/[pid]/exe` and on Windows, the value would match `GetProcessImageFileNameW`.
 
 **[5] `process.title`:** In many Unix-like systems, process title (proctitle), is the string that represents the name or command line of a running process, displayed by system monitoring tools like ps, top, and htop.
 
@@ -125,7 +125,7 @@ Deprecated process attributes.
 | <a id="process-context-switch-type" href="#process-context-switch-type">`process.context_switch_type`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `process.context_switch.type`. | string | "Deprecated, use `process.context_switch.type` instead." | `voluntary`; `involuntary` |
 | <a id="process-cpu-state" href="#process-cpu-state">`process.cpu.state`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `cpu.mode`. | string | Deprecated, use `cpu.mode` instead. | `system`; `user`; `wait` |
 | <a id="process-executable-build-id-profiling" href="#process-executable-build-id-profiling">`process.executable.build_id.profiling`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `process.executable.build_id.htlhash`. | string | "Deprecated, use `process.executable.build_id.htlhash` instead." | `600DCAFE4A110000F2BF38C493F5FB92` |
-| <a id="process-executable-path" href="#process-executable-path">`process.executable.path`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>`process.launch_path` should be used instead to capture the path used to launch the process. | string | The full path to the process executable. On Linux based systems, can be set to the target of `proc/[pid]/exe`. On Windows, can be set to the result of `GetProcessImageFileNameW`. | `/usr/bin/cmd/otelcol` |
+| <a id="process-executable-path" href="#process-executable-path">`process.executable.path`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>`process.launch_path` should be used instead to capture the path used to launch the process. | string | The full path to the process executable. On Linux based systems, can be set to the target of `/proc/[pid]/exe`. On Windows, can be set to the result of `GetProcessImageFileNameW`. | `/usr/bin/cmd/otelcol` |
 | <a id="process-paging-fault-type" href="#process-paging-fault-type">`process.paging.fault_type`</a> | ![Deprecated](https://img.shields.io/badge/-deprecated-red)<br>Replaced by `system.paging.fault.type`. | string | Deprecated, use `system.paging.fault.type` instead. | `major`; `minor` |
 
 ---

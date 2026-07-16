@@ -72,6 +72,6 @@ groups:
             `process.launch_path` should be used instead to capture the path used to launch the process.
         brief: >
           The full path to the process executable. On Linux based systems, can
-          be set to the target of `proc/[pid]/exe`. On Windows, can be set to the
+          be set to the target of `/proc/[pid]/exe`. On Windows, can be set to the
           result of `GetProcessImageFileNameW`.
         examples: ['/usr/bin/cmd/otelcol']

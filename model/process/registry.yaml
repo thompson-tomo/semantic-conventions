@@ -85,13 +85,13 @@ groups:
         type: string
         stability: development
         brief: >
-          The full path to the file being executed in this process as can be seen by external observer/monitors.
+          The full path to the file being executed in this process as can be seen by, external observers/monitors.
         note: >
           This should be the path to the file which was initially launched.
           For example, the `python myscript.py` command would have a launch_path of `/usr/local/bin/python3` as python is what is launched to execute in the process.
 
 
-          On Linux based systems, the value would match `proc/[pid]/exe` and
+          On Linux based systems, the value would match `/proc/[pid]/exe` and
           on Windows, the value would match `GetProcessImageFileNameW`.
         examples: ['/usr/bin/cmd/otelcol', '/usr/local/bin/python3']
       - id: process.command
