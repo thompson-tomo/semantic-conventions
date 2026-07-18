@@ -39,7 +39,7 @@ The ID is assigned by the container runtime and can vary in different environmen
 
 **[6] `container.label.<key>`:** For example, a docker container label `app` with value `nginx` SHOULD be recorded as the `container.label.app` attribute with value `"nginx"`.
 
-<details>
+<details open>
 <summary><b>Deprecated Attributes:</b></summary>
 
 | Key | Stability | Value Type | Description | Example Values |

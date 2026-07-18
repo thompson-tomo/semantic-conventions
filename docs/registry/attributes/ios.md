@@ -25,7 +25,7 @@
 | `inactive` | The app is now `inactive`. Associated with UIKit notification `applicationWillResignActive`. | ![Development](https://img.shields.io/badge/-development-blue) |
 | `terminate` | The app is about to terminate. Associated with UIKit notification `applicationWillTerminate`. | ![Development](https://img.shields.io/badge/-development-blue) |
 
-<details>
+<details open>
 <summary><b>Deprecated Attributes:</b></summary>
 
 | Key | Stability | Value Type | Description | Example Values |

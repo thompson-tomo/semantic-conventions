@@ -27,4 +27,4 @@
 {{ notes.render() }}
 {%- for enum in filtered_attributes | sort(attribute="name") %}
 {%- if enum.type is mapping -%}{{ enums.table(enum, notes) }}{% endif %}
-{%- endfor -%}{% endif %}{% if (ctx.attributes | selectattr("deprecated")) and filtered_attributes %}{{"\n"}}{% endif %}{{ at.generate_deprecated(ctx.attributes, "", "", "", notes) | trim }}{% if filtered_attributes | length != ctx.attributes | length %}{{"\n"}}{%endif%}
+{%- endfor -%}{% endif %}{% if (ctx.attributes | selectattr("deprecated")) and filtered_attributes %}{{"\n"}}{% endif %}{{ at.generate_deprecated(ctx.attributes, "", "", "", notes, " open") | trim }}{% if filtered_attributes | length != ctx.attributes | length %}{{"\n"}}{%endif%}

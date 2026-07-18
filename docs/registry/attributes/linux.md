@@ -5,7 +5,7 @@
 
 ## Linux Attributes
 
-<details>
+<details open>
 <summary><b>Deprecated Attributes:</b></summary>
 
 | Key | Stability | Value Type | Description | Example Values |

@@ -31,7 +31,7 @@ Examples:
 * Rust: `playground::my_module::my_cool_func`
 * C function: `fopen`
 
-<details>
+<details open>
 <summary><b>Deprecated Attributes:</b></summary>
 
 | Key | Stability | Value Type | Description | Example Values |

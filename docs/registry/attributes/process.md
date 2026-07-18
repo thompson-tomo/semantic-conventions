@@ -95,7 +95,7 @@ represented as a hex string.
 | `sleeping` | sleeping | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) |
 | `stopped` | stopped | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) |
 
-<details>
+<details open>
 <summary><b>Deprecated Attributes:</b></summary>
 
 | Key | Stability | Value Type | Description | Example Values |

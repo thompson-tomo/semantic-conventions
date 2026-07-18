@@ -42,7 +42,7 @@ considered to be identifying the same service:
 | `failed` | failed | ![Development](https://img.shields.io/badge/-development-blue) |
 | `succeeded` | succeeded | ![Development](https://img.shields.io/badge/-development-blue) |
 
-<details>
+<details open>
 <summary><b>Deprecated Attributes:</b></summary>
 
 | Key | Stability | Value Type | Description | Example Values |

@@ -46,7 +46,7 @@ For example, the variant `red` maybe be used for the value `#c05543`.
 | `targeting_match` | The resolved value was the result of a dynamic evaluation, such as a rule or specific user-targeting. | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) |
 | `unknown` | The reason for the resolved value could not be determined. | ![Release Candidate](https://img.shields.io/badge/-rc-mediumorchid) |
 
-<details>
+<details open>
 <summary><b>Deprecated Attributes:</b></summary>
 
 | Key | Stability | Value Type | Description | Example Values |

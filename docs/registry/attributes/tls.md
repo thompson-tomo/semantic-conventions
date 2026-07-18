@@ -49,7 +49,7 @@
 | `ssl` | ssl | ![Development](https://img.shields.io/badge/-development-blue) |
 | `tls` | tls | ![Development](https://img.shields.io/badge/-development-blue) |
 
-<details>
+<details open>
 <summary><b>Deprecated Attributes:</b></summary>
 
 | Key | Stability | Value Type | Description | Example Values |

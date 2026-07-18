@@ -25,7 +25,7 @@ exception instead. For example, in Go, errors created with `fmt.Errorf`
 using `%w` MAY be unwrapped when the wrapper type does not help
 classify the failure.
 
-<details>
+<details open>
 <summary><b>Deprecated Attributes:</b></summary>
 
 | Key | Stability | Value Type | Description | Example Values |
