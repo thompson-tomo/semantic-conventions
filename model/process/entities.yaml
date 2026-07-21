@@ -71,7 +71,7 @@ groups:
       This entity (resource attributes) is used to represent an executable
       which has been deployed to a system and the execution of that executable
       via a process is resulting in the production of the telemetry.
-      This entity (resource attributes) should not be used to describe the runtime 
+      This entity (resource attributes) should not be used to describe the runtime
       executable unless the process is being externally observed.
       The process.runtime entity should be used to report the runtime when not externally observed.
     attributes:
