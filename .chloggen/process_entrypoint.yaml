@@ -20,4 +20,4 @@ issues: [3686]
 # These lines will be padded with 2 spaces and then inserted directly into the document.
 # Use pipe (|) for multiline entries.
 subtext: >
-  The new `process.launch_path` attribute is associated with the process entity to cater for multiple identical executables residing on the 1 system.
+  The new `process.launch_path` attribute is associated with the process entity to cater for multiple identical executables residing on a single system.
