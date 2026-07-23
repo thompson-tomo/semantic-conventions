@@ -109,6 +109,21 @@ misspell:
 	@if ! npm ls cspell; then npm ci --ignore-scripts; fi
 	npx --no -- cspell . --no-progress
 
+.PHONY: textlint
+textlint:
+	@if ! npm ls textlint; then npm ci --ignore-scripts; fi
+
+	@if [ "$(format)" = "github" ]; then \
+		npx --no -- textlint --format github .; \
+	else \
+		npx --no -- textlint .; \
+	fi
+
+.PHONY: textlint-correction
+textlint-correction:
+	@if ! npm ls textlint; then npm ci --ignore-scripts; fi
+	npx --no -- textlint --fix .
+
 .PHONY: normalized-link-check
 # NOTE: Search "model/*/**" rather than "model" to skip `model/README.md`, which
 # contains valid occurrences of `../docs/`.
@@ -225,7 +240,7 @@ check: misspell markdownlint markdown-toc-check markdown-link-check check-polici
 
 # Attempt to fix issues / regenerate tables.
 .PHONY: fix
-fix: table-generation registry-generation markdown-toc
+fix: table-generation registry-generation textlint-correction markdown-toc
 	@echo "All autofixes complete"
 
 .PHONY: install-tools
