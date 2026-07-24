@@ -114,7 +114,7 @@ textlint:
 	@if ! npm ls textlint; then npm ci --ignore-scripts; fi
 
 	@if [ "$(format)" = "github" ]; then \
-		npx --no -- textlint --debug --format github .; \
+		npx --no -- textlint --format github .; \
 	else \
 		npx --no -- textlint .; \
 	fi
