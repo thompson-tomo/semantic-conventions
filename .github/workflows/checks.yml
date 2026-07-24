@@ -93,7 +93,12 @@ jobs:
       run: npm ci --ignore-scripts
 
     - name: run textlint
-      run: make textlint format=github
+      run: |
+        echo "foo.js: line=5, col=10"
+        echo "::error file=foo.js,line=5,endLine=5,col=10,endColumn=12,title=TextLint [foo]::Unexpected foo."
+        echo "bar.js: line=6, col=14"
+        echo "::warning file=bar.js,line=6,endLine=6,col=14,endColumn=16,title=TextLint [bar]::Unexpected bar."
+        make textlint format=github
 
   semantic-conventions:
     runs-on: ubuntu-latest
